@@ -15,8 +15,7 @@ $container-xl: 1200px;
 $container-padding: 24px;
 
 // Font families.
-$ff			: Arial, sans-serif;
-$ff-title	: Arial, sans-serif;
+$ff			: 'Gotham Pro', sans-serif;
 
 // Font sizes.
 $fs-xs	: 12px;
@@ -26,10 +25,7 @@ $fs-lg	: 18px;
 $fs-xl	: 20px;
 
 // Font weights.
-$fw-light	: 300;
 $fw-regular	: 400;
-$fw-medium	: 500;
-$fw-semibold: 600;
 $fw-bold	: 700;
 
 // Line heights.
@@ -37,8 +33,28 @@ $lh			: 1.5;
 $lh-title	: 1.3;
 
 // Colors.
-$white	: #FFFFFF;
-$black	: #000000;
+$white	     : #FFFFFF;
+$black	     : #000000;
+$light-gray	 : #F6F6F6;
+$light-middle: #6F6F6F;
+$light-blue	 : #2196F3;
+$light-blue2 : #D3EAFD;
+$light-rose  : #FDDADA;
+$dark-blue   : #0E293A;
+$neon-green  : #91FFD1;
+$neon-peach  : #FFAB91;
+$neon-purple : #AE91FF;
+$neon-rose   : #FF91B9;
+
+//Gradients
+$lg-light-blue: ($light-blue, linear-gradient(0deg, #2196F3 0%, #2196F3 100%), #FFF);
+
+
+//Box-shaodows
+$header-bs: 0px 4px 50px 0px rgba(128, 128, 128, 0.25);
+$gray-shadow: 0px 4px 10px 0px rgba(183, 183, 183, 0.25);
 
 // Others.
 $tr: 0.35s;
+$op: 0.7;
+$bord-20: 20px;
