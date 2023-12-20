@@ -48,7 +48,7 @@ $neon-purple : #AE91FF;
 $neon-rose   : #FF91B9;
 
 //Gradients
-$lg-light-blue: ($light-blue, linear-gradient(0deg, #2196F3 0%, #2196F3 100%), #FFF);
+$lg-light-blue: linear-gradient(0deg, #2196F3 0%, #2196F3 100%), #FFF;
 
 
 //Box-shaodows

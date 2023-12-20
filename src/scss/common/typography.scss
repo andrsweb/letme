@@ -11,10 +11,20 @@ h6, .h6 {
 }
 
 h1, .h1 {
-	font-size: 32px;
+	color: $dark-blue;
+	font-family: $ff;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: $fw-bold;
+	line-height: normal;
+	margin-bottom: 20px;
+
+	@media all and (min-width: $md) {
+		font-size: 24px;
+	}
 
 	@media all and (min-width: $lg) {
-		font-size: 36px
+		font-size: 32px;
 	}
 }
 
