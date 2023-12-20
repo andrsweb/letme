@@ -1,0 +1,17 @@
+<section class="nav__bar">
+	<div class="container">
+		<div class="nav__bar__wrapper">
+			<nav class="breadcrumbs">
+				<ul class="breadcrumbs__list">
+					@@loop('../../components/breadcrumbs/breadcrumbs-item.html', [
+						{'current': '', 'href': '/', 'text': 'Главная', 'arrow': ''},
+						{'current': 'current', 'href': '#', 'text': 'Букмекерские конторы', 'arrow': 'hidden'},
+					])
+				</ul>
+			</nav>
+			<div class="nav__bar_author">
+				Автор: Сергей Морозов, обновлено: <span class="nav__bar_update">14 ноября 2023</span>
+			</div>
+		</div>
+	</div>
+</section>

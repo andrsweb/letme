@@ -11,5 +11,9 @@
 // Footer styles.
 @import 'footer/footer';
 
+//Components
+@import 'components/breadcrumbs/breadcrumbs';
+
 // Home page sections styles.
 @import 'sections/home/hero';
+@import 'sections/home/nav-bar';

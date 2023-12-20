@@ -1,0 +1,18 @@
+.nav__bar {
+	padding: 144px 0 25px;
+
+	&__wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&_author {
+		color: $gray-middle;
+		font-family: $ff;
+		font-size: 14px;
+		font-style: normal;
+		font-weight: $fw-regular;
+		line-height: normal;
+	}
+}
