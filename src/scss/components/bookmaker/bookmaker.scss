@@ -137,6 +137,26 @@
 				width: 100%;
 				height: 100%;
 			}
+
+			svg path {
+				transition: stroke ease $tr,
+							fill ease $tr;
+			}
+
+			&:hover {
+				&:first-child {
+					svg path {
+						fill: transparent;
+						stroke: $dark-blue;
+					}
+				}
+
+				&:last-child {
+					svg path {
+						fill: #a4c639;
+					}
+				}
+			}
 		}
 	}
 
