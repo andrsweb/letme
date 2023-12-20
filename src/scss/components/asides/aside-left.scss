@@ -1,7 +1,10 @@
+.aside-left, .aside-right {
+	margin-top: 56px;
+}
+
 .aside-left {
 	width: 200px;
 	margin-top: 56px;
-
 	&__wrapper {
 		display: flex;
 		flex-direction: column;
