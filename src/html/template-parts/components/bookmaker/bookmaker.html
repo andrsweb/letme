@@ -1,0 +1,51 @@
+<div class="bookmaker">
+	<div class="bookmaker__wrapper">
+		<div class="bookmaker__img">
+			<img src="@@src" width="150" height="49" alt="">
+			<div class="bookmaker__img_text">
+				@@text
+			</div>
+		</div>
+		<div class="bookmaker__rate_wrapper">
+			<div class="bookmaker__rate">
+				<div class="bookmaker__star">
+					@@include('../../svg/ui/star-fill.html')
+					@@include('../../svg/ui/star-fill.html')
+					@@include('../../svg/ui/star-fill.html')
+					@@include('../../svg/ui/star-fill.html')
+					@@include('../../svg/ui/star-fill.html')
+				</div>
+			</div>
+			<div class="bookmaker__comments">
+				<div class="bookmaker__comments_img">
+					@@include('../../svg/ui/message.html')
+				</div>
+				<span class="message__value">@@value</span>
+			</div>
+		</div>
+		<div class="bookmaker__bonus">
+			<div class="bookmaker__bonus_img">
+				@@include('../../svg/ui/gift.html')
+			</div>
+			<div class="bonus__value_box">
+				<span class="bonus__value">@@bonus</span> ₽
+			</div>
+		</div>
+		<div class="bookmaker__apps">
+			<div class="bookmaker__app">
+				@@include('../../svg/ui/android.html')
+			</div>
+			<div class="bookmaker__app">
+				@@include('../../svg/ui/apple.html')
+			</div>
+		</div>
+		<div class="bookmaker__buttons">
+			<button class="button transparent">
+				Обзор
+			</button>
+			<button class="button blue">
+				Играть
+			</button>
+		</div>
+	</div>
+</div>

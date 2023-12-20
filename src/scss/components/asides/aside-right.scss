@@ -99,7 +99,7 @@
 		font-family: $ff;
 		font-size: 14px;
 		font-style: normal;
-		font-weight: $fw-regular;
+		font-weight: $fw-bold;
 		line-height: normal;
 		width: fit-content;
 		cursor: pointer;
@@ -126,6 +126,7 @@
 	.h5 {
 		margin-bottom: 20px;
 		text-align: center;
+		font-weight: $fw-bold;
 	}
 
 	.hidden__checkboxes {

@@ -1,3 +1,62 @@
+.button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	font-family: $ff;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: $fw-bold;
+	line-height: normal;
+	transition: background $tr ease, color $tr ease;
+	cursor: pointer;
+
+	&.transparent {
+		padding: 0 20.5px;
+		color: $dark-blue;
+
+		&:hover {
+			color: $gray-middle;
+		}
+	}
+
+	&.blue {
+		min-height: 50px;
+		padding: 0 40px;
+		color: $white;
+		text-align: center;
+		font-family: $ff;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: $fw-regular;
+		line-height: normal;
+		background: $lg-light-blue;
+		border-radius: 10px;
+		position: relative;
+		z-index: 2;
+
+		&::before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background: $lg-light-light-blue;
+			z-index: -1;
+			opacity: 0;
+			border-radius: 10px;
+			transition: opacity ease $tr;
+		}
+
+		&:hover {
+			&::before {
+				opacity: 1;
+			}
+		}
+	}
+}
+
 .sort__button {
 	display: flex;
 	justify-content: center;

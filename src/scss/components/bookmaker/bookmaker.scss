@@ -1,0 +1,154 @@
+.bookmaker {
+	min-height: 88px;
+	padding: 18px 0;
+	border-top: 1px solid $light-gray;
+	border-bottom: 1px solid $light-gray;
+
+	&:first-child {
+		padding: 0 0 18px 0;
+		border-top: 0;
+	}
+
+	&__wrapper {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 10px 0;
+	}
+
+	&__img {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+		max-width: 150px;
+		height: 100%;
+
+		&_text {
+			color: $dark-blue;
+			text-align: center;
+			font-family: $ff;
+			font-size: 14px;
+			font-style: normal;
+			font-weight: $fw-regular;
+			line-height: normal;
+		}
+	}
+
+	&__rate {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		max-width: 146px;
+		padding: 17px;
+		gap: 4px;
+		background-color: $light-gray;
+		border-radius: 20px;
+		margin-right: 10px;
+		height: 100%;
+
+		&_wrapper {
+			width: 100%;
+			max-width: 249px;
+			display: flex;
+		}
+	}
+
+	&__comments {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		max-width: 93px;
+		background-color: $light-gray;
+		border-radius: 100px;
+
+		&_img {
+			width: 20px;
+			height: 20px;
+			margin-right: 10px;
+
+			svg {
+				width: 100%;
+				height: 100%;
+			}
+		}
+
+		.message__value {
+			color: $light-blue;
+			font-family: $ff;
+			font-size: 20px;
+			font-style: normal;
+			font-weight: $fw-bold;
+			line-height: normal;
+		}
+	}
+
+	&__bonus {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		max-width: 155px;
+		padding: 15px;
+		background-color: $light-rose;
+		border-radius: 100px;
+
+		&_img {
+			width: 20px;
+			height: 20px;
+			display: flex;
+			align-items: center;
+			margin-right: 10px;
+
+			svg {
+				width: 100%;
+				height: 100%;
+			}
+		}
+
+		.bonus__value {
+			color: $dark-blue;
+			font-family: $ff;
+			font-size: 20px;
+			font-style: normal;
+			font-weight: $fw-bold;
+			line-height: normal;
+		}
+	}
+
+	&__apps {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
+		max-width: 70px;
+
+		.bookmaker__app {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 30px;
+			height: 30px;
+
+			svg {
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
+
+	&__buttons {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		max-width: 241px;
+		height: 100%;
+
+		.button.transparent  {
+			margin-right: 10px;
+		}
+	}
+}
