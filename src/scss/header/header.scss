@@ -1,0 +1,91 @@
+.header {
+	background-color: $light-gray;
+	width: 100%;
+	box-shadow: $header-bs;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 100%;
+
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 114px;
+	}
+
+	&__logo {
+		transition: opacity ease $tr;
+
+		&:hover {
+			opacity: $op;
+		}
+	}
+
+	&__inner {
+		height: 100%;
+	}
+
+	&__nav {
+		height: 100%;
+	}
+
+	&__list {
+		height: 100%;
+		display: flex;
+		align-items: center;
+	}
+
+	&__item {
+		margin-right: 70px;
+		height: 100%;
+		cursor: pointer;
+		position: relative;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		&::before {
+			content: "";
+			display: block;
+			opacity: 0;
+			visibility: hidden;
+			width: 100%;
+			height: 4px;
+			background-color: $light-blue;
+			position: absolute;
+			left: 0;
+			top: 0;
+			transform: translateY(-100%);
+			transition: opacity ease $tr,
+				visibility ease $tr,
+				transform ease $tr;
+		}
+
+		&:hover {
+			.header__link {
+				color: $light-blue;
+			}
+
+			&::before {
+				opacity: 1;
+				visibility: visible;
+				transform: translateY(0);
+			}
+		}
+	}
+
+	&__link {
+		display: flex;
+		align-items: center;
+		height: 100%;
+		color: $dark-blue;
+		font-family: $ff;
+		font-size: 18px;
+		font-style: normal;
+		font-weight: $fw-regular;
+		line-height: normal;
+		transition: color ease $tr;
+	}
+}
