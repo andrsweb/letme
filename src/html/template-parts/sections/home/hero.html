@@ -2,13 +2,30 @@
 	<div class="container">
 		<div class="hero__content">
 			<div class="hero__content_wrapper">
-				@@include('../../components/asides/left/aside.html')
+				@@include('../../components/asides/left/aside-left.html')
 				<div class="hero__content_main">
 					<h1 class="h1">
 						Легальные букмекерские конторы с лицензией ФНС РФ
 					</h1>
+					<div class="hero__text">
+						На странице представлен список всех легальных букмекеров РФ, все БК из этого списка имеют официальную лицензию ФНС России и зарегистрированы в Едином ЦУПИС
+					</div>
+					<div class="hero__items">
+						<button class="sort__button">
+							<div class="sort__button_img">
+								@@include('../../svg/ui/arrow-sort.html')
+							</div>
+							Сортировать
+						</button>
+						<div class="hero__items_panel">
+							<div class="panel__item">БУКМЕКЕР</div>
+							<div class="panel__item">РЕЙТИНГ</div>
+							<div class="panel__item">БОНУС</div>
+							<div class="panel__item">ПРИЛОЖЕНИЯ</div>
+						</div>
+					</div>
 				</div>
-				@@include('../../components/asides/right/aside.html')
+				@@include('../../components/asides/right/aside-right.html')
 			</div>
 		</div>
 	</div>
