@@ -1,51 +1,55 @@
 <div class="bookmaker">
 	<div class="bookmaker__wrapper">
-		<div class="bookmaker__img">
-			<img src="@@src" width="150" height="49" alt="">
-			<div class="bookmaker__img_text">
-				@@text
-			</div>
-		</div>
-		<div class="bookmaker__rate_wrapper">
-			<div class="bookmaker__rate">
-				<div class="bookmaker__star">
-					@@include('../../svg/ui/star-fill.html')
-					@@include('../../svg/ui/star-fill.html')
-					@@include('../../svg/ui/star-fill.html')
-					@@include('../../svg/ui/star-fill.html')
-					@@include('../../svg/ui/star-fill.html')
+		<div class="bookmaker__inner">
+			<div class="bookmaker__img_wrapper">
+				<div class="bookmaker__img">
+					<img src="@@src" width="150" height="49" alt="">
+				</div>
+				<div class="bookmaker__img_text">
+					@@text
 				</div>
 			</div>
-			<div class="bookmaker__comments">
-				<div class="bookmaker__comments_img">
-					@@include('../../svg/ui/message.html')
+			<div class="bookmaker__rate_wrapper">
+				<div class="bookmaker__rate">
+					<div class="bookmaker__star">
+						@@include('../../svg/ui/star-fill.html')
+						@@include('../../svg/ui/star-fill.html')
+						@@include('../../svg/ui/star-fill.html')
+						@@include('../../svg/ui/star-fill.html')
+						@@include('../../svg/ui/star-fill.html')
+					</div>
 				</div>
-				<span class="message__value">@@value</span>
+				<div class="bookmaker__comments">
+					<div class="bookmaker__comments_img">
+						@@include('../../svg/ui/message.html')
+					</div>
+					<span class="message__value">@@value</span>
+				</div>
 			</div>
-		</div>
-		<div class="bookmaker__bonus">
-			<div class="bookmaker__bonus_img">
-				@@include('../../svg/ui/gift.html')
+			<div class="bookmaker__bonus">
+				<div class="bookmaker__bonus_img">
+					@@include('../../svg/ui/gift.html')
+				</div>
+				<div class="bonus__value_box">
+					<span class="bonus__value">@@bonus</span> ₽
+				</div>
 			</div>
-			<div class="bonus__value_box">
-				<span class="bonus__value">@@bonus</span> ₽
+			<div class="bookmaker__apps">
+				<a href="#" class="bookmaker__app" target="_blank">
+					@@include('../../svg/ui/apple.html')
+				<a/>
+				<a href="#" class="bookmaker__app" target="_blank">
+					@@include('../../svg/ui/android.html')
+				</a>
 			</div>
-		</div>
-		<div class="bookmaker__apps">
-			<a href="#" class="bookmaker__app" target="_blank">
-				@@include('../../svg/ui/apple.html')
-			<a/>
-			<a href="#" class="bookmaker__app" target="_blank">
-				@@include('../../svg/ui/android.html')
-			</a>
-		</div>
-		<div class="bookmaker__buttons">
-			<a href="#" class="button transparent">
-				Обзор
-			</a>
-			<a href="#" class="button blue">
-				Играть
-			</a>
+			<div class="bookmaker__buttons">
+				<a href="#" class="button transparent">
+					Обзор
+				</a>
+				<a href="#" class="button blue">
+					Играть
+				</a>
+			</div>
 		</div>
 	</div>
 </div>
