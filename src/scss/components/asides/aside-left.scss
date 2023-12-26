@@ -25,6 +25,7 @@
 			background-color ease $tr;
 		position: relative;
 		z-index: 2;
+		cursor: pointer;
 
 		&::before {
 			content: '';
@@ -112,6 +113,7 @@
 			transition: transform ease $tr;
 
 			svg path {
+				transition: fill ease $tr;
 				fill: $white;
 			}
 		}
@@ -124,6 +126,27 @@
 			&:hover {
 				&::before {
 					opacity: 0;
+				}
+			}
+		}
+
+		.aside-left__item_link,
+			.dropdown__title {
+				color: $white;
+
+				svg path {
+					fill: $white;
+				}
+			}
+
+		.aside-left__dropdown {
+			background: $light-blue;
+			
+			.dropdown__start {
+				color: $white;
+
+				svg path {
+					fill:  $white;
 				}
 			}
 		}
