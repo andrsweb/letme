@@ -4,7 +4,7 @@
 	border-bottom: 1px solid $light-gray;
 
 	&:first-child {
-		border-top: 0;
+		border-top: 1px solid transparent;
 	}
 
 	&__wrapper {
@@ -26,9 +26,18 @@
 		&_wrapper {
 			display: flex;
 			flex-direction: column;
-			align-items: center;
+			align-items: flex-start;
+			width: 20%;
+		}
+
+		&_inner {
 			width: 100%;
 			max-width: 150px;
+			transition: opacity ease $tr;
+
+			&:hover {
+				opacity: $op;
+			}
 		}
 
 		&_text {
@@ -61,12 +70,12 @@
 		padding: 13px 0;
 
 		&_wrapper {
-			width: 100%;
-			max-width: 249px;
+			width: 20%;
 			display: flex;
+			justify-content: center;
 		}
 
-		.bookmaker__star{
+		.bookmaker__star {
 			svg {
 				margin-right: 4px;
 
@@ -85,6 +94,7 @@
 		max-width: 93px;
 		background-color: $light-gray;
 		border-radius: 100px;
+		transition: opacity ease $tr;
 
 		&_img {
 			width: 20px;
@@ -95,6 +105,10 @@
 				width: 100%;
 				height: 100%;
 			}
+		}
+
+		&:hover {
+			opacity: $op;
 		}
 
 		.message__value {
@@ -111,11 +125,17 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		padding: 14px;
 		width: 100%;
 		max-width: 155px;
-		padding: 14px;
 		background-color: $light-rose;
 		border-radius: 100px;
+
+		&_wrapper {
+			width: 20%;
+			display: flex;
+			justify-content: center;
+		}
 
 		&_img {
 			width: 20px;
@@ -137,8 +157,6 @@
 			font-style: normal;
 			font-weight: $fw-medium;
 			line-height: normal;
-
-
 		}
 	}
 
@@ -149,6 +167,12 @@
 		width: 100%;
 		padding: 10px 0;
 		max-width: 70px;
+
+		&_wrapper {
+			width: 20%;
+			display: flex;
+			justify-content: center;
+		}
 
 		.bookmaker__app {
 			display: flex;
@@ -164,7 +188,7 @@
 
 			svg path {
 				transition: stroke ease $tr,
-							fill ease $tr;
+					fill ease $tr;
 			}
 
 			&:hover {
@@ -188,10 +212,10 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		max-width: 241px;
+		width: 20%;
 		height: 100%;
 
-		.button.transparent  {
+		.button.transparent {
 			margin-right: 10px;
 		}
 	}

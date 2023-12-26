@@ -1,8 +1,8 @@
 .hero {
 	padding: 20px 0 50px;
+
 	&__content {
 		display: flex;
-		justify-content: space-between;
 
 		&_main {
 			width: 100%;
@@ -44,14 +44,17 @@
 		&_panel {
 			width: 100%;
 			margin: 15px 0 0;
-			padding: 18.5px 0;
+			padding: 18.5px 0 18.5px 10px;
 			display: flex;
 			background-color: $light-blue2;
 			border-radius: $bord-20;
 		}
 
 		.panel__item {
-			width: 100%;
+			width: 20%;
+			height: 100%;
+			display: flex;
+			justify-content: center;
 			color: $dark-blue;
 			text-align: center;
 			font-family: $ff;
@@ -59,24 +62,14 @@
 			font-style: normal;
 			font-weight: $fw-medium;
 			line-height: normal;
-			margin-right: 96px;
 
 			&:first-child {
-				max-width: 160px;
-			}
-
-			&:nth-child(2) {
-				max-width: 230px;
+				justify-content: flex-start;
+				padding-left: 2.5%;
 			}
 
 			&:nth-child(3) {
-				max-width: 136px;
-				margin-right: 72px;
-			}
-
-			&:last-child {
-				margin-right: 0;
-				max-width: 110px;
+				justify-content: center;
 			}
 		}
 	}
