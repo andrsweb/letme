@@ -69,6 +69,10 @@
 				visibility: visible;
 				transform: translateY(0);
 			}
+
+			.hidden__menu_wrapper {
+				display: flex;
+			}
 		}
 	}
 

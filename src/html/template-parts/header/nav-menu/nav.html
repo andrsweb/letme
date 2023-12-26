@@ -1,13 +1,333 @@
 <nav class="header__nav">
 	<ul class="header__list">
-		@@loop('./nav-item.html', [
-			{ 'active': '', 'href': '#', 'text': 'О проекте'},
-			{ 'active': '', 'href': '#', 'text': 'Букмекеры'},
-			{ 'active': '', 'href': '#', 'text': 'Бонусы'},
-			{ 'active': '', 'href': '#', 'text': 'Отзывы'},
-			{ 'active': '', 'href': '#', 'text': 'Прогнозы'},
-			{ 'active': '', 'href': '#', 'text': 'Новости'},
-			{ 'active': '', 'href': '#', 'text': 'База знаний'}
-		])
+		<li class="header__item @@class1">
+			<a href="#" class="header__link">
+				О проекте
+			</a>
+		</li>
+		<li class="header__item @@class2">
+			<a href="#" class="header__link">
+				Букмекеры
+			</a>
+			<ul class="hidden__menu_wrapper">
+				<li class="hidden__menu">
+					<ul class="hidden__menu_col">
+						<li class="hidden__menu_item">
+							<a class="hidden__menu_link" href="#">
+								Все букмекерские конторы
+							</a>
+						</li>
+						<li class="hidden__menu_item">
+							<a class="hidden__menu_link" href="#">
+								Приложения букмекеров
+							</a>
+						</li>
+						<li class="hidden__menu_item">
+							<a class="hidden__menu_link" href="#">
+								Все легальные букмекеры
+							</a>
+						</li>
+						<li class="hidden__menu_item">
+							<a class="hidden__menu_link" href="#">
+								Рейтинг надежности
+							</a>
+						</li>
+						<li class="hidden__menu_item">
+							<a class="hidden__menu_link" href="#">
+								Киберспорт
+							</a>
+						</li>
+						<li class="hidden__menu_item">
+							<a class="hidden__menu_link" href="#">
+								Новые букмекеры
+							</a>
+						</li>
+						<li class="hidden__menu_item">
+							<a class="hidden__menu_link" href="#">
+								Рейтинг Live
+							</a>
+						</li>
+						<li class="hidden__menu_item">
+							<a class="hidden__menu_link" href="#">
+								Народный рейтинг
+							</a>
+						</li>
+						<li class="hidden__menu_item">
+							<a class="hidden__menu_link" href="#">
+								Ваш букмекер
+							</a>
+						</li>
+					</ul>
+					<ul class="hidden__menu_col">
+						<li class="hidden__menu_item">
+							<a class="hidden__menu_link" href="#">
+								Букмекеры с бонусами
+							</a>
+						</li>
+						<li class="hidden__menu_item">
+							<a class="hidden__menu_link" href="#">
+								Все рейтинги букмекеров
+							</a>
+						</li>
+						<li class="hidden__menu_item">
+							<a class="hidden__menu_link" href="#">
+								Все букмекерские конторы мира
+							</a>
+						</li>
+						<li class="hidden__menu_item">
+							<a class="hidden__menu_link" href="#">
+								Букмекеры для VIP
+							</a>
+						</li>
+						<li class="hidden__menu_item">
+							<a class="hidden__menu_link" href="#">
+								Рейтинг по коэффициентам
+							</a>
+						</li>
+						<li class="hidden__menu_item">
+							<a class="hidden__menu_link" href="#">
+								БК с минимальным депозитом
+							</a>
+						</li>
+						<li class="hidden__menu_item">
+							<a class="hidden__menu_link" href="#">
+								Рейтинг по выбору ставок
+							</a>
+						</li>
+						<li class="hidden__menu_item">
+							<a class="hidden__menu_link" href="#">
+								Букмекеры на мобильных
+							</a>
+						</li>
+						<li class="hidden__menu_item">
+							<a class="hidden__menu_link" href="#">
+								Букмекерские клубы (ППС)
+							</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+		<li class="header__item @@class3">
+			<a href="#" class="header__link">
+				Бонусы
+			</a>
+			<ul class="hidden__menu_wrapper">
+				<li class="hidden__menu single">
+					<ul class="hidden__menu_col">
+						<li class="hidden__menu_item">
+							<a class="hidden__menu_link" href="#">
+								Без депозита
+								<span class="hidden__menu_num">
+									4
+								</span>
+							</a>
+						</li>
+						<li class="hidden__menu_item">
+							<a class="hidden__menu_link" href="#">
+								Фрибет
+								<span class="hidden__menu_num">
+									52
+								</span>
+							</a>
+						</li>
+						<li class="hidden__menu_item">
+							<a class="hidden__menu_link" href="#">
+								Фрибеты за регистрацию
+								<span class="hidden__menu_num">
+									18
+								</span>
+							</a>
+						</li>
+						<li class="hidden__menu_item">
+							<a class="hidden__menu_link" href="#">
+								Фрибеты без депозита
+								<span class="hidden__menu_num">
+									4
+								</span>
+							</a>
+						</li>
+						<li class="hidden__menu_item">
+							<a class="hidden__menu_link" href="#">
+								Промокоды
+								<span class="hidden__menu_num">
+									23
+								</span>
+							</a>
+						</li>
+						<li class="hidden__menu_item">
+							<a class="hidden__menu_link" href="#">
+								Кешбэк
+								<span class="hidden__menu_num">
+									10
+								</span>
+							</a>
+						</li>
+						<li class="hidden__menu_item">
+							<a class="hidden__menu_link" href="#">
+								Повышенные коэффициенты
+								<span class="hidden__menu_num">
+									7
+								</span>
+							</a>
+						</li>
+						<li class="hidden__menu_item">
+							<a class="hidden__menu_link" href="#">
+								Страховка ставки
+								<span class="hidden__menu_num">
+									15
+								</span>
+							</a>
+						</li>
+						<li class="hidden__menu_item">
+							<a class="hidden__menu_link" href="#">
+								Кеш-бонус
+								<span class="hidden__menu_num">
+									29
+								</span>
+							</a>
+						</li>
+						<li class="hidden__menu_item">
+							<a class="hidden__menu_link" href="#">
+								Приз
+								<span class="hidden__menu_num">
+									13
+								</span>
+							</a>
+						</li>
+						<li class="hidden__menu_item">
+							<a class="hidden__menu_link" href="#">
+								Эксклюзив LetmeBet
+								<span class="hidden__menu_num">
+									5
+								</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+		<li class="header__item @@class4">
+			<a href="#" class="header__link">
+				Отзывы
+			</a>
+		</li>
+		<li class="header__item @@class5">
+			<a href="#" class="header__link">
+				Прогнозы
+			</a>
+			<ul class="hidden__menu_wrapper">
+				<li class="hidden__menu single">
+					<ul class="hidden__menu_col">
+						<li class="hidden__menu_item">
+							<a class="hidden__menu_link" href="#">
+								На сегодня
+								<span class="hidden__menu_num">
+									4
+								</span>
+							</a>
+						</li>
+						<li class="hidden__menu_item">
+							<a class="hidden__menu_link" href="#">
+								На завтра
+								<span class="hidden__menu_num">
+									52
+								</span>
+							</a>
+						</li>
+						<li class="hidden__menu_item">
+							<a class="hidden__menu_link" href="#">
+								От плюсовых прогнозистов
+								<span class="hidden__menu_num">
+									18
+								</span>
+							</a>
+						</li>
+						<li class="hidden__menu_item">
+							<a class="hidden__menu_link" href="#">
+								Ставки по трендам
+								<span class="hidden__menu_num">
+									4
+								</span>
+							</a>
+						</li>
+						<li class="hidden__menu_item">
+							<a class="hidden__menu_link" href="#">
+								Статистика прогнозистов
+								<span class="hidden__menu_num">
+									23
+								</span>
+							</a>
+						</li>
+						<li class="hidden__menu_item">
+							<a class="hidden__menu_link" href="#">
+								Футбол
+								<span class="hidden__menu_num">
+									10
+								</span>
+							</a>
+						</li>
+						<li class="hidden__menu_item">
+							<a class="hidden__menu_link" href="#">
+								Хоккей
+								<span class="hidden__menu_num">
+									7
+								</span>
+							</a>
+						</li>
+						<li class="hidden__menu_item">
+							<a class="hidden__menu_link" href="#">
+								Теннис
+								<span class="hidden__menu_num">
+									15
+								</span>
+							</a>
+						</li>
+						<li class="hidden__menu_item">
+							<a class="hidden__menu_link" href="#">
+								Баскетбол
+								<span class="hidden__menu_num">
+									29
+								</span>
+							</a>
+						</li>
+						<li class="hidden__menu_item">
+							<a class="hidden__menu_link" href="#">
+								Волейбол
+								<span class="hidden__menu_num">
+									13
+								</span>
+							</a>
+						</li>
+						<li class="hidden__menu_item">
+							<a class="hidden__menu_link" href="#">
+								Киберспорт
+								<span class="hidden__menu_num">
+									5
+								</span>
+							</a>
+						</li>
+						<li class="hidden__menu_item">
+							<a class="hidden__menu_link" href="#">
+								Единоборства
+								<span class="hidden__menu_num">
+									5
+								</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+		<li class="header__item @@class6">
+			<a href="#" class="header__link">
+				Новости
+			</a>
+		</li>
+		<li class="header__item @@class7">
+			<a href="#" class="header__link">
+				База знаний
+			</a>
+		</li>
 	</ul>
 </nav>

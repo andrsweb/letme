@@ -1,0 +1,57 @@
+.hidden__menu {
+	padding: 20px 34px;
+	border-radius: 8px;
+	background-color: $white;
+	box-shadow: $gray-shadow;
+	display: flex;
+	justify-content: space-between;
+
+	&.single {
+		padding: 20px;
+	}
+
+	&_wrapper {
+		display: none;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		z-index: 100;
+		padding-top: 6px;
+		animation: menuOn 0.5s forwards ease;
+
+		@keyframes menuOn {
+			0% {
+				opacity: 0;
+			}
+
+			100% {
+				opacity: 1;
+			}
+		}
+	}
+
+	&_item {
+		padding: 16px 30px;
+		white-space: nowrap;
+	}
+
+	&_link {
+		color: $dark-blue;
+		font-family: $ff;
+		font-size: 14px;
+		font-style: normal;
+		font-weight: $fw-regular;
+		line-height: normal;
+		transition: color ease $tr;
+		display: flex;
+		justify-content: space-between;
+
+		&:hover {
+			color: $light-blue;
+		}
+	}
+
+	&_num {
+		margin-left: 8px;
+	}
+}
