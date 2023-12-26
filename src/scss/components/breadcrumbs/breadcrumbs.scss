@@ -17,6 +17,10 @@
 			.breadcrumb__link {
 				color: $light-blue;
 
+				svg {
+					display: none;
+				}
+
 				svg path {
 					fill: $light-blue;
 				}

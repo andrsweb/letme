@@ -86,7 +86,7 @@
 
 			&:checked + label {
 				color: $light-blue;
-				font-weight: $fw-bold;
+				font-weight: $fw-medium;
 			}
 		}
 	}
@@ -105,6 +105,14 @@
 		cursor: pointer;
 		margin-top: 18px;
 		transition: opacity ease $tr;
+
+		&.reverse {
+			.show__more_arrow {
+				svg {
+					transform: rotate(-90deg);
+				}
+			}
+		}
 
 		&_arrow {
 			display: flex;
@@ -130,21 +138,18 @@
 	}
 
 	.hidden__checkboxes {
-		display: none;
-
+		height: 0;
+		overflow: hidden;
+		transition: height ease 0.5s;
+	
 		&.visible {
-			display: block;
-			animation: fadeIn 1s forwards ease;
+			height: auto;
+		}
 
-			@keyframes fadeIn {
-				0% {
-					opacity: 0;
-				}
-
-				100% {
-					opacity: 1;
-				}
-			}
+		&_inner {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
 		}
 	}
 
@@ -166,3 +171,4 @@
 		}
 	}
 }
+

@@ -8,9 +8,9 @@ export const setTargetElement = element => targetElement = element   // Getter &
 
 // --------------------- 
 // Helper function for recalculating dropdown height.
-export const reCalculateDropdownHeight = dropdown => {
-	const dropdownOpen = dropdown.querySelector('.dropdown__open'),
-		dropdownInner = dropdown.querySelector('.dropdown__inner')
+export const reCalculateDropdownHeight = (dropdown, open, inner) => {
+	const dropdownOpen = dropdown.querySelector(open),
+		dropdownInner = dropdown.querySelector(inner)
 
 	if (!dropdownOpen || !dropdownInner) return
 

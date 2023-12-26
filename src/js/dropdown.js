@@ -3,28 +3,28 @@ import { reCalculateDropdownHeight } from "./common/global"
 document.addEventListener('DOMContentLoaded', () => {
 	'use strict'
 
-	toogleDropdown()
+	toogleDropdown('.dropdown', '.dropdown__open', '.dropdown__open', '.dropdown__inner')
 })
 
-const toogleDropdown = () => {                                    //Function for smooth dropdown opening
-	const dropdowns = document.querySelectorAll('.dropdown')
+const toogleDropdown = (selector, open, innerOpen, inner) => {                                    //Function for smooth dropdown opening
+	const dropdowns = document.querySelectorAll(selector)
 
 	if (!dropdowns.length) return
 
 	dropdowns.forEach(dropdown => {
 		if (dropdown.classList.contains('opened'))
-			reCalculateDropdownHeight(dropdown)
+			reCalculateDropdownHeight(dropdown, innerOpen, inner)
 	})
 
 	dropdowns.forEach(dropdown => {
 		dropdown.addEventListener('click', () => {
-			const dropdownOpen = dropdown.querySelector('.dropdown__open')
+			const dropdownOpen = dropdown.querySelector(open)
 
 			if (!dropdownOpen) return
 
 			if (!dropdown.classList.contains('opened')) {
 				dropdown.classList.add('opened')
-				reCalculateDropdownHeight(dropdown) //Height conversion, taking the height of the inner as a value
+				reCalculateDropdownHeight(dropdown, innerOpen, inner) //Height conversion, taking the height of the inner as a value
 			}
 			else {
 				dropdown.classList.remove('opened')
