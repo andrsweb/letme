@@ -1,0 +1,25 @@
+<section class="testimonials">
+	<div class="container">
+		<div class="testimonials__titles">
+			<h2 class="h2">
+				Отзывы
+			</h2>
+			<button class="box__shadow_button">
+				Смотреть все
+			</button>
+		</div>
+		<div class="testimonials__swiper_wrapper">
+			<div class="swiper testimonials-swiper">
+				<div class="swiper-wrapper">
+					@@include('./testi-slides.html')
+				</div>
+			</div>
+			<button class="testimonials__prev" type="button">
+				@@include('../../svg/swiper/arrow-left.html', {'id1': 'arrPrev1', 'id2': 'arrPrev1'})
+			</button>
+			<button class="testimonials__next" type="button">
+				@@include('../../svg/swiper/arrow-right.html', {'id1': 'arrNext1', 'id2': 'arrNext1'})
+			</button>
+		</div>
+	</div>
+</section>

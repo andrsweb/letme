@@ -1,0 +1,142 @@
+
+.testimonials__swiper_wrapper {
+	position: relative;
+
+	&::before {
+		content: '';
+		width: 104px;
+		display: block;
+		height: 100%;
+		background: linear-gradient(90deg, #F6F6F6 27.05%, rgba(246, 246, 246, 0.00) 100%);
+		position: absolute;
+		left: -20px;
+		top: 0;
+		z-index: 10;
+	}
+
+	&::after {
+		content: '';
+		width: 104px;
+		display: block;
+		height: 100%;
+		background: linear-gradient(-90deg, #F6F6F6 27.05%, rgba(246, 246, 246, 0.00) 100%);
+		position: absolute;
+		right: -20px;
+		top: 0;
+		z-index: 10;
+	}
+
+	.swiper-slide__wrapper {
+		display: flex;
+		flex-direction: column;
+		padding: 33px 40px;
+		border-radius: 20px;
+		background-color: $white;
+	
+		.swiper__img {
+			width: 30px;
+			height: 30px;
+			margin-right: 11px;
+	
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+	
+			&_wrapper {
+				display: flex;
+				align-items: center;
+				margin-bottom: 10px;
+			}
+		}
+	
+		.swiper__rate {
+			display: flex;
+			gap: 6px;
+			margin-bottom: 14px;
+		}
+	
+		.swiper__text {
+			color: $dark-blue;
+			font-family: $ff;
+			font-size: 16px;
+			font-style: normal;
+			font-weight: $fw-regular;
+			line-height: 130%;
+			height: 205px;
+			margin-bottom: 24px;
+			overflow: hidden;
+			background: linear-gradient(180deg, #0E293A 55.61%, rgba(14, 41, 58, 0.00) 100%);
+			background-clip: text;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+	
+		.swiper__name {
+			margin-left: 11px;
+	
+			&_wrapper {
+				display: flex;
+				align-items: center;
+				color: $dark-blue;
+				font-family: $ff;
+				font-size: 16px;
+				font-style: normal;
+				font-weight: $fw-medium;
+				line-height: normal;
+			}
+	
+			&_short {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 30px;
+				height: 30px;
+				color: $gray-middle;
+				border-radius: 10px;
+	
+				&.peach {
+					background-color: $neon-peach;
+				}
+	
+				&.green {
+					background-color: $neon-green;
+				}
+	
+				&.purple {
+					background-color: $neon-purple;
+				}
+	
+				&.rose {
+					background-color: $neon-rose;
+				}
+			}
+		}
+	}
+	
+	.testimonials__prev, .testimonials__next {
+		position: absolute;
+		z-index: 11;
+		cursor: pointer;
+		transition: opacity ease $tr;
+	}
+	
+	.testimonials__prev {
+		left: -30px;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	.testimonials__next {
+		right: -30px;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	.swiper-button {
+		&-disabled {
+			opacity: 0.5;
+		}
+	}
+}

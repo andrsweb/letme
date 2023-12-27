@@ -86,3 +86,30 @@
 		}
 	}
 }
+
+.box__shadow_button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: $white;
+	color: $light-blue;
+	font-family: $ff;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: $fw-medium;
+	line-height: normal;
+	box-shadow: $gray-shadow;
+	padding: 10px 20px;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: opacity ease $tr;
+	min-width: 181px;
+
+	@media all and (min-width: $lg) {
+		padding: 10px 15px;
+	}
+
+	&:hover {
+		opacity: $op;
+	}
+}
