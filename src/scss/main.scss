@@ -21,9 +21,13 @@
 @import 'components/asides/aside-left';
 @import 'components/asides/aside-right';
 @import 'components/bookmaker/bookmaker';
+@import 'components/bonus/bonus';
+@import 'components/payment-tabs/payment-tabs';
 
 // Home page sections styles.
 @import 'sections/home/hero';
 @import 'sections/home/nav-bar';
 @import 'sections/home/testimonials';
 @import 'sections/home/testimonial-swiper';
+@import 'sections/home/about';
+@import 'sections/home/payment';

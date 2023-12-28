@@ -1,0 +1,63 @@
+<section class="about">
+	<div class="container">
+		<h2 class="h2">Подробнее про букмекеров</h2>
+		<div class="about__items">
+			@@include('../../components/brand/brand.html',
+				{
+					'num':'01.','src':'img/bookmakers/fonbet.svg', 'name': 'Фонбет', 'link': 'fonbet.ru', 'strong': '«Фонбет»', 
+					'text': '- букмекерская контора, которая была основана в 2011 году. На территории России работает легально, включена в ЕРАИ и единую систему ЦУПИС. Является пятым букмейкером по узнаваемости в РФ, а по показателям   доверия среди клиентов занимает второе место. Целевой аудиторией компании является молодёжь, о чём говорят маркетинговые акции данного букмекера. Амбасадорами конторы являются Тимати и известный боец ММА А. Емельяненко.'
+				}
+			)
+			<div class="about__bonuses">
+				<h2 class="h3">Все бонусы букмекерской конторы Фонбет</h2>
+				<div class="bonuses__cards">
+					@@loop('../../components/bonus/bonus.html', [
+						{'src': 'img/components/bonus/bonus1.png', 'name': 'Фрибет 5 000 ₽', 'text': '5000 рублей за правильные прогнозы'},
+						{'src': 'img/components/bonus/bonus2.png', 'name': 'Промокод в ВИНлайн', 'text': 'Активируйте промокод и получайте фрибет 500 ₽'},
+						{'src': 'img/components/bonus/bonus3.png', 'name': 'Супер кэшбек', 'text': 'Кэшбек до 20% <br> для VIP-клиентов'},
+						{'src': 'img/components/bonus/bonus4.png', 'name': 'Розыгрыш 1,2 млн ₽', 'text': 'Совершите ставки и получайте призы'},
+						{'src': 'img/components/bonus/bonus3.png', 'name': 'Супер кэшбек', 'text': 'Кэшбек до 20% <br> для VIP-клиентов'},
+						{'src': 'img/components/bonus/bonus4.png', 'name': 'Розыгрыш 1,2 млн ₽', 'text': 'Совершите ставки и получайте призы'},
+						{'src': 'img/components/bonus/bonus5.png', 'name': 'Фрибет 5 000 ₽', 'text': '5000 рублей за правильные прогнозы'},
+						{'src': 'img/components/bonus/bonus2.png', 'name': 'Промокод в ВИНлайн', 'text': 'Активируйте промокод и получайте фрибет 500 ₽'}
+					])
+				</div>
+			</div>
+			<div class="payment">
+				<h3 class="h3">
+					Способы пополнения и вывода средств
+				</h3>
+				@@include('../../components/payment/payment-tabs.html')
+			</div>
+		</div>
+		<div class="about__items">
+			@@include('../../components/brand/brand.html',
+				{
+					'num':'02.','src':'img/bookmakers/pari.svg', 'name': 'Пари', 'link': 'parimatch.ru', 'strong': '«Пари»', 
+					'text': '- букмекерская контора, которая была основана в 2011 году. На территории России работает легально, включена в ЕРАИ и единую систему ЦУПИС. Является пятым букмейкером по узнаваемости в РФ, а по показателям   доверия среди клиентов занимает второе место. Целевой аудиторией компании является молодёжь, о чём говорят маркетинговые акции данного букмекера. Амбасадорами конторы являются Тимати и известный боец ММА А. Емельяненко.'
+				}
+			)
+			<div class="about__bonuses">
+				<h2 class="h3">Все бонусы букмекерской конторы Фонбет</h2>
+				<div class="bonuses__cards">
+					@@loop('../../components/bonus/bonus.html', [
+						{'src': 'img/components/bonus/bonus1.png', 'name': 'Фрибет 5 000 ₽', 'text': '5000 рублей за правильные прогнозы'},
+						{'src': 'img/components/bonus/bonus2.png', 'name': 'Промокод в ВИНлайн', 'text': 'Активируйте промокод и получайте фрибет 500 ₽'},
+						{'src': 'img/components/bonus/bonus3.png', 'name': 'Супер кэшбек', 'text': 'Кэшбек до 20% <br> для VIP-клиентов'},
+						{'src': 'img/components/bonus/bonus4.png', 'name': 'Розыгрыш 1,2 млн ₽', 'text': 'Совершите ставки и получайте призы'},
+						{'src': 'img/components/bonus/bonus3.png', 'name': 'Супер кэшбек', 'text': 'Кэшбек до 20% <br> для VIP-клиентов'},
+						{'src': 'img/components/bonus/bonus4.png', 'name': 'Розыгрыш 1,2 млн ₽', 'text': 'Совершите ставки и получайте призы'},
+						{'src': 'img/components/bonus/bonus5.png', 'name': 'Фрибет 5 000 ₽', 'text': '5000 рублей за правильные прогнозы'},
+						{'src': 'img/components/bonus/bonus2.png', 'name': 'Промокод в ВИНлайн', 'text': 'Активируйте промокод и получайте фрибет 500 ₽'}
+					])
+				</div>
+			</div>
+			<div class="payment">
+				<h3 class="h3">
+					Способы пополнения и вывода средств
+				</h3>
+				@@include('../../components/payment/payment-tabs.html')
+			</div>
+		</div>
+	</div>
+</section>

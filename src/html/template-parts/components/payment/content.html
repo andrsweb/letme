@@ -1,0 +1,92 @@
+<div class="payment__content @@class" data-id="@@id">
+	<div class="payment__content_wrapper">
+		<div class="payment__content_item">
+			<div class="payment__title_wrapper">
+				<div class="payment__title_ico">
+					@@include('../../svg/ui/card.html')
+				</div>
+				<div class="payment__title">
+					@@title
+				</div>
+			</div>
+			<div class="payment__content_info">
+				<div class="payment__row">
+					<div class="payment__text payment-min">
+						Мин. сумма
+					</div>
+					<div class="payment__quantity min-sum">
+						@@min-sum
+					</div>
+				</div>
+				<div class="payment__row">
+					<div class="payment__text payment-max">
+						Макс. сумма
+					</div>
+					<div class="payment__quantity max-sum">
+						@@max-sum
+					</div>
+				</div>
+				<div class="payment__row">
+					<div class="payment__text payment-tax">
+						Комиссия
+					</div>
+					<div class="payment__quantity payment-percent">
+						@@percent
+					</div>
+				</div>
+				<div class="payment__row">
+					<div class="payment__text payment-time">
+						Время перевода
+					</div>
+					<div class="payment__quantity payment-time-info">
+						@@time1
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="payment__content_item">
+			<div class="payment__title_wrapper">
+				<div class="payment__title_ico">
+					@@include('../../svg/ui/change.html')
+				</div>
+				<div class="payment__title">
+					Снятие
+				</div>
+			</div>
+			<div class="payment__content_info">
+				<div class="payment__row">
+					<div class="payment__text payment-min">
+						Мин. сумма
+					</div>
+					<div class="payment__quantity min-sum">
+						@@min-sum1
+					</div>
+				</div>
+				<div class="payment__row">
+					<div class="payment__text payment-max">
+						Макс. сумма
+					</div>
+					<div class="payment__quantity max-sum">
+						@@max-sum1
+					</div>
+				</div>
+				<div class="payment__row">
+					<div class="payment__text payment-tax">
+						Комиссия
+					</div>
+					<div class="payment__quantity payment-percent">
+						@@tax
+					</div>
+				</div>
+				<div class="payment__row">
+					<div class="payment__text payment-time">
+						Время вывода
+					</div>
+					<div class="payment__quantity payment-time-info">
+						@@time2
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
