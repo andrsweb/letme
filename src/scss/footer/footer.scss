@@ -1,0 +1,158 @@
+.footer {
+	padding: 50px 0;
+	background-color: $light-gray;
+
+	&__wrapper {}
+
+	&__logo {
+		width: 265px;
+		height: 54px;
+		transition: opacity ease $tr;
+
+		img {
+			width: 100%;
+			height: 100%;
+		}
+
+		&:hover {
+			opacity: $op;
+		}
+	}
+
+	&__top {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding-bottom: 23px;
+		margin-bottom: 30px;
+		border-bottom: 2px solid #D1D1D6;
+	}
+
+	&__social {
+		padding: 10px;
+		background-color: $white;
+		border-radius: $bord-20;
+		box-shadow: $gray-shadow3;
+		transition: opacity ease $tr;
+		margin-right: 8px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		&_items {
+			display: flex;
+			align-items: center;
+		}
+
+		&:hover {
+			opacity: $op;
+		}
+	}
+
+	&__info_items {
+		display: flex;
+	}
+
+	&__info_item {
+		padding: 19.5px 30px;
+		color: $dark-blue;
+		font-family: $ff;
+		font-size: 18px;
+		font-style: normal;
+		font-weight: $fw-regular;
+		line-height: normal;
+		margin-right: 20px;
+		background-color: $white;
+		box-shadow: $gray-shadow3;
+		border-radius: $bord-20;
+
+		span {
+			font-weight: $fw-bold;
+		}
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	.footer-swiper {
+		margin: 40px 0;
+		overflow: visible;
+		padding-bottom: 10px;
+		border-bottom: 4px solid $white;
+
+		.swiper-wrapper {
+			display: flex;
+			align-items: center;
+			-webkit-transition-timing-function: linear !important;
+			transition-timing-function: linear !important;
+		}
+		.swiper-slide {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			transition: opacity ease $tr;
+
+			&:hover {
+				opacity: $op;
+			}
+		}
+	}
+
+	&__bottom {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding-top: 10px;
+	}
+
+	&__notify {
+		display: flex;
+		align-items: center;
+	}
+
+	&__age {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: $dark-blue;
+		font-family: $ff;
+		font-size: 20px;
+		font-style: normal;
+		font-weight: $fw-bold;
+		line-height: normal;
+		padding: 10px;
+		background-color: $white;
+		border-radius: $bord-20;
+		margin-right: 10px;
+	}
+
+	&__year {
+		color: $dark-blue;
+		font-family: $ff;
+		font-size: 18px;
+		font-style: normal;
+		font-weight: $fw-medium;
+		line-height: normal;
+	}
+
+	&__link {
+		color: $gray-middle;
+		font-family: $ff;
+		font-size: 18px;
+		font-style: normal;
+		font-weight: $fw-regular;
+		line-height: normal;
+		transition: color ease $tr;
+		margin-right: 46px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		&:hover {
+			color: $light-blue;
+		}
+	}
+}
