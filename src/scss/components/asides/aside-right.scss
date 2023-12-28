@@ -29,146 +29,146 @@
 		}
 	}
 
-	.checkbox__wrapper {
-		display: flex;
-		align-items: center;
-		position: relative;
-		margin-bottom: 10px;
-
-		.checkbox__label {
-			color: $dark-blue;
-			text-align: left;
-			font-family: $ff;
-			font-size: 14px;
-			font-style: normal;
-			font-weight: $fw-regular;
-			line-height: normal;
-			border-radius: 5px;
-			position: relative;
-			cursor: pointer;
-		}
-
-		.checkbox {
-			position: absolute;
-			opacity: 0;
-			z-index: -1;
-
-			&+label {
-				display: inline-flex;
-				align-items: center;
-				user-select: none;
-
-				&::before {
-					content: '';
-					display: inline-block;
-					width: 19px;
-					height: 19px;
-					flex-shrink: 0;
-					flex-grow: 0;
-					border: 1px solid ;
-					border-radius: 5px;
-					margin-right: 20px;
-					background-repeat: no-repeat;
-					background-position: center center;
-					background-size: cover;
-					transition: border-color ease $tr, background-color ease $tr;
-				}
-			}
-
-			&:checked+label::before {
-				border-color: $light-blue;
-				background-color: $light-blue;
-				background-image: url('../../img/ico/check.svg');
-				background-size: 14px 14px;
-				background-repeat: no-repeat;
-				background-position: center;
-			}
-
-			&:checked + label {
-				color: $light-blue;
-				font-weight: $fw-medium;
-			}
-		}
-	}
-
-	.show__more {
-		display: flex;
-		align-items: center;
-		color: $light-blue;
-		text-align: center;
-		font-family: $ff;
-		font-size: 14px;
-		font-style: normal;
-		font-weight: $fw-bold;
-		line-height: normal;
-		width: fit-content;
-		cursor: pointer;
-		margin-top: 6px;
-		transition: opacity ease $tr;
-
-		&.reverse {
-			.show__more_arrow {
-				svg {
-					transform: rotate(-90deg);
-				}
-			}
-		}
-
-		&_arrow {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			margin-left: 10px;
-
-			svg {
-				transform: rotate(90deg);
-				transition: transform ease $tr;
-			}
-
-			svg path {
-				fill: $light-blue;
-			}
-		}
-	}
-
 	.h5 {
 		margin-bottom: 20px;
 		text-align: center;
 		font-weight: $fw-bold;
 	}
 
-	.hidden__checkboxes {
-		height: 0;
-		overflow: hidden;
-		transition: height ease 0.5s;
-	
-		&.visible {
-			height: auto;
-		}
-
-		&_inner {
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-		}
-	}
-
 	.rate__last {
 		margin-bottom: 0;
 	}
+}
 
-	.stars {
-		display: flex;
+.stars {
+	display: flex;
 
-		.star {
-			width: 16px;
-			height: 16px;
-			margin-right: 8px;
+	.star {
+		width: 16px;
+		height: 16px;
+		margin-right: 8px;
 
-			&:last-child {
-				margin-right: 0;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
+.checkbox__wrapper {
+	display: flex;
+	align-items: center;
+	position: relative;
+	margin-bottom: 10px;
+
+	.checkbox__label {
+		color: $dark-blue;
+		text-align: left;
+		font-family: $ff;
+		font-size: 14px;
+		font-style: normal;
+		font-weight: $fw-regular;
+		line-height: normal;
+		border-radius: 5px;
+		position: relative;
+		cursor: pointer;
+	}
+
+	.checkbox {
+		position: absolute;
+		opacity: 0;
+		z-index: -1;
+
+		&+label {
+			display: inline-flex;
+			align-items: center;
+			user-select: none;
+
+			&::before {
+				content: '';
+				display: inline-block;
+				width: 19px;
+				height: 19px;
+				flex-shrink: 0;
+				flex-grow: 0;
+				border: 1px solid ;
+				border-radius: 5px;
+				margin-right: 20px;
+				background-repeat: no-repeat;
+				background-position: center center;
+				background-size: cover;
+				transition: border-color ease $tr, background-color ease $tr;
 			}
 		}
+
+		&:checked+label::before {
+			border-color: $light-blue;
+			background-color: $light-blue;
+			background-image: url('../../img/ico/check.svg');
+			background-size: 14px 14px;
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+
+		&:checked + label {
+			color: $light-blue;
+			font-weight: $fw-medium;
+		}
+	}
+}
+
+.show__more {
+	display: flex;
+	align-items: center;
+	color: $light-blue;
+	text-align: center;
+	font-family: $ff;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: $fw-bold;
+	line-height: normal;
+	width: fit-content;
+	cursor: pointer;
+	margin-top: 6px;
+	transition: opacity ease $tr;
+
+	&.reverse {
+		.show__more_arrow {
+			svg {
+				transform: rotate(-90deg);
+			}
+		}
+	}
+
+	&_arrow {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-left: 10px;
+
+		svg {
+			transform: rotate(90deg);
+			transition: transform ease $tr;
+		}
+
+		svg path {
+			fill: $light-blue;
+		}
+	}
+}
+
+.hidden__checkboxes {
+	height: 0;
+	overflow: hidden;
+	transition: height ease 0.5s;
+
+	&.visible {
+		height: auto;
+	}
+
+	&_inner {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
 	}
 }
 

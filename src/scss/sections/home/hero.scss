@@ -11,8 +11,54 @@
 		}
 	}
 
+	&__filters_box {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
 	.sort__button_wrapper {
 		position: relative;
+	}
+
+	.filter__button_wrapper {
+		display: flex;
+		align-items: center;
+
+		@media all and (min-width: $xl) {
+			display: none;
+		}
+
+		.filter__button {
+			display: flex;
+			-webkit-box-pack: center;
+			justify-content: center;
+			align-items: center;
+			color: $gray-middle;
+			font-family: $ff;
+			font-size: 16px;
+			font-style: normal;
+			font-weight: $fw-regular;
+			line-height: normal;
+			padding: 10px 20px;
+			cursor: pointer;
+
+			&_img {
+				width: 20px;
+				height: 20px;
+				margin-right: 10px;
+			}
+
+			svg {
+				width: 100%;
+				height: 100%;
+
+				path {
+					fill: $light-blue;
+				}
+			}
+		}
 	}
 
 	.sort__hidden_items {

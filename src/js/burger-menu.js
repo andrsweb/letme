@@ -30,7 +30,7 @@ const toggleBurgerMenu = () => {
 	})
 
 	window.addEventListener('resize', () => {
-		if(window.innerWidth >= 992) {
+		if(window.innerWidth >= 1200) {
 			if(header.classList.contains('opened'))
 			header.classList.remove('opened')
 			burgerButton.classList.remove('opened')

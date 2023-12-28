@@ -122,7 +122,10 @@
 	height: 20px;
 	cursor: pointer;
 	transition: opacity ease $tr;
-	position: relative;
+	position: absolute;
+	right: 20px;
+	top: 50%;
+	transform: translateY(-50%);
 	z-index: 100;
 
 	span {

@@ -2,6 +2,8 @@
 	background-color: $light-gray;
 	width: 100%;
 	box-shadow: $header-bs;
+	position: relative;
+	z-index: 110;
 
 	&.opened {
 		.header__inner {
