@@ -1,7 +1,7 @@
 .container {
 	width: 100%;
 	max-width: 100%;
-	padding: 0 $container-padding;
+	padding: 0 20px;
 	margin: 0 auto;
 
 	@media all and (min-width: $md) {
@@ -9,7 +9,8 @@
 	}
 
 	@media all and (min-width: $lg) {
-		max-width: $container-lg
+		max-width: $container-lg;
+		padding: 0 $container-padding;
 	}
 
 	@media all and (min-width: $xl) {
