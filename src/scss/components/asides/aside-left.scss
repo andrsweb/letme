@@ -1,6 +1,11 @@
 .aside-left,
 .aside-right {
+	display: none;
 	margin-top: 56px;
+
+	@media all and (min-width: $xl) {
+		display: block;
+	}
 }
 
 .aside-left {

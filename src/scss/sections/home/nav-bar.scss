@@ -3,16 +3,26 @@
 
 	&__wrapper {
 		display: flex;
-		align-items: center;
+		flex-direction: column;
+		align-items: flex-start;
 		justify-content: space-between;
+
+		@media all and (min-width: $md) {
+			flex-direction: row;
+			align-items: center;
+		}
 	}
 
 	&_author {
 		color: $gray-middle;
 		font-family: $ff;
-		font-size: 14px;
+		font-size: 12px;
 		font-style: normal;
 		font-weight: $fw-regular;
 		line-height: normal;
+
+		@media all and (min-width: $md) {
+			font-size: 14px;
+		}
 	}
 }

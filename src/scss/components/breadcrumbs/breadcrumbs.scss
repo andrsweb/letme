@@ -1,4 +1,10 @@
 .breadcrumbs {
+	margin-bottom: 16px;
+
+	@media all and (min-width: $md) {
+		margin-bottom: 0;
+	}
+
 	&__list {
 		display: flex;
 	}
@@ -6,14 +12,19 @@
 	.breadcrumb__item {
 		display: flex;
 		align-items: center;
-		margin-right: 28px;
+		margin-right: 10px;
 		transition: opacity ease $tr;
+
+		@media all and (min-width: $md) {
+			margin-right: 28px;
+		}
 
 		&:last-child {
 			margin-bottom: 0;
 		}
 
 		&.current {
+			margin-right: 0;
 			.breadcrumb__link {
 				color: $light-blue;
 
@@ -56,6 +67,10 @@
 		width: 20px;
 		height: 20px;
 		padding-top: 2px;
-		margin-left: 28px;
+		margin-left: 10px;
+
+		@media all and (min-width: $md) {
+			margin-left: 28px;
+		}
 	}
 }

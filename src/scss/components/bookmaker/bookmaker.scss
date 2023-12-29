@@ -14,26 +14,50 @@
 
 	&__inner {
 		display: flex;
+		flex-wrap: wrap;
 		align-items: center;
 		justify-content: space-between;
 	}
 
 	&__img {
-		width: 150px;
-		height: 49px;
+		width: 120px;
+		height: 39px;
 		margin-bottom: 4px;
+
+		@media all and (min-width: $xl) {
+			width: 150px;
+			height: 49px;
+		}
 
 		&_wrapper {
 			display: flex;
 			flex-direction: column;
 			align-items: flex-start;
-			width: 20%;
+			width: 40%;
+			margin-bottom: 17px;
+
+			@media all and (min-width: $md) {
+				width: 25%;
+				margin-bottom: 0;
+			}
+
+			@media all and (min-width: $lg) {
+				width: 25%;
+			}
+
+			@media all and (min-width: $xxl) {
+				width: 20%;
+			}
 		}
 
 		&_inner {
 			width: 100%;
-			max-width: 150px;
+			max-width: 120px;
 			transition: opacity ease $tr;
+
+			@media all and (min-width: $xl) {
+				max-width: 150px;
+			}
 
 			&:hover {
 				opacity: $op;
@@ -67,17 +91,58 @@
 		border-radius: 20px;
 		margin-right: 10px;
 		height: 100%;
-		padding: 13px 0;
+		padding: 15px 0;
 
 		&_wrapper {
-			width: 20%;
+			width: 50%;
 			display: flex;
 			justify-content: center;
+
+			@media all and (min-width: $md) {
+				width: 25%;
+			}
+
+			@media all and (min-width: $xxl) {
+				width: 20%;
+			}
+		}
+
+		@media all and (min-width: $md) {
+			padding: 17px 15.5px;
+		}
+
+		&_num {
+			display: flex;
+			color: $dark-blue;
+			font-family: $ff;
+			font-size: 12px;
+			font-style: normal;
+			font-weight: $fw-medium;
+			line-height: normal;
+
+			@media all and (min-width: 1600px) {
+				display: none;
+			}
 		}
 
 		.bookmaker__star {
+			display: flex;
+			align-items: center;
+			margin-left: 6px;
+
 			svg {
-				margin-right: 4px;
+				&:not(svg:first-child) {
+					display: none;
+
+					@media all and (min-width: 1600px) {
+						display: block;
+					}
+				}
+
+				@media all and (min-width: $md) {
+					margin-right: 0;
+					margin-left: 0;
+				}
 
 				&:last-child {
 					margin-right: 0;
@@ -96,14 +161,24 @@
 		border-radius: 100px;
 		transition: opacity ease $tr;
 
+		@media all and (min-width: $md) {
+			padding: 0 20px;
+		}
+
 		&_img {
-			width: 20px;
-			height: 20px;
-			margin-right: 10px;
+			width: 16px;
+			height: 16px;
+			margin-right: 4px;
 
 			svg {
 				width: 100%;
 				height: 100%;
+			}
+
+			@media all and (min-width: $xxl) {
+				width: 20px;
+				height: 20px;
+				margin-right: 10px;			
 			}
 		}
 
@@ -114,10 +189,14 @@
 		.message__value {
 			color: $light-blue;
 			font-family: $ff;
-			font-size: 20px;
+			font-size: 12px;
 			font-style: normal;
 			font-weight: $fw-medium;
 			line-height: normal;
+
+			@media all and (min-width: $xxl) {
+				font-size: 20px;
+			}
 		}
 	}
 
@@ -127,36 +206,83 @@
 		justify-content: center;
 		padding: 14px;
 		width: 100%;
-		max-width: 155px;
+		max-width: 113px;
 		background-color: $light-rose;
 		border-radius: 100px;
 
+		@media all and (min-width: $lg) {
+			max-width: 155px;
+		}
+
 		&_wrapper {
-			width: 20%;
+			width: 35%;
 			display: flex;
 			justify-content: center;
+
+			@media all and (min-width: $md) {
+				width: 20%;
+			}
+
+			@media all and (min-width: $lg) {
+				width: 25%;
+			}
+
+			@media all and (min-width: $xxl) {
+				width: 20%;
+			}
+
+			&.desktop {
+				display: none;
+
+				@media all and (min-width: $md) {
+					display: flex;
+					justify-content: center;
+				}
+			}
+
+			&.mobile {
+				justify-content: flex-start;
+
+				@media all and (min-width: $md) {
+					display: none;
+				}
+			}
+		}
+
+		@media all and (min-width: $md) {
+			padding: 15px;
 		}
 
 		&_img {
-			width: 20px;
-			height: 20px;
+			width: 16px;
+			height: 16px;
 			display: flex;
 			align-items: center;
-			margin-right: 15px;
+			margin-right: 12px;
 
 			svg {
 				width: 100%;
 				height: 100%;
+			}
+
+			@media all and (min-width: $xxl) {
+				width: 20px;
+				height: 20px;
+				margin-right: 15px;			
 			}
 		}
 
 		.bonus__value_box {
 			color: $dark-blue;
 			font-family: $ff;
-			font-size: 20px;
+			font-size: 12px;
 			font-style: normal;
 			font-weight: $fw-medium;
 			line-height: normal;
+
+			@media all and (min-width: $xxl) {
+				font-size: 20px;
+			}
 		}
 	}
 
@@ -170,8 +296,12 @@
 
 		&_wrapper {
 			width: 20%;
-			display: flex;
+			display: none;
 			justify-content: center;
+
+			@media all and (min-width: $xxl) {
+				display: flex;
+			}
 		}
 
 		.bookmaker__app {
@@ -209,14 +339,70 @@
 	}
 
 	&__buttons {
-		display: flex;
+		display: none;
 		align-items: center;
-		justify-content: space-between;
+		justify-content: center;
 		width: 20%;
 		height: 100%;
 
+		@media all and (min-width: $md) {
+			justify-content: space-between;
+		}
+
 		.button.transparent {
-			margin-right: 10px;
+			padding: 0 10px;
+			font-size: 14px;
+
+			@media all and (min-width: $lg) {
+				padding: 0 20.5px;
+				margin-right: 10px;
+				font-size: 16px;
+			}
+		}
+
+		.button.blue {
+			padding: 0 37.4px;
+			font-size: 14px;
+
+			@media all and (min-width: $lg) {
+				padding: 0 33.9px;
+				margin-right: 10px;
+				font-size: 16px;
+			}
+
+			@media all and (min-width: $xl) {
+				padding: 10px;
+			}
+
+			@media all and (min-width: 1600px) {
+				padding: 0 37.4px;
+			}
+		}
+
+		&.mobile {
+			display: flex;
+			width: 60%;
+
+			@media all and (min-width: $md) {
+				display: none;
+			}
+		}
+
+		&.desktop {
+			display: none;
+
+			@media all and (min-width: $md) {
+				display: flex;
+				width: 30%;
+			}
+
+			@media all and (min-width: $lg) {
+				width: 25%;
+			}
+
+			@media all and (min-width: $xxl) {
+				width: 20%;
+			}
 		}
 	}
 }
