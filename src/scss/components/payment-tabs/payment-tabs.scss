@@ -14,39 +14,23 @@
 		align-items: center;
 		background-color: $white;
 		border-radius: $bord-20;
-		padding: 0 60px;
+		padding: 0 24px 81px 24px;
 		box-shadow: $gray-shadow4;
-	}
+		position: relative;
+		gap: 20px;
 
-	&__hidden {
-		display: flex;
-		height: 0;
-		overflow: hidden;
-		justify-content: center;
-		align-items: center;
-		gap: 24px;
-		transition: height ease $tr,
-			opacity ease $tr;
-
-		&.showed {
-			height: auto;
-			opacity: 1;
+		@media all and (min-width: $md) {
+			padding: 0 50px;
 		}
 
-		.payment__button_img {
-			height: 34px;
+		@media all and (min-width: $xl) {
+			padding: 0 60px;
+			gap: 24px;
 		}
-	}
-
-	&__visible {
-		display: flex;
-		// flex-wrap: wrap;
-		justify-content: center;
-		align-items: center;
-		gap: 24px;
 	}
 
 	&__button {
+		width: calc(100% / 2 - 20px);
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -56,6 +40,14 @@
 		position: relative;
 		transition: filter ease $tr,
 			height ease $tr;
+
+			@media all and (min-width: $md) {
+				width: calc(100% / 4 - 20px);
+			}
+
+			@media all and (min-width: $xl) {
+				width: calc(100% / 8 - 24px);
+			}
 
 		&::before {
 			content: '';
@@ -97,6 +89,29 @@
 				width: 100%;
 			}
 		}
+
+		&.hidden {
+			display: none;
+
+			&.showed {
+				display: flex;
+				animation: sho 1s forwards ease;
+
+				@keyframes sho {
+					0% {
+						scale: 0;
+					}
+
+					100% {
+						scale: 1;
+					}
+				}
+			}
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
 	}
 
 	&__arrow {
@@ -107,6 +122,10 @@
 		height: 50px;
 		cursor: pointer;
 		transition: opacity ease $tr;
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		bottom: 16px;
 
 		svg {
 			width: 100%;
@@ -124,6 +143,20 @@
 				transform: rotate(90deg);
 			}
 		}
+
+		@media all and (min-width: $md) {
+			left: auto;
+			right: -15px;
+			bottom: 13px;
+			top: auto;
+		}
+
+		@media all and (min-width: $xl) {
+			left: auto;
+			right: -15px;
+			bottom: 13px;
+			top: auto;			
+		}
 	}
 
 	&__contents {
@@ -131,7 +164,15 @@
 		background-color: $white;
 		box-shadow: $gray-shadow4;
 		margin-top: 10px;
-		padding: 56px 97px;
+		padding: 16px;
+
+		@media all and (min-width: $md) {
+			padding: 30px 40px;
+		}
+
+		@media all and (min-width: $xl) {
+			padding: 56px 97px;
+		}
 	}
 
 	&__content {
@@ -154,20 +195,43 @@
 
 		&_wrapper {
 			display: flex;
+			flex-direction: column;
 			justify-content: space-between;
+
+			@media all and (min-width: $lg) {
+				flex-direction: row;
+			}
 		}
 
 		&_item {
 			display: flex;
 			flex-direction: column;
 			width: 100%;
-			max-width: 498px;
+			margin-bottom: 30px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			@media all and (min-width: $lg) {
+				max-width: 498px;
+				margin-bottom: 0;
+				margin-right: 10px;
+
+				&:last-child {
+					margin-right: 0;
+				}
+			}
 		}
 
 		&_info {
 			display: flex;
 			flex-direction: column;
-			padding-bottom: 18px;
+			padding-bottom: 0;
+
+			@media all and (min-width: $md) {
+				padding-bottom: 18px;
+			}
 		}
 	}
 
@@ -183,26 +247,36 @@
 	}
 
 	&__text {
-		width: 50%;
+		width: 60%;
 		color: $gray-middle;
 		font-family: $ff;
-		font-size: 20px;
+		font-size: 16px;
 		font-style: normal;
 		font-weight: $fw-medium;
 		line-height: normal;
 		padding-right: 10px;
+
+		@media all and (min-width: $md) {
+			font-size: 20px;
+			width: 50%;
+		}
 	}
 
 	&__quantity {
-		width: 50%;
+		width: 40%;
 		color: $dark-blue;
 		font-family: $ff;
-		font-size: 20px;
+		font-size: 16px;
 		font-style: normal;
 		font-weight: $fw-bold;
 		line-height: normal;
 		padding-right: 10px;
 		text-align: right;
+
+		@media all and (min-width: $md) {
+			font-size: 20px;
+			width: 50%;
+		}
 	}
 
 	&__title {
@@ -210,10 +284,14 @@
 		color: $dark-blue;
 		text-align: center;
 		font-family: $ff;
-		font-size: 20px;
+		font-size: 16px;
 		font-style: normal;
 		font-weight: $fw-medium;
 		line-height: normal;
+
+		@media all and (min-width: $md) {
+			font-size: 20px;
+		}
 
 		&_wrapper {
 			display: flex;

@@ -4,7 +4,7 @@
 
 	&::before {
 		content: '';
-		width: 104px;
+		width: 54px;
 		display: block;
 		height: 100%;
 		background: linear-gradient(90deg, #F6F6F6 27.05%, rgba(246, 246, 246, 0.00) 100%);
@@ -12,11 +12,15 @@
 		left: -20px;
 		top: 0;
 		z-index: 10;
+
+		@media all and (min-width: $md) {
+			width: 104px;
+		}
 	}
 
 	&::after {
 		content: '';
-		width: 104px;
+		width: 54px;
 		display: block;
 		height: 100%;
 		background: linear-gradient(-90deg, #F6F6F6 27.05%, rgba(246, 246, 246, 0.00) 100%);
@@ -24,14 +28,34 @@
 		right: -20px;
 		top: 0;
 		z-index: 10;
+
+		@media all and (min-width: $md) {
+			width: 104px;
+		}
+	}
+
+	.testimonials-swiper {
+		padding: 0 15%;
+
+		@media all and (min-width: $sm) {
+			padding: 0 5%;
+		}
+
+		@media all and (min-width: $md) {
+			padding: 0;
+		}
 	}
 
 	.swiper-slide__wrapper {
 		display: flex;
 		flex-direction: column;
-		padding: 33px 40px;
+		padding: 20px;
 		border-radius: 20px;
 		background-color: $white;
+
+		@media all and (min-width: $lg) {
+			padding: 33px 40px;
+		}
 	
 		.swiper__img {
 			width: 30px;
@@ -48,6 +72,15 @@
 				display: flex;
 				align-items: center;
 				margin-bottom: 10px;
+			}
+
+			&_name {
+				color: $dark-blue;
+				font-family: $ff;
+				font-size: 16px;
+				font-style: normal;
+				font-weight: $fw-medium;
+				line-height: normal;
 			}
 		}
 	
@@ -75,16 +108,10 @@
 	
 		.swiper__name {
 			margin-left: 11px;
-	
+
 			&_wrapper {
 				display: flex;
 				align-items: center;
-				color: $dark-blue;
-				font-family: $ff;
-				font-size: 16px;
-				font-style: normal;
-				font-weight: $fw-medium;
-				line-height: normal;
 			}
 	
 			&_short {
@@ -123,15 +150,23 @@
 	}
 	
 	.testimonials__prev {
-		left: -30px;
+		left: 0;
 		top: 50%;
 		transform: translateY(-50%);
+
+		@media all and (min-width: $xl) {
+			left: -30px;
+		}
 	}
 
 	.testimonials__next {
-		right: -30px;
+		right: 0;
 		top: 50%;
 		transform: translateY(-50%);
+
+		@media all and (min-width: $xl) {
+			right: -30px;
+		}
 	}
 
 	.swiper-button {

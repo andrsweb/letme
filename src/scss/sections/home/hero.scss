@@ -1,5 +1,9 @@
 .hero {
-	padding: 20px 0 100px;
+	padding: 20px 0 50px;
+
+	@media all and (min-width: $xxl) {
+		padding: 20px 0 100px;
+	}
 
 	&__content {
 		display: flex;

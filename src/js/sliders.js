@@ -24,6 +24,10 @@ const swiperWithNav = (selector, next, prev) => {
 				slidesPerView: 1,
 			},
 
+			576: {
+				slidesPerView: 2,
+			},
+
 
 			768: {
 				slidesPerView: 3,

@@ -1,6 +1,9 @@
 .about {
-	padding: 75px 0 90px;
-	// padding: 100px 0;
+	padding: 50px 0;
+
+	@media all and (min-width: $xl) {
+		padding: 75px 0 90px;
+	}
 
 	.container {
 		max-width: $container-xxl;
@@ -11,13 +14,25 @@
 	}
 
 	&__items {
-		padding: 50px;
+		width: 100vw;
+		margin-left: calc(50% - 50vw);
 		background-color: $light-gray;
 		border-radius: $bord-20;
 		margin-bottom: 40px;
+		padding: 30px 20px;
 
 		&:last-child {
 			margin-bottom: 0;
+		}
+
+		@media all and (min-width: $md) {
+			padding: 30px;
+			width: auto;
+			margin-left: 0;
+		}
+
+		@media all and (min-width: $xl) {
+			padding: 50px;
 		}
 	}
 
@@ -26,7 +41,17 @@
 
 		&_top {
 			display: flex;
-			gap: 24px;
+			flex-direction: column;
+			gap: 20px;
+
+			@media all and (min-width: $md) {
+				flex-direction: row;
+				justify-content: space-between;
+			}
+
+			@media all and (min-width: $xl) {
+				gap: 24px;
+			}
 		}
 
 		&_titles {
@@ -39,15 +64,29 @@
 		&_num {
 			color: $dark-blue;
 			font-family: $ff;
-			font-size: 32px;
+			font-size: 15px;
 			font-style: normal;
 			font-weight: $fw-bold;
 			line-height: 300%;
+
+			@media all and (min-width: $xl) {
+				font-size: 32px;
+			}
 		}
 
 		&_img {
-			width: 260px;
-			height: 60px;
+			width: 160px;
+			height: 30px;
+
+			@media all and (min-width: $md) {
+				width: 160px;
+				height: 36px;				
+			}
+
+			@media all and (min-width: $xl) {
+				width: 260px;
+				height: 60px;				
+			}
 
 			img {
 				width: 100%;
@@ -60,15 +99,26 @@
 			color: $gray-middle;
 			text-align: center;
 			font-family: $ff;
-			font-size: 20px;
+			font-size: 15px;
 			font-style: normal;
 			font-weight: $fw-medium;
 			line-height: 300%;
+
+			@media all and (min-width: $xl) {
+				font-size: 20px;
+			}
 		}
 
 		&_brand {
 			width: 100%;
-			max-width: 446px;
+
+			@media all and (min-width: $md) {
+				max-width: 324px;
+			}
+
+			@media all and (min-width: $xl) {
+				max-width: 446px;
+			}
 		}
 
 		&_info {
@@ -76,16 +126,26 @@
 			justify-content: center;
 			align-items: center;
 			width: 100%;
-			max-width: 860px;
-			padding: 50px;
+			max-width: 100%;
+			padding: 20px 50px;
 			border-radius: $bord-20;
 			background-color: $white;
 			color: $dark-blue;
 			font-family: $ff;
-			font-size: 16px;
+			font-size: 14px;
 			font-style: normal;
 			font-weight: $fw-regular;
 			line-height: 130%;
+
+			@media all and (min-width: $md) {
+				max-width: 50%;
+			}
+
+			@media all and (min-width: $xl) {
+				font-size: 16px;
+				padding: 50px;
+				max-width: 860px;
+			}
 		}
 
 		&_rate {
@@ -93,7 +153,11 @@
 			justify-content: space-between;
 			gap: 10px;
 			width: 100%;
-			margin-bottom: 27px;
+			margin-bottom: 23px;
+
+			@media all and (min-width: $md) {
+				margin-bottom: 27px;
+			}
 		}
 
 		&_link {
@@ -103,11 +167,15 @@
 			max-width: 186px;
 			color: $dark-blue;
 			font-family: $ff;
-			font-size: 20px;
+			font-size: 14px;
 			font-style: normal;
 			font-weight: $fw-medium;
 			line-height: normal;
 			word-break: break-all;
+
+			@media all and (min-width: $xl) {
+				font-size: 20px;
+			}
 		}
 
 		&_stars {
@@ -138,30 +206,42 @@
 	}
 
 	&__comment_img {
-		width: 20px;
-		height: 20px;
+		width: 16px;
+		height: 16px;
 		margin-right: 10px;
 
 		svg {
 			width: 100%;
 			height: 100%;
 		}
+
+		@media all and (min-width: $md) {
+			width: 20px;
+			height: 20px;
+		}
 	}
 
 	&__comment_num {
 		color: $light-blue;
 		font-family: $ff;
-		font-size: 20px;
+		font-size: 12px;
 		font-style: normal;
 		font-weight: $fw-medium;
 		line-height: normal;
+
+		@media all and (min-width: $xl) {
+			font-size: 20px;
+		}
 	}
 
 	.bonuses__cards {
 		display: flex;
 		justify-content: center;
 		flex-wrap: wrap;
-		gap: 50px 30px;
-		margin-bottom: 50px;
+		gap: 20px 30px;
+
+		@media all and (min-width: $md) {
+			gap: 50px 30px;
+		}
 	}
 }
