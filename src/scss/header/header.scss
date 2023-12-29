@@ -156,6 +156,10 @@
 	&__inner {
 		height: 100%;
 		display: none;
+
+		@media all and (min-width: $xl) {
+			display: flex;
+		}
 	}
 
 	&__nav {
@@ -169,7 +173,7 @@
 	}
 
 	&__item {
-		margin-right: 70px;
+		margin-right: 25px;
 		height: 100%;
 		cursor: pointer;
 		position: relative;
@@ -177,6 +181,10 @@
 
 		&:last-child {
 			margin-right: 0;
+		}
+
+		@media all and (min-width: $xxl) {
+			margin-right: 70px;
 		}
 
 		&::before {

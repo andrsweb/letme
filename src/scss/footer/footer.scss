@@ -2,12 +2,17 @@
 	padding: 50px 0;
 	background-color: $light-gray;
 
-	&__wrapper {}
-
 	&__logo {
-		width: 265px;
-		height: 54px;
+		width: 192px;
+		height: 40px;
 		transition: opacity ease $tr;
+		margin-bottom: 20px;
+
+		@media all and (min-width: $md) {
+			width: 265px;
+			height: 54px;
+			margin-bottom: 0;		
+		}
 
 		img {
 			width: 100%;
@@ -21,11 +26,17 @@
 
 	&__top {
 		display: flex;
-		align-items: center;
+		flex-direction: column;
+		align-items: flex-start;
 		justify-content: space-between;
 		padding-bottom: 23px;
 		margin-bottom: 30px;
 		border-bottom: 2px solid #D1D1D6;
+
+		@media all and (min-width: $md) {
+			flex-direction: row;
+			align-items: center;
+		}
 	}
 
 	&__social {
@@ -52,20 +63,34 @@
 
 	&__info_items {
 		display: flex;
+		flex-direction: column;
+
+		@media all and (min-width: $md) {
+			flex-direction: row;
+		}
 	}
 
 	&__info_item {
 		padding: 19.5px 30px;
 		color: $dark-blue;
 		font-family: $ff;
-		font-size: 18px;
+		font-size: 14px;
 		font-style: normal;
 		font-weight: $fw-regular;
 		line-height: normal;
-		margin-right: 20px;
+		margin-bottom: 20px;
 		background-color: $white;
 		box-shadow: $gray-shadow3;
 		border-radius: $bord-20;
+
+		@media all and (min-width: $md) {
+			margin-bottom: 0;
+			margin-right: 20px;
+		}
+
+		@media all and (min-width: $lg) {
+			font-size: 18px;
+		}
 
 		span {
 			font-weight: $fw-bold;
@@ -73,6 +98,7 @@
 
 		&:last-child {
 			margin-right: 0;
+			margin-bottom: 0;
 		}
 	}
 
@@ -102,14 +128,45 @@
 
 	&__bottom {
 		display: flex;
-		align-items: center;
+		flex-direction: column;
+		align-items: flex-start;
 		justify-content: space-between;
 		padding-top: 10px;
+		position: relative;
+
+		@media all and (min-width: $md) {
+			flex-direction: row;
+			align-items: flex-end;
+			justify-content: flex-start;
+		}
+
+		@media all and (min-width: $lg) {
+			flex-direction: column;
+			align-items: center;
+		}
+
+		@media all and (min-width: $xxl) {
+			flex-direction: row;
+		}
 	}
 
 	&__notify {
 		display: flex;
-		align-items: center;
+		flex-direction: row-reverse;
+		align-items: flex-end;
+		justify-content: space-between;
+		width: 100%;
+
+		@media all and (min-width: $md) {
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		@media all and (min-width: $xxl) {
+			max-width: 300px;
+			justify-content: flex-start;
+			flex-direction: row;
+		}
 	}
 
 	&__age {
@@ -122,33 +179,99 @@
 		font-style: normal;
 		font-weight: $fw-bold;
 		line-height: normal;
-		padding: 10px;
+		padding: 20px;
 		background-color: $white;
 		border-radius: $bord-20;
-		margin-right: 10px;
+
+		@media all and (min-width: $md) {
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
+
+		@media all and (min-width: $lg) {
+			padding: 10px;
+			margin-right: 10px;
+			position: static;
+			right: auto;
+			top: auto;
+		}
 	}
 
 	&__year {
 		color: $dark-blue;
 		font-family: $ff;
-		font-size: 18px;
+		font-size: 14px;
 		font-style: normal;
 		font-weight: $fw-medium;
 		line-height: normal;
+
+		@media all and (min-width: $md) {
+			font-size: 18px;
+			position: absolute;
+			right: 0;
+			bottom: 0;
+		}
+
+		@media all and (min-width: $lg) {
+			position: static;
+			right: auto;
+			bottom: auto;
+		}
+	}
+
+	&__nav {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 70px;
+
+		@media all and (min-width: $md) {
+			margin-bottom: 0;
+		}
+
+		@media all and (min-width: $lg) {
+			flex-direction: row;
+			margin-bottom: 70px;
+		}
+
+		@media all and (min-width: $xxl) {
+			margin-bottom: 0;
+		}
 	}
 
 	&__link {
 		color: $gray-middle;
 		font-family: $ff;
-		font-size: 18px;
+		font-size: 14px;
 		font-style: normal;
 		font-weight: $fw-regular;
 		line-height: normal;
 		transition: color ease $tr;
-		margin-right: 46px;
+		margin-bottom: 30px;
+
+		@media all and (min-width: $md) {
+			font-size: 18px;
+		}
+
+		@media all and (min-width: $lg) {
+			margin-right: 25px;
+			margin-bottom: 0;
+			font-size: 16px;
+		}
+
+		@media all and (min-width: $xxl) {
+			margin-right: 20px;
+			font-size: 18px;
+		}
+
+		@media all and (min-width: 1500px) {
+			margin-right: 46px;
+		}
 
 		&:last-child {
 			margin-right: 0;
+			margin-bottom: 0;
 		}
 
 		&:hover {
