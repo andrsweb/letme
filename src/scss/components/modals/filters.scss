@@ -1,14 +1,13 @@
 .popup-wrapper {
 	position:fixed;
 	display:none;
-	// display:flex;
 	align-items:center;
 	justify-content:center;
 	top: 0;
 	left: 0;
 	width:100vw;
-	height:100vh;
-	z-index: 99;
+	height:100dvh;
+	z-index: 100;
 	overflow-y: auto;
 	padding: 0;
 	margin: auto 0;
@@ -71,8 +70,7 @@
 			align-items: center;
 			width: 100%;
 			height: 100%;
-			padding-top: 115px;
-			padding-bottom: 30px;
+			padding: 30px;
 		}
 
 		&__heading {
@@ -166,10 +164,12 @@
 				background-color: $white;
 				box-shadow: $gray-shadow3;
 				cursor: pointer;
-				transition: color ease $tr;
+				transition: color ease $tr,
+					box-shadow ease $tr;
 
 				&:hover {
 					color: red;
+					box-shadow: $gray-shadow;
 				}
 
 				@media all and (min-width: $sm) {

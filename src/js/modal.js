@@ -35,9 +35,11 @@ const showPopup = ( selector, btn, lock) => {
 	})
 
 	window.addEventListener('resize', () => {
-		popupWrapper.classList.add('closed')
-		setTimeout(() => popupWrapper.classList.remove('showed'), 350);
-		setTimeout(() => popupWrapper.classList.remove('closed'), 350);
-		enableBodyScroll(getTargetElement())
+		if(window.innerWidth >= 1200) {
+			popupWrapper.classList.add('closed')
+			setTimeout(() => popupWrapper.classList.remove('showed'), 350);
+			setTimeout(() => popupWrapper.classList.remove('closed'), 350);
+			enableBodyScroll(getTargetElement())
+		}
 	})
 }
