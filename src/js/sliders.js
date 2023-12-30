@@ -106,6 +106,10 @@ const swiperScrollbar = () => {
 
 			1366: {
 				spaceBetween: 88,
+				slidesPerView: 4
+			},
+
+			1760: {
 				slidesPerView: 6
 			}
 		},
