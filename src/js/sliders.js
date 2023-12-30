@@ -1,11 +1,12 @@
 import Swiper from 'swiper';
-import { Navigation, Pagination, Autoplay, Thumbs, EffectCreative, EffectFade } from 'swiper/modules';
+import { Navigation, Pagination, Scrollbar, Autoplay} from 'swiper/modules';
 
 document.addEventListener('DOMContentLoaded', () => {
 	'use strict'
 
-	swiperWithNav('.testimonials-swiper', '.testimonials__next',  '.testimonials__prev' )
+	swiperWithNav('.testimonials-swiper', '.testimonials__next', '.testimonials__prev')
 	swiperCarousel()
+	swiperScrollbar()
 })
 
 const swiperWithNav = (selector, next, prev) => {
@@ -74,6 +75,42 @@ const swiperCarousel = () => {
 		},
 
 		speed: 8000
+	})
+
+	if (!swiper) return
+}
+
+const swiperScrollbar = () => {
+	const swiper = new Swiper('.swiper.team-swiper', {
+		spaceBetween: 10,
+
+		modules: [Scrollbar],
+
+		scrollbar: {
+			el: '.swiper-scrollbar',
+		},
+
+		breakpoints: {
+			320: {
+				slidesPerView: 1,
+			},
+
+			480: {
+				slidesPerView: 2,
+			},
+
+			768: {
+				slidesPerView: 3,
+				spaceBetween: 64,
+			},
+
+			1366: {
+				spaceBetween: 88,
+				slidesPerView: 6
+			}
+		},
+
+		speed: 1000
 	})
 
 	if (!swiper) return
