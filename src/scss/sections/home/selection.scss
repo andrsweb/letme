@@ -1,5 +1,13 @@
 .selection {
-	padding: 182px 0 100px;
+	padding: 50px 0;
+
+	@media all and (min-width: $md) {
+		padding: 78px 0;
+	}
+
+	@media all and (min-width: $xxl) {
+		padding: 182px 0 100px;
+	}
 
 	.container {
 		max-width: 1465px;
@@ -7,22 +15,51 @@
 
 	&__wrapper {
 		display: flex;
-		align-items: center;
+		flex-direction: column;
 		justify-content: space-between;
+
+		@media all and (min-width: $md) {
+			flex-direction: row;
+			align-items: center;
+		}
 	}
 
 	&__left {
 		display: flex;
 		flex-direction: column;
 		width: 100%;
-		max-width: 455px;
+		max-width: 228px;
 		align-items: flex-start;
+
+		@media all and (min-width: $md) {
+			margin-right: 70px;
+		}
+
+		@media all and (min-width: $lg) {
+			
+			max-width: 455px;
+		}
+
+		.blue {
+			width: 100%;
+			display: none;
+
+			@media all and (min-width: $lg) {
+				width: auto;
+			}
+
+			&.desktop {
+				@media all and (min-width: $md) {
+					display: flex;
+				}
+			}
+		}
 	}
 
 	&__title {
 		color: $dark-blue;
 		font-family: $ff;
-		font-size: 48px;
+		font-size: 24px;
 		font-style: normal;
 		font-weight: $fw-medium;
 		line-height: normal;
@@ -31,32 +68,73 @@
 		span {
 			color: $light-blue;
 		}
+
+		@media all and (min-width: $lg) {
+			font-size: 48px;
+		}
 	}
 
 	&__img {
-		width: 180px;
-		height: 180px;
+		width: 135px;
+		height: 135px;
 		position: absolute;
-		left: -150px;
-		top: -50px;
+		left: 65%;
+		top: -100px;
 		z-index: -1;
+
+		@media all and (min-width: $md) {
+			left: -120px;
+			top: -40px;
+		}
+
+		@media all and (min-width: $lg) {
+			width: 180px;
+			height: 180px;
+			left: -150px;
+			top: -100px;
+		}
+
+		@media all and (min-width: 1400px) {
+			left: -150px;
+			top: -50px;
+		}
 	}
 
 	&__right {
 		width: 100%;
 		max-width: 840px;
 		position: relative;
-		padding: 40px 90px;
+		padding: 20px 45px;
 		border-radius: $bord-20;
 		background: $lg-light-blue;
+
+		@media all and (min-width: $lg) {
+			padding: 40px 90px;
+		}
 
 		&_text {
 			color: $white;
 			font-family: $ff;
-			font-size: 24px;
+			font-size: 14px;
 			font-style: normal;
 			font-weight: $fw-regular;
 			line-height: 130%;
+
+			@media all and (min-width: $md) {
+				font-size: 18px;
+			}
+
+			@media all and (min-width: $xl) {
+				font-size: 24px;
+			}
+		}
+	}
+
+	.button.mobile {
+		margin-top: 20px;
+
+		@media all and (min-width: $md) {
+			display: none;
 		}
 	}
 }
