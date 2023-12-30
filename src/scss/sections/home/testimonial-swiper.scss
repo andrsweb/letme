@@ -34,6 +34,16 @@
 		}
 	}
 
+	.swiper-slide {
+		&:hover {
+			.read__more {
+				opacity: 1;
+				visibility: visible;
+				z-index: 0;
+			}
+		}
+	}
+
 	.testimonials-swiper {
 		padding: 0 15%;
 
@@ -108,6 +118,8 @@
 	
 		.swiper__name {
 			margin-left: 11px;
+			color: $dark-blue;
+			font-weight: $fw-medium;
 
 			&_wrapper {
 				display: flex;
@@ -120,6 +132,7 @@
 				align-items: center;
 				width: 30px;
 				height: 30px;
+				font-weight: $fw-medium;
 				color: $gray-middle;
 				border-radius: 10px;
 	

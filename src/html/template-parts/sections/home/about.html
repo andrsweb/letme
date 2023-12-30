@@ -27,7 +27,163 @@
 				<h3 class="h3">
 					Способы пополнения и вывода средств
 				</h3>
-				@@include('../../components/payment/payment-tabs.html')
+				<div class="payment__tabs">
+					<div class="payment__buttons">
+						<button class="payment__button active" type="button" data-id="1">
+							<span class="payment__button_img">
+								<img src="img/payments/master.svg" width="110" height="46" loading="lazy" alt="">
+							</span>
+						</button>
+						<button class="payment__button" type="button" data-id="2">
+							<span class="payment__button_img">
+								<img src="img/payments/visa.svg" width="110" height="46" loading="lazy" alt="">
+							</span>
+						</button>
+						<button class="payment__button" type="button" data-id="3">
+							<span class="payment__button_img">
+								<img src="img/payments/mir.svg" width="110" height="46" loading="lazy" alt="">
+							</span>
+						</button>
+						<button class="payment__button" type="button" data-id="4">
+							<span class="payment__button_img">
+								<img src="img/payments/mtc.svg" width="110" height="46" loading="lazy" alt="">
+							</span>
+						</button>
+						<button class="payment__button" type="button" data-id="5">
+							<span class="payment__button_img">
+								<img src="img/payments/beeline.svg" width="110" height="46" loading="lazy" alt="">
+							</span>
+						</button>
+						<button class="payment__button" type="button" data-id="6">
+							<span class="payment__button_img">
+								<img src="img/payments/qiwi.svg" width="110" height="46" loading="lazy" alt="">
+							</span>
+						</button>
+						<button class="payment__button" type="button" data-id="7">
+							<span class="payment__button_img">
+								<img src="img/payments/umoney.svg" width="110" height="46" loading="lazy" alt="">
+							</span>
+						</button>
+						<button class="payment__button" type="button" data-id="8">
+							<span class="payment__button_img">
+								<img src="img/payments/megaphone.svg" width="110" height="46" loading="lazy" alt="">
+							</span>
+						</button>
+						<button class="payment__button hidden" type="button" data-id="9">
+							<span class="payment__button_img">
+								<img src="img/payments/master.svg" width="110" height="46" loading="lazy" alt="">
+							</span>
+						</button>
+						<button class="payment__button hidden" type="button" data-id="10">
+							<span class="payment__button_img">
+								<img src="img/payments/visa.svg" width="110" height="46" loading="lazy" alt="">
+							</span>
+						</button>
+						<button class="payment__button hidden" type="button" data-id="11">
+							<span class="payment__button_img">
+								<img src="img/payments/mir.svg" width="110" height="46" loading="lazy" alt="">
+							</span>
+						</button>
+						<button class="payment__button hidden" type="button" data-id="12">
+							<span class="payment__button_img">
+								<img src="img/payments/mtc.svg" width="110" height="46" loading="lazy" alt="">
+							</span>
+						</button>
+						<button class="payment__button hidden" type="button" data-id="13">
+							<span class="payment__button_img">
+								<img src="img/payments/beeline.svg" width="110" height="46" loading="lazy" alt="">
+							</span>
+						</button>
+						<button class="payment__button hidden" type="button" data-id="14">
+							<span class="payment__button_img">
+								<img src="img/payments/qiwi.svg" width="110" height="46" loading="lazy" alt="">
+							</span>
+						</button>
+						<button class="payment__button hidden" type="button" data-id="15">
+							<span class="payment__button_img">
+								<img src="img/payments/umoney.svg" width="110" height="46" loading="lazy" alt="">
+							</span>
+						</button>
+						<button class="payment__button hidden" type="button" data-id="16">
+							<span class="payment__button_img">
+								<img src="img/payments/megaphone.svg" width="110" height="46" loading="lazy" alt="">
+							</span>
+						</button>
+						<button class="payment__arrow">
+							@@include('../../svg/swiper/arrow-left.html', {'id1': 'paym1dd2', 'id2': 'paym1dd2'})
+						</button>
+					</div>
+					
+					<div class="payment__contents">
+						@@loop('../../components/payment/content.html', [
+							{
+								'class': 'active', 'id': '1', 'title': 'Пополнение', 'min-sum': '100 ₽', 'max-sum': '595 000 ₽', 'percent': '5 %',
+								'time1': 'Мгновенно', 'min-sum1': '1 000 ₽', 'max-sum1': '595 000 ₽', 'tax': '0 ₽', 'time2': 'До 5 дней' 
+							},
+							{
+								'class': '', 'id': '2', 'title': 'Пополнение', 'min-sum': '100 ₽', 'max-sum': '195 000 ₽', 'percent': '5 %',
+								'time1': 'Мгновенно', 'min-sum1': '2 000 ₽', 'max-sum1': '395 000 ₽', 'tax': '0 ₽', 'time2': 'До 5 дней' 
+							},
+							{
+								'class': '', 'id': '3', 'title': 'Пополнение', 'min-sum': '100 ₽', 'max-sum': '295 000 ₽', 'percent': '5 %',
+								'time1': 'Мгновенно', 'min-sum1': '3 000 ₽', 'max-sum1': '295 000 ₽', 'tax': '0 ₽', 'time2': 'До 5 дней' 
+							},
+							{
+								'class': '', 'id': '4', 'title': 'Пополнение', 'min-sum': '100 ₽', 'max-sum': '395 000 ₽', 'percent': '5 %',
+								'time1': 'Мгновенно', 'min-sum1': '1 000 ₽', 'max-sum1': '195 000 ₽', 'tax': '0 ₽', 'time2': 'До 5 дней' 
+							},
+							{
+								'class': '', 'id': '5', 'title': 'Пополнение', 'min-sum': '100 ₽', 'max-sum': '495 000 ₽', 'percent': '5 %',
+								'time1': 'Мгновенно', 'min-sum1': '5 000 ₽', 'max-sum1': '495 000 ₽', 'tax': '0 ₽', 'time2': 'До 5 дней' 
+							},
+							{
+								'class': '', 'id': '6', 'title': 'Пополнение', 'min-sum': '100 ₽', 'max-sum': '595 000 ₽', 'percent': '5 %',
+								'time1': 'Мгновенно', 'min-sum1': '1 000 ₽', 'max-sum1': '295 000 ₽', 'tax': '0 ₽', 'time2': 'До 5 дней' 
+							},
+							{
+								'class': '', 'id': '7', 'title': 'Пополнение', 'min-sum': '100 ₽', 'max-sum': '695 000 ₽', 'percent': '5 %',
+								'time1': 'Мгновенно', 'min-sum1': '2 500 ₽', 'max-sum1': '795 000 ₽', 'tax': '0 ₽', 'time2': 'До 5 дней' 
+							},
+							{
+								'class': '', 'id': '8', 'title': 'Пополнение', 'min-sum': '100 ₽', 'max-sum': '795 000 ₽', 'percent': '5 %',
+								'time1': 'Мгновенно', 'min-sum1': '4 000 ₽', 'max-sum1': '1 20000 ₽', 'tax': '10 ₽', 'time2': 'До 5 дней' 
+							},
+							{
+								'class': '', 'id': '9', 'title': 'Пополнение', 'min-sum': '100 ₽', 'max-sum': '795 000 ₽', 'percent': '5 %',
+								'time1': 'Мгновенно', 'min-sum1': '4 000 ₽', 'max-sum1': '1 20000 ₽', 'tax': '10 ₽', 'time2': 'До 5 дней' 
+							},
+							{
+								'class': '', 'id': '10', 'title': 'Пополнение', 'min-sum': '100 ₽', 'max-sum': '795 000 ₽', 'percent': '5 %',
+								'time1': 'Мгновенно', 'min-sum1': '4 000 ₽', 'max-sum1': '1 20000 ₽', 'tax': '10 ₽', 'time2': 'До 5 дней' 
+							},
+							{
+								'class': '', 'id': '11', 'title': 'Пополнение', 'min-sum': '100 ₽', 'max-sum': '795 000 ₽', 'percent': '5 %',
+								'time1': 'Мгновенно', 'min-sum1': '4 000 ₽', 'max-sum1': '1 20000 ₽', 'tax': '10 ₽', 'time2': 'До 5 дней' 
+							},
+							{
+								'class': '', 'id': '12', 'title': 'Пополнение', 'min-sum': '100 ₽', 'max-sum': '795 000 ₽', 'percent': '5 %',
+								'time1': 'Мгновенно', 'min-sum1': '4 000 ₽', 'max-sum1': '1 20000 ₽', 'tax': '10 ₽', 'time2': 'До 5 дней' 
+							},
+							{
+								'class': '', 'id': '13', 'title': 'Пополнение', 'min-sum': '100 ₽', 'max-sum': '795 000 ₽', 'percent': '5 %',
+								'time1': 'Мгновенно', 'min-sum1': '4 000 ₽', 'max-sum1': '1 20000 ₽', 'tax': '10 ₽', 'time2': 'До 5 дней' 
+							},
+							{
+								'class': '', 'id': '14', 'title': 'Пополнение', 'min-sum': '100 ₽', 'max-sum': '795 000 ₽', 'percent': '5 %',
+								'time1': 'Мгновенно', 'min-sum1': '4 000 ₽', 'max-sum1': '1 20000 ₽', 'tax': '10 ₽', 'time2': 'До 5 дней' 
+							},
+							{
+								'class': '', 'id': '15', 'title': 'Пополнение', 'min-sum': '100 ₽', 'max-sum': '795 000 ₽', 'percent': '5 %',
+								'time1': 'Мгновенно', 'min-sum1': '4 000 ₽', 'max-sum1': '1 20000 ₽', 'tax': '10 ₽', 'time2': 'До 5 дней' 
+							},
+							{
+								'class': '', 'id': '16', 'title': 'Пополнение', 'min-sum': '100 ₽', 'max-sum': '795 000 ₽', 'percent': '5 %',
+								'time1': 'Мгновенно', 'min-sum1': '4 000 ₽', 'max-sum1': '1 20000 ₽', 'tax': '10 ₽', 'time2': 'До 5 дней' 
+							}
+						])
+					</div>				
+				</div>
+				
 			</div>
 		</div>
 		<div class="about__items">
@@ -56,7 +212,163 @@
 				<h3 class="h3">
 					Способы пополнения и вывода средств
 				</h3>
-				@@include('../../components/payment/payment-tabs.html')
+				<div class="payment__tabs">
+					<div class="payment__buttons">
+						<button class="payment__button active" type="button" data-id="1">
+							<span class="payment__button_img">
+								<img src="img/payments/master.svg" width="110" height="46" loading="lazy" alt="">
+							</span>
+						</button>
+						<button class="payment__button" type="button" data-id="2">
+							<span class="payment__button_img">
+								<img src="img/payments/visa.svg" width="110" height="46" loading="lazy" alt="">
+							</span>
+						</button>
+						<button class="payment__button" type="button" data-id="3">
+							<span class="payment__button_img">
+								<img src="img/payments/mir.svg" width="110" height="46" loading="lazy" alt="">
+							</span>
+						</button>
+						<button class="payment__button" type="button" data-id="4">
+							<span class="payment__button_img">
+								<img src="img/payments/mtc.svg" width="110" height="46" loading="lazy" alt="">
+							</span>
+						</button>
+						<button class="payment__button" type="button" data-id="5">
+							<span class="payment__button_img">
+								<img src="img/payments/beeline.svg" width="110" height="46" loading="lazy" alt="">
+							</span>
+						</button>
+						<button class="payment__button" type="button" data-id="6">
+							<span class="payment__button_img">
+								<img src="img/payments/qiwi.svg" width="110" height="46" loading="lazy" alt="">
+							</span>
+						</button>
+						<button class="payment__button" type="button" data-id="7">
+							<span class="payment__button_img">
+								<img src="img/payments/umoney.svg" width="110" height="46" loading="lazy" alt="">
+							</span>
+						</button>
+						<button class="payment__button" type="button" data-id="8">
+							<span class="payment__button_img">
+								<img src="img/payments/megaphone.svg" width="110" height="46" loading="lazy" alt="">
+							</span>
+						</button>
+						<button class="payment__button hidden" type="button" data-id="9">
+							<span class="payment__button_img">
+								<img src="img/payments/master.svg" width="110" height="46" loading="lazy" alt="">
+							</span>
+						</button>
+						<button class="payment__button hidden" type="button" data-id="10">
+							<span class="payment__button_img">
+								<img src="img/payments/visa.svg" width="110" height="46" loading="lazy" alt="">
+							</span>
+						</button>
+						<button class="payment__button hidden" type="button" data-id="11">
+							<span class="payment__button_img">
+								<img src="img/payments/mir.svg" width="110" height="46" loading="lazy" alt="">
+							</span>
+						</button>
+						<button class="payment__button hidden" type="button" data-id="12">
+							<span class="payment__button_img">
+								<img src="img/payments/mtc.svg" width="110" height="46" loading="lazy" alt="">
+							</span>
+						</button>
+						<button class="payment__button hidden" type="button" data-id="13">
+							<span class="payment__button_img">
+								<img src="img/payments/beeline.svg" width="110" height="46" loading="lazy" alt="">
+							</span>
+						</button>
+						<button class="payment__button hidden" type="button" data-id="14">
+							<span class="payment__button_img">
+								<img src="img/payments/qiwi.svg" width="110" height="46" loading="lazy" alt="">
+							</span>
+						</button>
+						<button class="payment__button hidden" type="button" data-id="15">
+							<span class="payment__button_img">
+								<img src="img/payments/umoney.svg" width="110" height="46" loading="lazy" alt="">
+							</span>
+						</button>
+						<button class="payment__button hidden" type="button" data-id="16">
+							<span class="payment__button_img">
+								<img src="img/payments/megaphone.svg" width="110" height="46" loading="lazy" alt="">
+							</span>
+						</button>
+						<button class="payment__arrow">
+							@@include('../../svg/swiper/arrow-left.html', {'id1': 'paym1dd', 'id2': 'paym1dd'})
+						</button>
+					</div>
+					
+					<div class="payment__contents">
+						@@loop('../../components/payment/content.html', [
+							{
+								'class': 'active', 'id': '1', 'title': 'Пополнение', 'min-sum': '100 ₽', 'max-sum': '595 000 ₽', 'percent': '5 %',
+								'time1': 'Мгновенно', 'min-sum1': '1 000 ₽', 'max-sum1': '595 000 ₽', 'tax': '0 ₽', 'time2': 'До 5 дней' 
+							},
+							{
+								'class': '', 'id': '2', 'title': 'Пополнение', 'min-sum': '100 ₽', 'max-sum': '195 000 ₽', 'percent': '5 %',
+								'time1': 'Мгновенно', 'min-sum1': '2 000 ₽', 'max-sum1': '395 000 ₽', 'tax': '0 ₽', 'time2': 'До 5 дней' 
+							},
+							{
+								'class': '', 'id': '3', 'title': 'Пополнение', 'min-sum': '100 ₽', 'max-sum': '295 000 ₽', 'percent': '5 %',
+								'time1': 'Мгновенно', 'min-sum1': '3 000 ₽', 'max-sum1': '295 000 ₽', 'tax': '0 ₽', 'time2': 'До 5 дней' 
+							},
+							{
+								'class': '', 'id': '4', 'title': 'Пополнение', 'min-sum': '100 ₽', 'max-sum': '395 000 ₽', 'percent': '5 %',
+								'time1': 'Мгновенно', 'min-sum1': '1 000 ₽', 'max-sum1': '195 000 ₽', 'tax': '0 ₽', 'time2': 'До 5 дней' 
+							},
+							{
+								'class': '', 'id': '5', 'title': 'Пополнение', 'min-sum': '100 ₽', 'max-sum': '495 000 ₽', 'percent': '5 %',
+								'time1': 'Мгновенно', 'min-sum1': '5 000 ₽', 'max-sum1': '495 000 ₽', 'tax': '0 ₽', 'time2': 'До 5 дней' 
+							},
+							{
+								'class': '', 'id': '6', 'title': 'Пополнение', 'min-sum': '100 ₽', 'max-sum': '595 000 ₽', 'percent': '5 %',
+								'time1': 'Мгновенно', 'min-sum1': '1 000 ₽', 'max-sum1': '295 000 ₽', 'tax': '0 ₽', 'time2': 'До 5 дней' 
+							},
+							{
+								'class': '', 'id': '7', 'title': 'Пополнение', 'min-sum': '100 ₽', 'max-sum': '695 000 ₽', 'percent': '5 %',
+								'time1': 'Мгновенно', 'min-sum1': '2 500 ₽', 'max-sum1': '795 000 ₽', 'tax': '0 ₽', 'time2': 'До 5 дней' 
+							},
+							{
+								'class': '', 'id': '8', 'title': 'Пополнение', 'min-sum': '100 ₽', 'max-sum': '795 000 ₽', 'percent': '5 %',
+								'time1': 'Мгновенно', 'min-sum1': '4 000 ₽', 'max-sum1': '1 20000 ₽', 'tax': '10 ₽', 'time2': 'До 5 дней' 
+							},
+							{
+								'class': '', 'id': '9', 'title': 'Пополнение', 'min-sum': '100 ₽', 'max-sum': '795 000 ₽', 'percent': '5 %',
+								'time1': 'Мгновенно', 'min-sum1': '4 000 ₽', 'max-sum1': '1 20000 ₽', 'tax': '10 ₽', 'time2': 'До 5 дней' 
+							},
+							{
+								'class': '', 'id': '10', 'title': 'Пополнение', 'min-sum': '100 ₽', 'max-sum': '795 000 ₽', 'percent': '5 %',
+								'time1': 'Мгновенно', 'min-sum1': '4 000 ₽', 'max-sum1': '1 20000 ₽', 'tax': '10 ₽', 'time2': 'До 5 дней' 
+							},
+							{
+								'class': '', 'id': '11', 'title': 'Пополнение', 'min-sum': '100 ₽', 'max-sum': '795 000 ₽', 'percent': '5 %',
+								'time1': 'Мгновенно', 'min-sum1': '4 000 ₽', 'max-sum1': '1 20000 ₽', 'tax': '10 ₽', 'time2': 'До 5 дней' 
+							},
+							{
+								'class': '', 'id': '12', 'title': 'Пополнение', 'min-sum': '100 ₽', 'max-sum': '795 000 ₽', 'percent': '5 %',
+								'time1': 'Мгновенно', 'min-sum1': '4 000 ₽', 'max-sum1': '1 20000 ₽', 'tax': '10 ₽', 'time2': 'До 5 дней' 
+							},
+							{
+								'class': '', 'id': '13', 'title': 'Пополнение', 'min-sum': '100 ₽', 'max-sum': '795 000 ₽', 'percent': '5 %',
+								'time1': 'Мгновенно', 'min-sum1': '4 000 ₽', 'max-sum1': '1 20000 ₽', 'tax': '10 ₽', 'time2': 'До 5 дней' 
+							},
+							{
+								'class': '', 'id': '14', 'title': 'Пополнение', 'min-sum': '100 ₽', 'max-sum': '795 000 ₽', 'percent': '5 %',
+								'time1': 'Мгновенно', 'min-sum1': '4 000 ₽', 'max-sum1': '1 20000 ₽', 'tax': '10 ₽', 'time2': 'До 5 дней' 
+							},
+							{
+								'class': '', 'id': '15', 'title': 'Пополнение', 'min-sum': '100 ₽', 'max-sum': '795 000 ₽', 'percent': '5 %',
+								'time1': 'Мгновенно', 'min-sum1': '4 000 ₽', 'max-sum1': '1 20000 ₽', 'tax': '10 ₽', 'time2': 'До 5 дней' 
+							},
+							{
+								'class': '', 'id': '16', 'title': 'Пополнение', 'min-sum': '100 ₽', 'max-sum': '795 000 ₽', 'percent': '5 %',
+								'time1': 'Мгновенно', 'min-sum1': '4 000 ₽', 'max-sum1': '1 20000 ₽', 'tax': '10 ₽', 'time2': 'До 5 дней' 
+							}
+						])
+					</div>				
+				</div>
+				
 			</div>
 		</div>
 	</div>
