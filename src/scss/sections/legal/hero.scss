@@ -154,79 +154,79 @@
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
-
-		&_panel {
-			width: 100%;
-			margin: 15px 0 0;
-			padding: 18.5px 0 18.5px 10px;
-			display: none;
-			background-color: $light-blue2;
-			border-radius: $bord-20;
-
-			@media all and (min-width: $md) {
-				display: flex;
-			}
-		}
-
-		.panel__item {
-			width: 20%;
-			height: 100%;
-			display: flex;
-			justify-content: center;
-			color: $dark-blue;
-			text-align: center;
-			font-family: $ff;
-			font-size: 14px;
-			font-style: normal;
-			font-weight: $fw-medium;
-			line-height: normal;
-
-			&:first-child {
-				justify-content: flex-start;
-				padding-left: 2.5%;
-
-				@media all and (min-width: $md) {
-					width: 25%;
-				}
-
-				@media all and (min-width: $xxl) {
-					width: 20%;
-				}
-			}
-
-			&:nth-child(2) {
-				@media all and (min-width: $md) {
-					width: 25%;
-				}
-
-				@media all and (min-width: $xxl) {
-					width: 20%;
-				}
-			}
-
-			&:nth-child(3) {
-				justify-content: center;
-
-				@media all and (min-width: $md) {
-					width: 25%;
-				}
-				
-				@media all and (min-width: $xxl) {
-					width: 20%;
-				}
-			}
-
-			&:nth-child(4) {
-				display: none;
-
-				@media all and (min-width: $xxl) {
-					display: block;
-				}
-			}
-		}
 	}
 
 	&__bookmakers {
 		width: 100%;
+	}
+}
+
+.hero__items_panel {
+	width: 100%;
+	margin: 15px 0 0;
+	padding: 18.5px 0 18.5px 10px;
+	display: none;
+	background-color: $light-blue2;
+	border-radius: $bord-20;
+
+	@media all and (min-width: $md) {
+		display: flex;
+	}
+}
+
+.panel__item {
+	width: 20%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	color: $dark-blue;
+	text-align: center;
+	font-family: $ff;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: $fw-medium;
+	line-height: normal;
+
+	&:first-child {
+		justify-content: flex-start;
+		padding-left: 2.5%;
+
+		@media all and (min-width: $md) {
+			width: 25%;
+		}
+
+		@media all and (min-width: $xxl) {
+			width: 20%;
+		}
+	}
+
+	&:nth-child(2) {
+		@media all and (min-width: $md) {
+			width: 25%;
+		}
+
+		@media all and (min-width: $xxl) {
+			width: 20%;
+		}
+	}
+
+	&:nth-child(3) {
+		justify-content: center;
+
+		@media all and (min-width: $md) {
+			width: 25%;
+		}
+
+		@media all and (min-width: $xxl) {
+			width: 20%;
+		}
+	}
+
+	&:nth-child(4) {
+		display: none;
+
+		@media all and (min-width: $xxl) {
+			display: block;
+		}
 	}
 }

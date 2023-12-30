@@ -129,6 +129,7 @@
 			display: flex;
 			align-items: center;
 			margin-left: 6px;
+			gap: 4px;
 
 			svg {
 				&:not(svg:first-child) {
@@ -140,7 +141,6 @@
 				}
 
 				@media all and (min-width: $md) {
-					margin-right: 0;
 					margin-left: 0;
 				}
 
@@ -166,6 +166,8 @@
 		}
 
 		&_img {
+			display: flex;
+			align-items: center;
 			width: 16px;
 			height: 16px;
 			margin-right: 4px;
@@ -390,6 +392,7 @@
 
 		&.desktop {
 			display: none;
+			justify-content: flex-end;
 
 			@media all and (min-width: $md) {
 				display: flex;

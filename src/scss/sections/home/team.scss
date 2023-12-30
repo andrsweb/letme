@@ -42,7 +42,13 @@
 			justify-content: center;
 		}
 
+		.scrollbar__wrapper {
+			display: flex;
+			justify-content: center;
+		}
+
 		.swiper-scrollbar {
+			width: 80%;
 			position: relative;
 			margin-top: 30px;
 			background-color: $white;

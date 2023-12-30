@@ -1,0 +1,35 @@
+.best {
+	padding: 25px 0;
+
+	@media all and (min-width: $xl) {
+		padding-left: 50px 0 25px;
+	}
+
+	.h2 {
+		margin-bottom: 15px;
+
+		@media all and (min-width: $xl) {
+			padding-left: 50px;
+		}
+	}
+
+	&__wrapper {
+		border-radius: $bord-20;
+		background-color: $white;
+
+		@media all and (min-width: $xl) {
+			padding: 40px 50px;
+			box-shadow: $gray-shadow;
+		}
+
+		.panel__item_text {
+			@media all and (min-width: $xl) {
+				font-size: 16px;
+			}
+		}
+	}
+
+	.button.full {
+		margin-top: 30px;
+	}
+}
