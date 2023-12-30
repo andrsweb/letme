@@ -27,10 +27,12 @@
 @import 'components/modals/filters';
 
 // Home page sections styles.
-@import 'sections/home/hero';
-@import 'sections/home/nav-bar';
-@import 'sections/home/testimonials';
-@import 'sections/home/testimonial-swiper';
-@import 'sections/home/about';
-@import 'sections/home/payment';
-@import 'sections/home/other';
+
+// Legal page sections styles.
+@import 'sections/legal/hero';
+@import 'sections/legal/nav-bar';
+@import 'sections/legal/testimonials';
+@import 'sections/legal/testimonial-swiper';
+@import 'sections/legal/about';
+@import 'sections/legal/payment';
+@import 'sections/legal/other';
