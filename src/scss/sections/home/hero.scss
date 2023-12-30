@@ -1,8 +1,21 @@
 .hero-main {
-	padding: 50px 0;
+	padding: 15px 0;
+
+	@media all and (min-width: $md) {
+		padding: 20px 0;
+	}
+
+	@media all and (min-width: $lg) {
+		padding: 50px 0;
+	}
 
 	&__blocks {
 		display: flex;
+		flex-direction: column;
+
+		@media all and (min-width: $lg) {
+			flex-direction: row;
+		}
 	}
 
 	&__left {
@@ -13,33 +26,80 @@
 		max-width: 850px;
 		background: $lg-light-blue;
 		border-radius: $bord-20;
-		padding: 16.3% 3% 4.2% 6.5%;
-		margin-right: 20px;
+		padding: 35.3% 3% 5.5% 6.5%;
+		margin-bottom: 16px;
+
+		@media all and (min-width: $md) {
+			padding: 13.3% 3% 4.2% 5.4%;
+		}
+
+		@media all and (min-width: $lg) {
+			padding: 16.3% 3% 4.2% 6.5%;
+			margin-bottom: 0;
+			margin-right: 20px;			
+		}
 
 		&_text {
 			display: flex;
-			align-items: flex-end;
-			justify-content: flex-start;
-			color: $white;
-			font-family: $ff;
-			font-size: 24px;
-			font-style: normal;
-			font-weight: $fw-regular;
-			line-height: normal;
+			justify-content: space-between;
+
+			@media all and (min-width: $md) {
+				justify-content: flex-start;
+				align-items: center;
+			}
+
+			@media all and (min-width: $lg) {
+				align-items: flex-end;
+			}
 
 			svg {
+				width: 30px;
+				height: 30px;
 				margin-left: 10px;
 				cursor: pointer;
-
+				margin-right: 10px;
+	
 				path {
 					fill: $white;
 				}
+
+				@media all and (min-width: $md) {
+					width: 40px;
+					height: 40px;
+					margin-right: 0;
+				}
+			}
+		}
+	}
+
+	&__text {
+		color: $white;
+		font-family: $ff;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: $fw-regular;
+		line-height: normal;
+		width: 70%;
+
+		@media all and (min-width: $md) {
+			font-size: 24px;
+			width: 80%;
+		}
+
+		@media all and (min-width: $xl) {
+			width: 83%;
+		}
+
+		span {
+			font-size: 16px;
+			font-weight: $fw-medium;
+
+			@media all and (min-width: $md) {
+				font-size: 24px;
 			}
 
-			span {
-				margin-right: 5px;
+			@media all and (min-width: $xl) {
 				font-size: 36px;
-				font-weight: $fw-medium;
 			}
 		}
 	}
@@ -50,39 +110,61 @@
 		display: flex;
 		flex-direction: column;
 
-		.hero-main__left_text {
-			font-size: 36px;
-			flex-direction: column;
-			align-items: flex-start;
-		}
-
 		&_top {
 			position: relative;	
 			background: linear-gradient(90deg, #494949 0%, rgba(217, 217, 217, 0.00) 100%);
 			border-radius: $bord-20;
-			margin-bottom: 30px;
+			margin-bottom: 15px;
 			height: calc(50% - 15px);
-			padding: 23.5% 5% 5% 6%;
+			padding: 30.5% 5% 5% 6%;
 			overflow: hidden;
+
+			@media all and (min-width: $md) {
+				padding: 26.5% 8% 4% 5%;
+			}
+
+			.hero-main__bottom_text {
+				font-size: 24px;
+			}
+
+			@media all and (min-width: $md) {
+				margin-bottom: 20px;
+			}
+
+			@media all and (min-width: $lg) {
+				margin-bottom: 30px;
+			}
 		}
 
 		&_bg {
 			width: 100%;
 			height: 100%;
 			position: absolute;
-			right: -26%;
+			right: -46%;
 			top: -3%;
 			z-index: 1;
-			width: 100%;
-			height: 100%;
-			object-fit: contain;
+
+			@media all and (min-width: $xl) {
+				right: -26%;	
+			}
 		}
 
 		&_bottom {
 			width: 100%;
-			height: calc(50% - 15px);
+			height: calc(50% - 8.5px);
 			display: flex;
-			gap: 30px;
+			gap: 16px;
+
+			@media all and (min-width: $md) {
+				gap: 30px;
+				height: calc(50% - 15px);
+			}
+
+			.hero-main__bottom_text {
+				font-size: 24px;
+
+				@media all and (min-width: $md) {}
+			}
 		}
 	}
 
@@ -90,14 +172,69 @@
 		background-color: $dark-blue;
 		width: 50%;
 		border-radius: $bord-20;
-		padding: 24% 5% 5% 6%;
+		padding: 22% 5% 5% 6%;
+
+		@media all and (min-width: $md) {
+			padding: 26% 5% 5% 6%;		
+		}
+	}
+
+	&__bottom_text {
+			color: $white;
+			font-family: $ff;
+			font-size: 16px;
+			font-style: normal;
+			font-weight: $fw-regular;
+			line-height: 1.2;
+
+			@media all and (min-width: $md) {
+				font-size: 16px;
+			}
+
+			@media all and (min-width: $md) {
+				font-size: 24px;
+			}
+
+			@media all and (min-width: $lg) {
+				font-size: 36px;
+			}
+
+		span {
+			font-weight: $fw-medium;
+
+			@media all and (min-width: $md) {
+				font-size: 32px;
+			}
+		}
+
+		br {
+			display: none;
+
+			@media all and (min-width: $md) {
+				display: block;
+			}
+		}
 	}
 
 	.h1 {
-		font-size: 64px;
+		font-size: 30px;
 		font-weight: $fw-medium;
 		line-height: 1;
-		margin-bottom: 179px;
+		margin-bottom: 60px;
+
+		@media all and (min-width: $sm) {
+			font-size: 35px;
+		}
+
+		@media all and (min-width: $md) {
+			font-size: 48px;
+			margin-bottom: 30px;
+		}
+
+		@media all and (min-width: $lg) {
+			font-size: 64px;
+			margin-bottom: 179px;
+		}
 
 		span {
 			color: $white;
