@@ -29,6 +29,10 @@
 
 	&.small {
 		width: 280px;
+
+		.card__inner_info {
+			padding: 50px 30px;
+		}
 	}
 
 	&:hover {

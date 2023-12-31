@@ -1,0 +1,28 @@
+.sports {
+	padding: 50px 0;
+
+	.container {
+		max-width: 1560px;
+	}
+
+	.h2 {
+		@media all and (min-width: $xl) {
+			padding-left: 60px;
+		}
+	}
+
+	&__items {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 10px;
+
+		@media all and (min-width: $md) {
+			gap: 20px;
+		}
+
+		@media all and (min-width: $xl) {
+			gap: 30px 46px;
+		}
+	}
+}
