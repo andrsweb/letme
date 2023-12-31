@@ -233,15 +233,15 @@
 			font-size: 20px;
 		}
 	}
+}
 
-	.bonuses__cards {
-		display: flex;
-		justify-content: center;
-		flex-wrap: wrap;
-		gap: 20px 30px;
+.bonuses__cards {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 20px 30px;
 
-		@media all and (min-width: $md) {
-			gap: 50px 30px;
-		}
+	@media all and (min-width: $md) {
+		gap: 50px 30px;
 	}
 }

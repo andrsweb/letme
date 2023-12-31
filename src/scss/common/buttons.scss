@@ -59,7 +59,10 @@
 
 		&.full {
 			width: 100%;
-			min-height: 70px;
+
+			@media all and (min-width: $lg) {
+				min-height: 70px;
+			}
 		}
 	}
 }

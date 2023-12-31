@@ -1,0 +1,35 @@
+.bonuses {
+	padding: 0;
+
+	@media all and (min-width: $xl) {
+		padding: 50px 0;
+	}
+
+	.container {
+		max-width: 1560px;
+	}
+
+	.bonuses__cards {
+		&_wrapper {
+			padding: 40px 0 10px;
+			border-radius: $bord-20;
+
+			@media all and (min-width: $xl) {
+				padding: 40px 90px;
+				background-color: $light-gray;
+			}
+		}
+	}
+
+	.h2 {
+		margin-bottom: 40px;
+
+		span {
+			color: $light-blue;
+		}
+	}
+
+	.full {
+		margin-top: 30px;
+	}
+}
