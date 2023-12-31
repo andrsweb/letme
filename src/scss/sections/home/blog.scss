@@ -1,0 +1,19 @@
+.blog {
+	padding: 90px 0;
+
+	.container {
+		max-width: 1560px;
+	}
+
+	.h2 {
+		margin-bottom: 40px;
+	}
+
+	.blog__items {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: 40px 30px;
+	}
+}
