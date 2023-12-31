@@ -1,0 +1,25 @@
+.category {
+	padding: 56px 0;
+
+	@media all and (min-width: $xxl) {
+		padding: 90px 0;
+	}
+
+	.container {
+		max-width: 1560px;
+	}
+
+	.h2 {
+		@media all and (min-width: $xxl) {
+			padding-left: 60px;
+		}
+	}
+
+	.button {
+		margin-top: 30px;
+
+		@media all and (min-width: $xxl) {
+			display: none;
+		}
+	}
+}

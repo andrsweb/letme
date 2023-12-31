@@ -27,6 +27,10 @@
 		background-color: #9FD5B1;
 	}
 
+	&.small {
+		width: 280px;
+	}
+
 	&:hover {
 		.card__item_img {
 			&:first-child {
