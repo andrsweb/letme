@@ -30,7 +30,6 @@
 		}
 
 		.blog__right_wrapper {
-			// padding: 90px 50px 40px 50px;
 
 			@media all and (min-width: $xl) {
 				padding: 90px 50px 40px 50px;
@@ -93,6 +92,10 @@
 
 			@media all and (min-width: $lg) {
 				width: 484px;
+			}
+
+			picture {
+				height: 100%;
 			}
 
 			img {

@@ -1,0 +1,97 @@
+.faq {
+	padding: 50px 0;
+
+	@media all and (min-width: $xl) {
+		padding: 50px 0 100px;
+	}
+
+	.container {
+		max-width: 1560px;
+	}
+
+	.h2 {
+		margin-bottom: 40px;
+
+		@media all and (min-width: $xl) {
+			padding-left: 60px;
+		}
+	}
+
+	.dropdown {
+		position: relative;
+		padding-left: 40px;
+		margin-bottom: 30px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		&::before {
+			content: '';
+			display: block;
+			width: 10px;
+			height: 100%;
+			background-color: $light-blue;
+			position: absolute;
+			left: 0;
+			top: 0;
+			border-radius: $bord-20;
+		}
+
+		&.opened {
+			.dropdown__title {
+				svg {
+					transform: rotate(90deg);
+				}
+			}
+		}
+	}
+
+	.dropdown__open {
+		transition: padding ease $tr,
+				height ease $tr;
+	}
+
+	.dropdown__inner {
+		padding-top: 30px;
+	}
+
+	.dropdown__title {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		color: $dark-blue;
+		font-family: $ff;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: $fw-medium;
+		line-height: 130%;
+
+		@media all and (min-width: $md) {
+			font-size: 20px;
+		}
+		
+		svg {
+			margin-left: 30px;
+			width: 50px;
+			height: 50px;
+			transition: transform ease $tr;
+			cursor: pointer;
+			transform: rotate(-90deg);
+		}
+	}
+
+	.dropdown__start {
+		width: calc(100% - 80px);
+	}
+
+	.dropdown__text {
+		color: $dark-blue;
+		font-family: $ff;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: $fw-regular;
+		line-height: 130%;
+	}
+}

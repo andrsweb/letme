@@ -123,8 +123,16 @@
 				padding: 26.5% 8% 4% 5%;
 			}
 
+			@media all and (min-width: $xl) {
+				padding: 23.5% 8% 6% 5%;
+			}
+
 			.hero-main__bottom_text {
 				font-size: 24px;
+
+				@media all and (min-width: $xl) {
+					font-size: 36px;
+				}
 			}
 
 			@media all and (min-width: $md) {
@@ -163,7 +171,9 @@
 			.hero-main__bottom_text {
 				font-size: 24px;
 
-				@media all and (min-width: $md) {}
+				@media all and (min-width: $xl) {
+					font-size: 36px;
+				}
 			}
 		}
 	}
@@ -176,6 +186,10 @@
 
 		@media all and (min-width: $md) {
 			padding: 26% 5% 5% 6%;		
+		}
+
+		@media all and (min-width: $xl) {
+			padding: 23% 5% 5% 6%;		
 		}
 	}
 
@@ -204,6 +218,10 @@
 
 			@media all and (min-width: $md) {
 				font-size: 32px;
+			}
+
+			@media all and (min-width: $xl) {
+				font-size: 36px;
 			}
 		}
 

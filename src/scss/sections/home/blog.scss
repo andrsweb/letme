@@ -1,5 +1,9 @@
 .blog {
-	padding: 90px 0;
+	padding: 40px 0;
+
+	@media all and (min-width: $xl) {
+		padding: 50px 0;
+	}
 
 	.container {
 		max-width: 1560px;
@@ -7,6 +11,10 @@
 
 	.h2 {
 		margin-bottom: 40px;
+
+		@media all and (min-width: $xl) {
+			padding-left: 60px;
+		}
 	}
 
 	.blog__items {
@@ -15,5 +23,9 @@
 		justify-content: center;
 		flex-wrap: wrap;
 		gap: 40px 30px;
+	}
+
+	.blue {
+		margin-top: 40px;
 	}
 }

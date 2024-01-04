@@ -2,7 +2,7 @@
 	padding: 0;
 
 	@media all and (min-width: $xl) {
-		padding: 50px 0;
+		padding: 40px 0;
 	}
 
 	.container {
@@ -10,13 +10,14 @@
 	}
 
 	.bonuses__cards {
+		gap: 40px 30px;
+
 		&_wrapper {
-			padding: 40px 0 10px;
 			border-radius: $bord-20;
 
 			@media all and (min-width: $xl) {
-				padding: 40px 90px;
 				background-color: $light-gray;
+				padding: 50px 0;
 			}
 		}
 	}
@@ -27,9 +28,13 @@
 		span {
 			color: $light-blue;
 		}
+
+		@media all and (min-width: $xl) {
+			padding-left: 60px;
+		}
 	}
 
 	.full {
-		margin-top: 30px;
+		max-width: 1330px;
 	}
 }
