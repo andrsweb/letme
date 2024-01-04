@@ -20,6 +20,7 @@
 @import 'components/breadcrumbs/breadcrumbs';
 @import 'components/asides/aside-left';
 @import 'components/asides/aside-right';
+@import 'components/asides/fixed-aside';
 @import 'components/bookmaker/bookmaker';
 @import 'components/bonus/bonus';
 @import 'components/payment-tabs/payment-tabs';
@@ -27,6 +28,7 @@
 @import 'components/modals/filters';
 @import 'components/sport/sport';
 @import 'components/blog/blog';
+@import 'components/bookmaker-feedback/feedback';
 
 // Home page sections styles.
 @import 'sections/home/hero';
@@ -48,3 +50,6 @@
 @import 'sections/legal/about';
 @import 'sections/legal/payment';
 @import 'sections/legal/other';
+
+// About page sections styles.
+@import 'sections/about/box';

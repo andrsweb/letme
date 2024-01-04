@@ -1,0 +1,12 @@
+.about__box {
+	padding: 28px 0 50px;
+
+	&_items {
+		display: flex;
+		position: relative;
+	}
+
+	&_content {
+		width: calc(100% - 433px);
+	}
+}
