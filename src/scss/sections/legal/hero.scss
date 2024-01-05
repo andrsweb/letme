@@ -25,9 +25,7 @@
 		justify-content: space-between;
 	}
 
-	.sort__button_wrapper {
-		position: relative;
-	}
+	
 
 	.filter__button_wrapper {
 		display: flex;
@@ -68,59 +66,6 @@
 				path {
 					fill: $light-blue;
 				}
-			}
-		}
-	}
-
-	.sort__hidden_items {
-		width: 224px;
-		padding: 8px 0;
-		border-radius: 8px;
-		background-color: $white;
-		box-shadow: $gray-shadow;
-		position: absolute;
-		top: 100%;
-		left: 0;
-		opacity: 0;
-		visibility: hidden;
-		z-index: -1;
-		transition: opacity ease $tr,
-			visibility ease $tr;
-
-		&.showed {
-			opacity: 1;
-			visibility: visible;
-			z-index: 1;
-		}
-	}
-
-	.sort__hidden_item {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		padding: 8px 16px;
-		color: #444444;
-		font-family: $ff;
-		font-size: 14px;
-		font-style: normal;
-		font-weight: $fw-regular;
-		line-height: normal;
-		cursor: pointer;
-
-		svg {
-			opacity: 0;
-			margin-left: 8px;
-			visibility: hidden;
-			transition: opacity ease $tr,
-				visibility ease $tr;
-		}
-
-		&.active {
-			background-color: $light-gray;
-
-			svg {
-				opacity: 1;
-				visibility: visible;
 			}
 		}
 	}
@@ -227,6 +172,63 @@
 
 		@media all and (min-width: $xxl) {
 			display: block;
+		}
+	}
+}
+
+.sort__button_wrapper {
+	position: relative;
+}
+
+.sort__hidden_items {
+	width: 240px;
+	padding: 8px 0;
+	border-radius: 8px;
+	background-color: $white;
+	box-shadow: $gray-shadow;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	opacity: 0;
+	visibility: hidden;
+	z-index: -1;
+	transition: opacity ease $tr,
+		visibility ease $tr;
+
+	&.showed {
+		opacity: 1;
+		visibility: visible;
+		z-index: 100;
+	}
+}
+
+.sort__hidden_item {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 8px 16px;
+	color: #444444;
+	font-family: $ff;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: $fw-regular;
+	line-height: normal;
+	cursor: pointer;
+
+	svg {
+		opacity: 0;
+		margin-left: 8px;
+		visibility: hidden;
+		transition: opacity ease $tr,
+			visibility ease $tr;
+	}
+
+	&.active {
+		background-color: $light-gray;
+
+		svg {
+			opacity: 1;
+			visibility: visible;
 		}
 	}
 }
