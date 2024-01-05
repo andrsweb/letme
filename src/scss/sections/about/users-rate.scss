@@ -1,0 +1,81 @@
+.users__rate {
+	padding: 50px;
+	background-color: $light-gray;
+	border-radius: $bord-20;
+	display: flex;
+	flex-direction: column;
+
+	&_title {
+		color: $dark-blue;
+		font-family: $ff;
+		font-size: 20px;
+		font-style: normal;
+		font-weight: $fw-regular;
+		line-height: normal;
+		margin-bottom: 32px;
+	}
+
+	&_item {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		margin-bottom: 17px;
+
+		.checkbox__wrapper {
+			.checkbox__num {
+				min-width: 20px;
+				font-size: 20px;
+				margin-right: 20px;
+			}
+
+			label:before {
+				margin-right: 10px;
+			}
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&_progress {
+		display: flex;
+		align-items: center;
+		width: 100%;
+		margin-left: 30px;
+
+		.progress__bar {
+			width: 100%;
+			border-radius: $bord-20;
+			height: 6px;
+			background-color: #D1D1D6;
+			position: relative;
+
+			&_inner {
+				width: 0;
+				position: absolute;
+				left: 0;
+				top: 0;
+				height: 100%;
+				background-color: $dark-blue;
+				border-radius: $bord-20;
+			}
+		}
+	}
+
+	.progress__num {
+		color: $dark-blue;
+		font-family: $ff;
+		font-size: 20px;
+		font-style: normal;
+		font-weight: $fw-regular;
+		line-height: normal;
+		margin-left: 30px;
+		min-width: 40px;
+	}
+
+	.blue {
+		max-width: 270px;
+		margin-top: 10px;
+	}
+}
