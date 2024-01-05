@@ -19,9 +19,11 @@
 		width: 100%;
 		display: flex;
 		align-items: center;
-		margin-bottom: 17px;
+		margin-bottom: 28px;
 
 		.checkbox__wrapper {
+			margin-bottom: 0;
+
 			.checkbox__num {
 				min-width: 20px;
 				font-size: 20px;
