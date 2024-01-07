@@ -26,6 +26,39 @@
 				@@include('./user-feedback-empty.html')
 				@@include('./user-feedback-empty.html')
 				@@include('./user-feedback-empty.html')
+				<form class="main__feedback">
+					<legend>Написать отзыв</legend>
+					<fieldset>
+						<div class="main__left">
+							<div class="main__inputs">
+								<input type="text" placeholder="Введите ваше имя">
+								<input type="text" placeholder="Введите ваш email">
+							</div>
+							<div class="textarea__wrapper">
+								<textarea name="textarea" placeholder="Пожалуйста, напишите, что вы думаете о букмекерской конторе"></textarea>
+							</div>
+						</div>
+						<div class="main__right_wrapper">
+							<div class="main__right">
+								<div class="main__rating">
+									<div class="main__title">
+										Оцените букмекера
+									</div>
+									<div class="main__stars">
+										@@include('../../svg/ui/star-empty.html')
+										@@include('../../svg/ui/star-empty.html')
+										@@include('../../svg/ui/star-empty.html')
+										@@include('../../svg/ui/star-empty.html')
+										@@include('../../svg/ui/star-empty.html')
+									</div>
+								</div>
+							</div>
+							<button class="button blue">
+								Отправить отзыв
+							</button>
+						</div>
+					</fieldset>
+				</form>
 			</div>
 			<div class="fixed__aside_wrapper">
 				@@include('../../components/fixed-aside/aside.html')
