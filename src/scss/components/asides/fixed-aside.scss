@@ -1,13 +1,13 @@
 .fixed__aside {
 	position: sticky;
-	top: 0;
+	top: 20px;
 
 	&_wrapper {
 		width: 403px;
 		margin-left: 33px;
-		padding: 50px 0;
+		padding: 50px 0 0;
 		position: relative;
-		height: 2000px;
+		min-height: 100vh;
 	}
 
 	&_items {
