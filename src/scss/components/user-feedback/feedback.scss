@@ -394,6 +394,11 @@
 
 .main__feedback {
 	margin-top: 40px;
+	display: none;
+
+	@media all and (min-width: $xl) {
+		display: block;
+	}
 
 	legend {
 		color: $dark-blue;
@@ -411,10 +416,14 @@
 	}
 
 	.main__left {
-		width: calc(65% - 10px);
+		width: calc(50% - 10px);
 		display: flex;
 		flex-direction: column;
 		margin-right: 10px;
+
+		@media all and (min-width: 1500px) {
+			width: calc(65% - 10px);
+		}
 
 		.textarea__wrapper {
 			width: 100%;
@@ -424,7 +433,7 @@
 				content: 'мин. 60 — макс. 2000 символов';
 				display: block;
 				position: absolute;
-				left: 50px;
+				left: 20px;
 				bottom: 30px;
 				font-family: $ff;
 				color: $gray-middle;
@@ -432,6 +441,10 @@
 				font-style: normal;
 				font-weight: $fw-regular;
 				line-height: normal;
+
+				@media all and (min-width: 1500px) {
+					left: 50px;
+				}
 			}
 
 			&:focus-within::after {
@@ -441,7 +454,7 @@
 
 		textarea {
 			width: 100%;
-			padding: 30px 50px;
+			padding: 20px;
 			resize: none;
 			border-radius: $bord-20;
 			border: 1px solid #D1D1D6;
@@ -469,15 +482,24 @@
 					opacity: 0;
 				}
 			}
+
+			@media all and (min-width: 1500px) {
+				padding: 30px 50px;
+			}
 		}
 	}
 
 	.main__inputs {
 		display: flex;
-		margin-bottom: 10px;
+		flex-direction: column;
+
+		@media all and (min-width: 1500px) {
+			flex-direction: row;
+			margin-bottom: 10px;
+		}
 
 		input {
-			padding: 10px 50px;
+			padding: 10px 20px;
 			height: 70px;
 			color: $gray-middle;
 			font-family: $ff;
@@ -487,6 +509,7 @@
 			line-height: normal;
 			border-radius: $bord-20;
 			border: 1px solid #D1D1D6;
+			margin-bottom: 10px;
 
 			&::placeholder {
 				color: $gray-middle;
@@ -498,15 +521,25 @@
 				opacity: 1;
 			}
 
+			@media all and (min-width: 1500px) {
+				padding: 0 50px;
+			}
+
 			&:first-child {
 				width: 100%;
-				max-width: 350px;
-				margin-right: 10px;
+
+				@media all and (min-width: 1500px) {
+					max-width: 350px;
+					margin-right: 10px;
+				}
 			}
 
 			&:last-child {
 				width: 100%;
-				max-width: 512px;
+
+				@media all and (min-width: 1500px) {
+					max-width: 512px;
+				}
 			}
 		}
 	}
@@ -516,17 +549,27 @@
 		display: flex;
 		flex-direction: column;
 		border: 1px solid #D1D1D6;
-		padding: 45px 76px 92px 76px;
+		padding: 30px;
 		border-radius: $bord-20;
+		height: calc(100% - 60px);
+
+		@media all and (min-width: 1500px) {
+			padding: 45px 76px 92px 76px;
+		}
 
 		&_wrapper {
-			width: 35%;
+			width: 50%;
 			display: flex;
 			flex-direction: column;
 			align-items: center;
+
+			@media all and (min-width: 1500px) {
+				width: 35%;
+				
+			}
 			
 			.blue {
-				margin-top: 10px;
+				margin-top: auto;
 				width: 100%;
 			}
 		}
@@ -539,6 +582,7 @@
 			font-weight: $fw-medium;
 			line-height: normal;
 			margin-bottom: 36px;
+			text-align: center;
 		}
 
 		.main__stars {
@@ -566,5 +610,7 @@
 }
 
 .for__sticky {
-	overflow: visible;
+	@media all and (min-width: $xl) {
+		overflow: visible;
+	}
 }

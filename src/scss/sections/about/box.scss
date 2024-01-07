@@ -1,5 +1,9 @@
 .about__box {
-	padding: 28px 0 50px;
+	padding: 20px 0 50px;
+
+	@media all and (min-width: $lg) {
+		padding: 28px 0 50px;	
+	}
 
 	&_items {
 		display: flex;
@@ -7,6 +11,10 @@
 	}
 
 	&_content {
-		width: calc(100% - 433px);
+		width: 100%;
+
+		@media all and (min-width: $xl) {
+			width: calc(100% - 433px);
+		}
 	}
 }

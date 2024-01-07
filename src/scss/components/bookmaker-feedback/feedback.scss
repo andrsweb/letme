@@ -1,5 +1,9 @@
 .feedback {
-	padding: 50px 0 40px;
+	padding: 50px 0 0;
+
+	@media all and (min-width: $xl) {
+		padding: 50px 0 40px;
+	}
 
 	&__wrapper {
 		display: flex;
@@ -15,11 +19,17 @@
 		&_title {
 			display: flex;
 			align-items: flex-end;
-			gap: 20px;
-			margin-bottom: 33px;
+			gap: 30px 20px;
+			margin-bottom: 10px;
+			flex-wrap: wrap;
 
 			h1 {
 				margin-bottom: 0;
+			}
+
+			@media all and (min-width: $lg) {
+				gap: 20px;
+				margin-bottom: 33px;
 			}
 		}
 	
@@ -52,6 +62,20 @@
 			.blue {
 				width: calc(50% - 5px);
 				margin-right: 10px;
+			}
+
+			&.desktop {
+				display: none;
+
+				@media all and (min-width: $xl) {
+					display: flex;
+				}
+			}
+
+			&.mobile {
+				@media all and (min-width: $xl) {
+					display: none;
+				}			
 			}
 		}
 
@@ -105,17 +129,36 @@
 	&__bottom {
 		display: flex;
 		align-items: center;
+		justify-content: center;
 		color: $dark-blue;
 		font-family: $ff;
-		font-size: 24px;
+		font-size: 16px;
 		font-style: normal;
 		font-weight: $fw-regular;
 		line-height: normal;
 		background-color: $light-gray;
 		border-radius: $bord-20;
-		padding: 0 50px;
-		height: 80px;
-		margin-top: 27px;
+		height: 40px;
+		margin: 10px 0;
+
+		&.desktop {
+			display: none;
+
+			@media all and (min-width: $xl) {
+				display: flex;
+				font-size: 24px;
+				padding: 0 50px;
+				height: 80px;
+				justify-content: flex-start;
+				margin: 27px 0 0 0;
+			}
+		}
+
+		&.mobile {
+			@media all and (min-width: $xl) {
+				display: none;
+			}			
+		}
 
 		&_wrapper {
 			display: flex;
@@ -123,15 +166,25 @@
 			justify-content: space-between;
 			width: 100%;
 			height: 100%;
-			max-width: 293px;
+			max-width: 100%;
+
+			@media all and (min-width: $xl) {
+				max-width: 293px;
+			}
 		}
 
 		&_nums {
 			display: flex;
 			align-items: center;
-			padding-right: 40px;
+			justify-content: center;
 			height: 100%;
 			position: relative;
+			width: 50%;
+
+			@media all and (min-width: $xl) {
+				padding-right: 40px;
+				width: auto;
+			}
 
 			&::before {
 				content: '';
@@ -155,13 +208,26 @@
 			display: flex;
 			align-items: center;
 			font-weight: $fw-medium;
-			padding-left: 40px;
+			
 			height: 100%;
+			width: 50%;
+			justify-content: center;
+
+			@media all and (min-width: $xl) {
+				width: auto;
+				justify-content: flex-start;
+				padding-left: 40px;
+			}
 
 			svg {
-				width: 30px;
-				height: 30px;
+				width: 20px;
+				height: 20px;
 				margin-right: 8px;
+
+				@media all and (min-width: $xl) {
+					width: 30px;
+					height: 30px;					
+				}
 			}
 		}
 
@@ -179,5 +245,47 @@
 			height: 100%;
 			object-fit: cover;
 		}
+	}
+}
+
+.bookmaker-feedback-swiper {
+	overflow: visible;
+	margin: 20px 0;
+
+	@media all and (min-width: $xl) {
+		display: none;
+	}
+
+	.swiper-slide {
+		width: 196px;
+	}
+
+	.fixed__aside_item {
+		padding: 20px;
+	}
+
+	.fixed__inner {
+		flex-direction: column;
+		height: auto;
+		align-items: flex-start;
+	}
+
+	.fixed__feedbacks {
+		flex-direction: row;
+		
+		padding: 10px 0;
+		margin: 10px 0;
+
+		&::before, &::after {
+			display: none;
+		}
+
+		span {
+			margin-right: 5px;
+		}
+	}
+
+	.fixed__rate {
+		padding-left: 0;
 	}
 }

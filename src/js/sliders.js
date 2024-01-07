@@ -7,9 +7,25 @@ document.addEventListener('DOMContentLoaded', () => {
 	swiperWithNav('.testimonials-swiper', '.testimonials__next', '.testimonials__prev')
 	swiperCarousel()
 	swiperScrollbar()
+	fixedWidthSwiper('.bookmaker-feedback-swiper')
 })
 
+const fixedWidthSwiper = (selector) => {
+
+	if(!selector) return
+
+	const swiper = new Swiper(selector, {
+		spaceBetween: 10,
+		slidesPerView: 'auto',
+
+		speed: 2000
+	})
+}
+
 const swiperWithNav = (selector, next, prev) => {
+
+	if (!selector) return
+
 	const swiper = new Swiper(selector, {
 		spaceBetween: 20,
 		slidesPerView: 4,
@@ -42,8 +58,6 @@ const swiperWithNav = (selector, next, prev) => {
 
 		speed: 2000
 	})
-
-	if (!swiper) return
 }
 
 const swiperCarousel = () => {
