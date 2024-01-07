@@ -15,8 +15,35 @@
 				@@include('../../components/bookmaker-feedback/feedback.html')
 				@@include('./user-rate.html')
 				@@include('./chatbar.html')
+				@@include('./user-feedback-empty.html')
+				@@include('./user-feedback-inner-no-photo.html')
+				@@include('./user-feedback-overflow.html')
+				@@include('./user-feedback-inner-big.html')
+				@@include('./user-feedback-inner.html')
+				@@include('./user-feedback-empty.html')
+				@@include('./user-feedback-empty.html')
+				@@include('./user-feedback-empty.html')
+				@@include('./user-feedback-empty.html')
+				@@include('./user-feedback-empty.html')
+				@@include('./user-feedback-empty.html')
 			</div>
-			@@include('../../components/fixed-aside/aside.html')
+			<div class="fixed__aside_wrapper">
+				@@include('../../components/fixed-aside/aside.html')
+			</div>
+			<form class="feedback__form">
+				<fieldset>
+					<input type="text" placeholder="Введите ваше имя">
+					<textarea name="feedback" placeholder="Напишите ваш комментарий"></textarea>
+				</fieldset>
+				<div class="feedback__form_buttons">
+					<button class="button blue" type="submit">
+						Ответить
+					</button>
+					<button class="cancel" type="button">
+						Отмена
+					</button>
+				</div>
+			</form>
 		</div>
 	</div>
 </section>

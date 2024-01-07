@@ -1,9 +1,14 @@
 .fixed__aside {
-	width: 403px;
-	margin-left: 33px;
-	padding: 50px 0;
-	// position: fixed;
-	// right: 0;
+	position: sticky;
+	top: 0;
+
+	&_wrapper {
+		width: 403px;
+		margin-left: 33px;
+		padding: 50px 0;
+		position: relative;
+		height: 2000px;
+	}
 
 	&_items {
 		display: flex;

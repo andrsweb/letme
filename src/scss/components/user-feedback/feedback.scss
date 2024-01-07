@@ -1,0 +1,393 @@
+.user__feedback {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 50px;
+	background-color: $light-gray;
+	border-radius: $bord-20;
+	margin-bottom: 10px;
+
+	.user__feedback {
+		padding: 30px 50px 30px 50px;
+		position: relative;
+
+		&::before {
+			content: '';
+			width: 100%;
+			height: 3px;
+			display: block;
+			position: absolute;
+			right: 0;
+			top: 0;
+			background-color: $white;
+		}
+
+		&:nth-child(n + 2) {
+			&::before {
+				width: 88%;
+			}
+		}
+
+		.user__feedback {
+			padding: 30px 50px 0 0;
+		}
+	}
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	&.notified {
+		.user__notify {
+			display: flex;
+		}
+	}
+
+	.inner__feedback {
+		display: none;
+
+		&.showed {
+			display: block;
+		}
+	}
+
+	&_top {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 30px;
+	}
+
+	.user__info {
+		display: flex;
+		flex-direction: column;
+
+		&_right {
+			display: flex;
+			align-items: center;
+		}
+	}
+
+	.user__notify {
+		display: none;
+		align-items: center;
+		justify-content: center;
+		background-color: $white;
+		border-radius: 100px;
+		box-shadow: $gray-shadow3;
+		padding: 9px 20px;
+		min-height: 40px;
+		color: $gray-middle;
+		font-family: $ff;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: $fw-regular;
+		line-height: 130%;
+		margin-right: 10px;
+	}
+
+	.user__stars {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 10px;
+		padding: 10px 20px;
+		background-color: $white;
+		border-radius: 100px;
+		box-shadow: $gray-shadow3;
+		min-height: 40px;
+	}
+
+	.user__info_wrapper {
+		display: flex;
+		align-items: center;
+	}
+
+	.user__img {
+		width: 60px;
+		height: 60px;
+		border-radius: 20px;
+		margin-right: 10px;
+		background-color: $light-blue2;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			border-radius: 20px;
+		}
+	}
+
+	.user__name {
+		color: $dark-blue;
+		font-family: Gotham Pro;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: $fw-medium;
+		line-height: 130%;
+	}
+
+	.user__date {
+		color: $gray-middle;
+		font-family: $ff;
+		font-size: 14px;
+		font-style: normal;
+		font-weight: $fw-regular;
+		line-height: 130%;
+	}
+
+	.user__text {
+		color: $dark-blue;
+		font-family: $ff;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: $fw-regular;
+		line-height: 130%;
+		margin-bottom: 30px;
+
+		&.big {
+			position: relative;
+			margin-bottom: 0;
+			height: 105px;
+			overflow: hidden;
+
+			&::after {
+				content: '';
+				display: block;
+				width: 100%;
+				height: 100%;
+				background: linear-gradient(0deg, #F6F6F6 0%, rgba(246, 246, 246, 0.00) 36.45%);
+				position: absolute;
+				left: 0;
+				bottom: 0;
+			}
+
+			&.more {
+				overflow: visible;
+				height: auto;
+
+				&::after {
+					display: none;
+				}
+			}
+		}
+	}
+
+	.read__all {
+		display: none;
+		align-items: center;
+		color: $light-blue;
+		font-family: $ff;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: $fw-medium;
+		line-height: normal;
+		cursor: pointer;
+		transition: opacity ease $tr;
+		margin-bottom: 30px;
+		margin-top: 15px;
+
+		svg {
+			margin-left: 6px;
+			transform: rotate(90deg);
+			transition: transform ease $tr;
+		}
+
+		&:hover {
+			opacity: $op;
+		}
+
+		&.visible {
+			display: flex;
+		}
+
+		&.clicked {
+			svg {
+				transform: rotate(-90deg);
+			}
+		}
+	}
+
+	.show__comments {
+		display: flex;
+		align-items: center;
+		color: $light-blue;
+		font-family: $ff;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: $fw-medium;
+		line-height: normal;
+		cursor: pointer;
+		transition: opacity ease $tr;
+		margin-top: 30px;
+
+		svg {
+			margin-left: 6px;
+			transform: rotate(90deg);
+			transition: transform ease $tr;
+		}
+
+		&:hover {
+			opacity: $op;
+		}
+
+		&.clicked {
+			margin-bottom: 30px;
+
+			svg {
+				transform: rotate(-90deg);
+			}
+		}	
+	}
+
+	&_bottom {
+		display: flex;
+		align-items: center;
+
+		.thumbs {
+			display: flex;
+			gap: 6px;
+
+			&__down {
+				svg {
+					transform: rotate(180deg)
+				}
+			}
+
+			&__up, &__down {
+				display: flex;
+				align-items: center;
+				width: 56px;
+				cursor: pointer;
+
+				svg {
+					margin-right: 6px;
+					width: 20px;
+					height: 20px;
+
+					.svg__top {
+						fill: transparent;
+						stroke: $dark-blue;
+						fill-rule: evenodd;
+					}
+				}
+
+				&.clicked {
+					svg .svg__top {
+						fill: $dark-blue;
+						stroke: $dark-blue;
+						fill-rule: nonzero;
+					}
+				}
+			}
+
+			&_value {
+				color: $gray-middle;
+				font-family: $ff;
+				font-size: 16px;
+				font-style: normal;
+				font-weight: $fw-medium;
+				line-height: 130%;
+			}
+		}
+	}
+
+	.reply {
+		cursor: pointer;
+		color: $light-blue;
+		font-family: $ff;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: $fw-medium;
+		line-height: normal;
+		margin-left: 16px;
+		transition: opacity ease $tr;
+
+		&:hover {
+			opacity: $op;
+		}
+	}
+}
+
+.feedback__form {
+	display: none;
+	flex-direction: column;
+	width: 100%;
+	margin-top: 25px;
+
+	&.cloned {
+		display: flex;
+	}
+	
+	fieldset {
+		display: flex;
+		flex-direction: column;
+
+		input {
+			color: $gray-middle;
+			font-family: $ff;
+			font-size: 16px;
+			font-style: normal;
+			font-weight: $fw-medium;
+			line-height: normal;
+			padding: 15px 50px;
+			margin-bottom: 10px;
+			border: 1px solid #D1D1D6;
+			border-radius: $bord-20;
+
+			&::placeholder {
+				color: $gray-middle;
+				font-family: $ff;
+				font-size: 16px;
+			}
+		}
+
+		textarea {
+			color: $gray-middle;
+			font-family: $ff;
+			font-size: 16px;
+			font-style: normal;
+			font-weight: $fw-medium;
+			line-height: normal;
+			resize: none;
+			padding: 30px 50px 25px 50px;
+			border: 1px solid #D1D1D6;
+			border-radius: $bord-20;
+
+			&::placeholder {
+				color: $gray-middle;
+				font-family: $ff;
+				font-size: 16px;
+			}
+		}
+	}
+
+	&_buttons {
+		display: flex;
+		align-items: center;
+		margin-top: 10px;
+
+		.blue {
+			width: 100%;
+			max-width: 220px;
+			margin-right: 10px;
+		}
+
+		.cancel {
+			cursor: pointer;
+			padding: 16px;
+			color: $dark-blue;
+			text-align: center;
+			font-family: $ff;
+			font-size: 16px;
+			font-style: normal;
+			font-weight: $fw-medium;
+			line-height: normal;
+			transition: opacity ease $tr;
+
+			&:hover {
+				opacity: $op;
+			}
+		}
+	}
+}
