@@ -1,10 +1,37 @@
 .chat__bar {
 	display: flex;
+	flex-direction: row-reverse;
 	align-items: center;
 	justify-content: space-between;
 	margin: 40px 0 20px;
 
+	@media all and (min-width: $md) {
+		flex-direction: row;
+	}
+
 	@media all and (min-width: $xl) {
 		padding: 0 50px;
+	}
+
+	.sort__button {
+		&_text {
+			display: none;
+	
+			@media all and (min-width: $md) {
+				display: inline-block;
+			}
+		}
+
+		&_wrapper {
+			.sort__hidden_items {
+				left: auto;
+				right: 0;
+
+				@media all and (min-width: $md) {
+					right: auto;
+					left: 0;
+				}
+			}
+		}
 	}
 }

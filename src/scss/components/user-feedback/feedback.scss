@@ -2,14 +2,22 @@
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
-	padding: 50px;
+	padding: 30px;
 	background-color: $light-gray;
 	border-radius: $bord-20;
 	margin-bottom: 10px;
 
+	@media all and (min-width: $md) {
+		padding: 50px;
+	}
+
 	.user__feedback {
-		padding: 30px 50px 30px 50px;
+		padding: 30px 20px 30px 20px;
 		position: relative;
+
+		@media all and (min-width: $md) {
+			padding: 30px 50px 30px 50px;
+		}
 
 		&::before {
 			content: '';
@@ -29,7 +37,11 @@
 		}
 
 		.user__feedback {
-			padding: 30px 50px 0 0;
+			padding: 30px 0 0 0;
+
+			@media all and (min-width: $md) {
+				padding: 30px 50px 0 0;
+			}
 		}
 	}
 
@@ -40,6 +52,11 @@
 	&.notified {
 		.user__notify {
 			display: flex;
+			margin-top: 10px;
+
+			@media all and (min-width: $md) {
+				margin-top: 0;
+			}
 		}
 	}
 
@@ -54,8 +71,13 @@
 	&_top {
 		width: 100%;
 		display: flex;
+		flex-direction: column;
 		justify-content: space-between;
 		margin-bottom: 30px;
+
+		@media all and (min-width: $md) {
+			flex-direction: row;
+		}
 	}
 
 	.user__info {
@@ -64,7 +86,13 @@
 
 		&_right {
 			display: flex;
-			align-items: center;
+			flex-direction: column;
+			align-items: flex-start;
+
+			@media all and (min-width: $md) {
+				flex-direction: row;
+				align-items: center;
+			}
 		}
 	}
 
@@ -81,9 +109,13 @@
 		font-family: $ff;
 		font-size: 16px;
 		font-style: normal;
-		font-weight: $fw-regular;
+		font-weight: $fw-medium;
 		line-height: 130%;
-		margin-right: 10px;
+
+		@media all and (min-width: $md) {
+			padding: 9px 20px;
+			margin-right: 10px;
+		}
 	}
 
 	.user__stars {
@@ -96,6 +128,11 @@
 		border-radius: 100px;
 		box-shadow: $gray-shadow3;
 		min-height: 40px;
+		margin-top: 10px;
+
+		@media all and (min-width: $md) {
+			margin-top: 0;
+		}
 	}
 
 	.user__info_wrapper {
@@ -322,27 +359,36 @@
 	fieldset {
 		display: flex;
 		flex-direction: column;
+		width: 100%;
 
 		input {
+			width: 100%;
 			color: $gray-middle;
 			font-family: $ff;
-			font-size: 16px;
+			font-size: 12px;
 			font-style: normal;
 			font-weight: $fw-medium;
 			line-height: normal;
-			padding: 15px 50px;
+			padding: 15px 20px;
 			margin-bottom: 10px;
 			border: 1px solid #D1D1D6;
 			border-radius: $bord-20;
+
+			@media all and (min-width: $md) {
+				font-size: 16px;
+				padding: 15px 50px;
+			}
 
 			&::placeholder {
 				color: $gray-middle;
 				font-family: $ff;
 				font-size: 16px;
+
 			}
 		}
 
 		textarea {
+			width: 100%;
 			color: $gray-middle;
 			font-family: $ff;
 			font-size: 16px;
@@ -350,9 +396,14 @@
 			font-weight: $fw-medium;
 			line-height: normal;
 			resize: none;
-			padding: 30px 50px 25px 50px;
+			padding: 30px 10px 50px 20px;
 			border: 1px solid #D1D1D6;
 			border-radius: $bord-20;
+
+			@media all and (min-width: $md) {
+				padding: 30px 50px 25px 50px;
+				font-size: 16px;
+			}
 
 			&::placeholder {
 				color: $gray-middle;
@@ -364,13 +415,23 @@
 
 	&_buttons {
 		display: flex;
+		flex-direction: column-reverse;
 		align-items: center;
 		margin-top: 10px;
+
+		@media all and (min-width: $md) {
+			flex-direction: row;
+		}
 
 		.blue {
 			width: 100%;
 			max-width: 220px;
-			margin-right: 10px;
+			margin-top: 10px;
+
+			@media all and (min-width: $md) {
+				margin-right: 10px;
+				margin-top: 0;
+			}
 		}
 
 		.cancel {
@@ -412,6 +473,7 @@
 	}
 
 	fieldset {
+		width: 100%;
 		display: flex;
 	}
 
