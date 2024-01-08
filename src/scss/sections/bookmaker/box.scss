@@ -1,9 +1,14 @@
 .bookmaker__box {
 	padding: 30px 0 0;
 
-	&_items {}
+	&_items {
+		display: flex;
+	}
 
-	&_content {}
+	&_content {
+		width: calc(100% - 290px);
+		margin-right: 33px;
+	}
 
 	&_title {
 		display: flex;
