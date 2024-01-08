@@ -1,0 +1,57 @@
+.downloads {
+	position: relative;
+	border-radius: $bord-20;
+	margin: 40px 0;
+
+	&__bg {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		border-radius: $bord-20;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			border-radius: $bord-20;
+		}
+	}
+
+	&__wrapper {
+		width: 100%;
+		height: 100%;
+		border-radius: $bord-20;
+		padding: 31px 35px 31px 19%;
+	}
+
+	&__links {
+		display: flex;
+		flex-direction: column;
+
+		&_title {
+			color: $white;
+			font-family: $ff;
+			font-size: 24px;
+			font-style: normal;
+			font-weight: $fw-medium;
+			line-height: normal;
+			margin-bottom: 16px;
+		}
+	}
+
+	&__link {
+		margin-right: 20px;
+		transition: opacity ease $tr;
+
+		&:hover {
+			opacity: $op;
+		}
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
