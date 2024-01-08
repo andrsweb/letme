@@ -1,0 +1,22 @@
+.types {
+	padding: 20px 0;
+
+	&__wrapper {
+		.h2 {
+			margin-bottom: 30px;
+
+			@media all and (min-width: $xl) {
+				padding-left: 60px;
+			}
+		}
+
+		.types-swiper1 {
+			margin-bottom: 26px;
+		}
+
+		.swiper-wrapper {
+			-webkit-transition-timing-function: linear !important;
+			transition-timing-function: linear !important;
+		}
+	}
+}

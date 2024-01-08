@@ -1,5 +1,5 @@
 import Swiper from 'swiper';
-import { Navigation, Pagination, Scrollbar, Autoplay} from 'swiper/modules';
+import { Navigation, Pagination, Scrollbar, Autoplay } from 'swiper/modules';
 
 document.addEventListener('DOMContentLoaded', () => {
 	'use strict'
@@ -8,11 +8,72 @@ document.addEventListener('DOMContentLoaded', () => {
 	swiperCarousel()
 	swiperScrollbar()
 	fixedWidthSwiper('.bookmaker-feedback-swiper')
+	simpleSwiper('.types-swiper1')
+	simpleSwiperWithReverse('.types-swiper2')
 })
+
+const simpleSwiper = (selector) => {
+	if (!selector) return
+
+	const swiper = new Swiper(selector, {
+		spaceBetween: 24,
+		slidesPerView: 5,
+		loop: true,
+
+		modules: [Autoplay],
+
+		breakpoints: {
+			768: {
+				slidesPerView: 3,
+			},
+
+			1200: {
+				slidesPerView: 5
+			}
+		},
+
+		autoplay: {
+			delay: 0,
+			disableOnInteraction: false,
+		},
+
+		speed: 15000
+	})
+}
+
+const simpleSwiperWithReverse = (selector) => {
+	if (!selector) return
+
+	const swiper = new Swiper(selector, {
+		spaceBetween: 24,
+		slidesPerView: 5,
+		loop: true,
+
+		modules: [Autoplay],
+
+		breakpoints: {
+			768: {
+				slidesPerView: 3,
+			},
+
+			1200: {
+				slidesPerView: 5
+			}
+		},
+
+		autoplay: {
+			delay: 0,
+			disableOnInteraction: false,
+			reverseDirection: true
+		},
+
+		speed: 15000
+	})
+}
 
 const fixedWidthSwiper = (selector) => {
 
-	if(!selector) return
+	if (!selector) return
 
 	const swiper = new Swiper(selector, {
 		spaceBetween: 10,
