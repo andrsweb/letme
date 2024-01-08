@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	'use strict'
 
 	changeTab('.payment__button', '.payment__content')
+	changeTab('.payment__ways_button', '.payment__ways_content')
 	initShowHidden()
 })
 
