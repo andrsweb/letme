@@ -216,4 +216,54 @@
 			opacity: $op;
 		}
 	}
+
+	&__full {
+		display: flex;
+		padding: 20px 0;
+
+		&_wrapper {
+			width: 100%;
+			padding: 50px;
+			background-color: $light-gray;
+			border-radius: $bord-20;
+		}
+
+		&_row {
+			display: flex;
+			width: 100%;
+			padding: 28px 0;
+			border-bottom: 2px solid $white;
+
+			&:first-child {
+				padding: 0 0 28px;
+			}
+
+			&:last-child {
+				border-bottom: 0;
+				padding: 28px 0 0;
+			}
+		}
+
+		&_name {
+			width: 40%;
+			color: $gray-middle;
+			font-family: $ff;
+			font-size: 16px;
+			font-style: normal;
+			font-weight: $fw-medium;
+			line-height: normal;
+			padding-right: 20px;
+		}
+
+		&_info {
+			width: 60%;
+			color: $dark-blue;
+			font-family: $ff;
+			font-size: 16px;
+			font-style: normal;
+			font-weight: $fw-medium;
+			line-height: normal;
+			padding-right: 20px;
+		}
+	}
 }
