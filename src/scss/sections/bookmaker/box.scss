@@ -1,0 +1,18 @@
+.bookmaker__box {
+	padding: 30px 0 0;
+
+	&_items {}
+
+	&_content {}
+
+	&_title {
+		display: flex;
+		align-items: center;
+		margin: 50px 0 35px;
+
+		.h1 {
+			margin-bottom: 0;
+			margin-right: 20px;
+		}
+	}
+}

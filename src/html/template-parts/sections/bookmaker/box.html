@@ -1,17 +1,25 @@
-<section class="about__box">
+<section class="bookmaker__box">
 	<div class="container">
 		<div class="breadcrumbs">
 			<ul class="breadcrumbs__list">
 				@@loop('../../components/breadcrumbs/breadcrumbs-item.html', [
 					{'current': '', 'href': '/', 'text': 'Главная', 'arrow': ''},
 					{'current': '', 'href': '/', 'text': 'Букмекеры', 'arrow': ''},
-					{'current': '', 'href': '/', 'text': 'Фонбет', 'arrow': ''},
-					{'current': 'current', 'href': '#', 'text': 'Отзывы', 'arrow': 'hidden'},
+					{'current': 'current', 'href': '#', 'text': 'Фонбет', 'arrow': ''},
 				])
 			</ul>
 		</div>
-		<div class="about__box_items">
-			<div class="about__box_content"></div>
+		<div class="bookmaker__box_items">
+			<div class="bookmaker__box_content">
+				<div class="bookmaker__box_title">
+					<h1 class="h1">Букмекерская контора Фонбет</h1>
+					<div class="grey__border_link feedback__top_notify">
+						<img src="img/ico/check-green.svg" width="14" height="14" alt="">
+						легальная БК
+					</div>
+				</div>
+				@@include('./hero.html')
+			</div>
 		</div>
 	</div>
 </section>
