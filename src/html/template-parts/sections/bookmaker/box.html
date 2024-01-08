@@ -1,0 +1,17 @@
+<section class="about__box">
+	<div class="container">
+		<div class="breadcrumbs">
+			<ul class="breadcrumbs__list">
+				@@loop('../../components/breadcrumbs/breadcrumbs-item.html', [
+					{'current': '', 'href': '/', 'text': 'Главная', 'arrow': ''},
+					{'current': '', 'href': '/', 'text': 'Букмекеры', 'arrow': ''},
+					{'current': '', 'href': '/', 'text': 'Фонбет', 'arrow': ''},
+					{'current': 'current', 'href': '#', 'text': 'Отзывы', 'arrow': 'hidden'},
+				])
+			</ul>
+		</div>
+		<div class="about__box_items">
+			<div class="about__box_content"></div>
+		</div>
+	</div>
+</section>

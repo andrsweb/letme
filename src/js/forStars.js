@@ -6,6 +6,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 const fillStars = () => {
 	const starsContainer = document.querySelector('.main__stars')
+
+	if(!starsContainer) return
+
 	const stars = starsContainer.querySelectorAll('svg')
 
 	starsContainer.addEventListener('click', e => {
