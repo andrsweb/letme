@@ -26,4 +26,16 @@
 		border-radius: $bord-20;
 		padding: 50px 30px;
 	}
+
+	.main__feedback {
+		padding: 20px 0;
+		
+		.main__inputs {
+			input {
+				&:last-child {
+					max-width: 100%;
+				}
+			}
+		}
+	}
 }
