@@ -1,19 +1,31 @@
 .bookmaker__box {
 	padding: 30px 0 0;
 
+	.container-fluid {
+		padding: 0;
+	}
+
 	&_items {
 		display: flex;
 	}
 
 	&_content {
-		width: calc(100% - 290px);
-		margin-right: 33px;
+		width: 100%;
+
+		@media all and (min-width: $xl) {
+			width: calc(100% - 290px);
+			margin-right: 33px;
+		}
 	}
 
 	&_title {
-		display: flex;
+		display: none;
 		align-items: center;
 		margin: 50px 0 35px;
+
+		@media all and (min-width: $md) {
+			display: flex;
+		}
 
 		.h1 {
 			margin-bottom: 0;
@@ -24,17 +36,115 @@
 
 	.testimonials {
 		border-radius: $bord-20;
-		padding: 50px 30px;
+		padding: 30px 0;
+
+		@media all and (min-width: $xl) {
+			padding: 50px 30px;
+		}
 	}
 
 	.main__feedback {
 		padding: 20px 0;
+		display: block;
+		margin-top: 0;
+
+		@media all and (min-width: $md) {
+			margin-top: 40px;
+		}
+
+		legend {
+			padding-left: 0;
+			font-size: 20px;
+
+			@media all and (min-width: $md) {
+				padding-left: 50px;
+				font-size: 32px;
+			}
+		}
+
+		fieldset {
+			flex-direction: column;
+
+			@media all and (min-width: $md) {
+				flex-direction: row;
+			}
+		}
+
+		.main__left {
+			width: 100%;
+			margin-right: 0;
+
+			@media all and (min-width: $md) {
+				width: calc(50% - 10px);
+				margin-right: 10px;
+			}
+		}
+
+		.main__right_wrapper {
+			width: 100%;
+			margin-top: 10px;
+
+			@media all and (min-width: $md) {
+				width: 50%;
+				margin-top: 0;
+			}
+		}
 		
 		.main__inputs {
 			input {
 				&:last-child {
 					max-width: 100%;
 				}
+			}
+		}
+
+		.main__stars {
+			svg {
+				width: 30px;
+				height: 30px;
+
+				@media all and (min-width: $md) {
+					width: 40px;
+					height: 40px;
+				}
+			}
+		}
+
+		.main__title {
+			font-size: 20px;
+
+			@media all and (min-width: $md) {
+				font-size: 24px;
+			}
+		}
+
+		.blue {
+			margin-top: 10px;
+
+			@media all and (min-width: $md) {
+				margin-top: 0;
+			}
+		}
+	}
+
+	.testimonials__swiper_wrapper {
+		.testimonials-swiper {
+			padding: 0 10px;
+		}
+
+		.testimonials__prev {
+			left: -25px;
+
+			@media all and (min-width: $md) {
+				left: 0;
+			}
+		}
+
+		.testimonials__next {
+			right: -25px;
+
+			@media all and (min-width: $md) {
+				right: 0;
 			}
 		}
 	}

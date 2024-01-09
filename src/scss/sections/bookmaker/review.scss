@@ -8,7 +8,11 @@
 	&__wrapper {
 		background-color: $light-gray;
 		border-radius: $bord-20;
-		padding: 50px;
+		padding: 50px 20px;
+
+		@media all and (min-width: $xl) {
+			padding: 50px;
+		}
 
 		&_top {
 			padding-bottom: 30px;
@@ -94,13 +98,21 @@
 			cursor: pointer;
 			transform: rotate(-90deg);
 		}
+
+		.dropdown__start {
+			width: 70%;
+		}
 	}
 
 	&__swiper {
 		margin: 20px 0;
-		padding: 26px 40px;
+		padding: 56px 9;
 		background-color: $white;
 		border-radius: $bord-20;
+
+		@media all and (min-width: $md) {
+			padding: 26px 40px;
+		}
 
 		.swiper-slide {
 			padding: 26px 0;
@@ -145,6 +157,11 @@
 			transform: translateY(-50%);
 			z-index: 10;
 			cursor: pointer;
+			display: none;
+
+			@media all and (min-width: $md) {
+				display: block;
+			}
 		}
 
 		.swiper-button {
@@ -213,17 +230,21 @@
 			&_name {
 				color: $dark-blue;
 				font-family: $ff;
-				font-size: 20px;
+				font-size: 16px;
 				font-style: normal;
 				font-weight: $fw-medium;
 				line-height: 130%;
 				margin-bottom: 4px;
+
+				@media all and (min-width: $md) {
+					font-size: 20px;
+				}
 			}
 
 			&_job {
 				color: $light-blue;
 				font-family: $ff;
-				font-size: 14px;
+				font-size: 12px;
 				font-style: normal;
 				font-weight: $fw-medium;
 				line-height: 130%;
@@ -231,6 +252,10 @@
 				background-color: $white;
 				border-radius: 10px;
 				box-shadow: -2px 2px 14px 0px #CACACA;
+
+				@media all and (min-width: $md) {
+					font-size: 14px;
+				}
 			}
 		}
 	}

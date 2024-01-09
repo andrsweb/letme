@@ -114,7 +114,6 @@ const swiperWithNav = (selector, next, prev) => {
 
 	const swiper = new Swiper(selector, {
 		spaceBetween: 20,
-		slidesPerView: 4,
 		modules: [Navigation],
 
 		navigation: {
@@ -133,11 +132,15 @@ const swiperWithNav = (selector, next, prev) => {
 
 
 			768: {
-				slidesPerView: 3,
 				spaceBetween: 40,
 			},
 
 			992: {
+				slidesPerView: 3,
+				spaceBetween: 40,
+			},
+
+			1400: {
 				slidesPerView: 4
 			}
 		},

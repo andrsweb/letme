@@ -5,11 +5,36 @@
 		span {
 			color: $gray-middle;
 			font-family: $ff;
-			font-size: 32px;
+			font-size: 20px;
 			font-style: normal;
 			font-weight: $fw-medium;
 			line-height: normal;
-			margin-left: 15px;
+			margin-left: 10px;
+
+			@media all and (min-width: $md) {
+				font-size: 32px;
+				margin-left: 15px;
+			}
+		}
+	}
+
+	.sort__button_wrapper {
+		.sort__button_text {
+			display: none;
+
+			@media all and (min-width: $md) {
+				display: block;
+			}
+		}
+
+		.sort__hidden_items.showed {
+			left: auto;
+			right: 0;
+
+			@media all and (min-width: $md) {
+				right: auto;
+				left: 0;
+			}
 		}
 	}
 

@@ -3,35 +3,39 @@
 		<div class="breadcrumbs">
 			<ul class="breadcrumbs__list">
 				@@loop('../../components/breadcrumbs/breadcrumbs-item.html', [
-					{'current': '', 'href': '/', 'text': 'Главная', 'arrow': ''},
-					{'current': '', 'href': '/', 'text': 'Букмекеры', 'arrow': ''},
-					{'current': 'current', 'href': '#', 'text': 'Фонбет', 'arrow': ''},
+				{'current': '', 'href': '/', 'text': 'Главная', 'arrow': ''},
+				{'current': '', 'href': '/', 'text': 'Букмекеры', 'arrow': ''},
+				{'current': 'current', 'href': '#', 'text': 'Фонбет', 'arrow': ''},
 				])
 			</ul>
 		</div>
-		<div class="bookmaker__box_items">
-			<div class="bookmaker__box_content">
-				<div class="bookmaker__box_title">
-					<h1 class="h1">Букмекерская контора Фонбет</h1>
-					<div class="grey__border_link feedback__top_notify">
-						<img src="img/ico/check-green.svg" width="14" height="14" alt="">
-						легальная БК
+	</div>
+	<div class="bookmaker__box_wrapper">
+		<div class="container">
+			<div class="bookmaker__box_items">
+				<div class="bookmaker__box_content">
+					<div class="bookmaker__box_title">
+						<h1 class="h1">Букмекерская контора Фонбет</h1>
+						<div class="grey__border_link feedback__top_notify">
+							<img src="img/ico/check-green.svg" width="14" height="14" alt="">
+							легальная БК
+						</div>
 					</div>
+					@@include('./hero.html')
+					@@include('./downloads.html')
+					@@include('../legal/testimonials.html')
+					@@include('./main-feedback.html')
+					@@include('./information.html')
+					@@include('./information-full.html')
+					@@include('./options.html')
+					@@include('./types.html')
+					@@include('./sales.html')
+					@@include('./review.html')
+					@@include('./other.html')
+					@@include('./testimonials.html')
 				</div>
-				@@include('./hero.html')
-				@@include('./downloads.html')
-				@@include('../legal/testimonials.html')
-				@@include('./main-feedback.html')
-				@@include('./information.html')
-				@@include('./information-full.html')
-				@@include('./options.html')
-				@@include('./types.html')
-				@@include('./sales.html')
-				@@include('./review.html')
-				@@include('./other.html')
-				@@include('./testimonials.html')
+				@@include('../../components/asides/bookmaker-aside.html')
 			</div>
-			@@include('../../components/asides/bookmaker-aside.html')
 		</div>
 	</div>
 </div>

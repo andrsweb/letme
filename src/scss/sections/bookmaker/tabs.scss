@@ -92,6 +92,8 @@
 
 	&_top {
 		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
 		gap: 56px;
 		padding-bottom: 33px;
 		border-bottom: 2px solid $light-gray;
@@ -100,6 +102,8 @@
 	&_bottom {
 		padding-top: 33px;
 		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
 		gap: 56px;
 	}
 }

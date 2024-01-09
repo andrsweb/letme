@@ -1,5 +1,4 @@
 .downloads {
-	position: relative;
 	border-radius: $bord-20;
 	margin: 40px 0;
 
@@ -21,10 +20,16 @@
 	}
 
 	&__wrapper {
+		position: relative;
 		width: 100%;
+		max-width: 100%;
 		height: 100%;
 		border-radius: $bord-20;
-		padding: 31px 35px 31px 19%;
+		padding: 36px 35px 36px 5%;
+
+		@media all and (min-width: $xl) {
+			padding: 31px 35px 31px 19%;
+		}
 	}
 
 	&__links {
@@ -34,11 +39,19 @@
 		&_title {
 			color: $white;
 			font-family: $ff;
-			font-size: 24px;
+			font-size: 20px;
 			font-style: normal;
 			font-weight: $fw-medium;
 			line-height: normal;
 			margin-bottom: 16px;
+
+			@media all and (min-width: $xl) {
+				font-size: 24px;
+			}
+		}
+
+		.download__links_inner {
+			display: flex;
 		}
 	}
 

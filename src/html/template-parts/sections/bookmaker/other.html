@@ -7,6 +7,17 @@
 			Cмотреть всё
 		</a>
 	</div>
+	<div class="other__items">
+			@@loop('../../components/other-card/other.html', [
+			{'class':'purple','src': 'img/bookmakers/1x.svg', 'name': '1XBet'},
+			{'class':'red','src': 'img/bookmakers/leon.svg', 'name': 'Leon.ru'},
+			{'class':'aqua','src': 'img/bookmakers/pari.svg', 'name': 'PARI'},
+			{'class':'green','src': 'img/bookmakers/league.svg', 'name': 'Лига Ставок'}
+		])
+		<a href="#" class="button blue full">
+			Смотреть все
+		</a>
+	</div>
 	<div class="other__wrapper">
 		<div class="swiper other-swiper">
 			<div class="swiper-wrapper">

@@ -13,9 +13,31 @@
 		}
 	}
 
+	&__items {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: 30px;
+
+		@media all and (min-width: $xl) {
+			display: none;
+		}
+
+		.full {
+			@media all and (min-width: $md) {
+				display: none;
+			}
+		}
+	}
+
 	&__wrapper {
 		position: relative;
 		padding: 0 25px;
+		display: none;
+
+		@media all and (min-width: $xl) {
+			display: block;
+		}
 
 		&::before {
 			content: '';

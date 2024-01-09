@@ -13,6 +13,11 @@
 		.types-swiper1, .types-swiper2 {
 			position: relative;
 			padding: 0 25px;
+			display: none;
+
+			@media all and (min-width: $md) {
+				display: block;
+			}
 	
 			&::before {
 				content: '';
@@ -46,6 +51,25 @@
 		.swiper-wrapper {
 			-webkit-transition-timing-function: linear !important;
 			transition-timing-function: linear !important;
+		}
+	}
+
+	&__items {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		flex-wrap: wrap;
+
+		.sport {
+			margin-bottom: 10px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		@media all and (min-width: $md) {
+			display: none;
 		}
 	}
 }
