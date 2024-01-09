@@ -10,6 +10,35 @@
 			}
 		}
 
+		.types-swiper1, .types-swiper2 {
+			position: relative;
+			padding: 0 25px;
+	
+			&::before {
+				content: '';
+				width: 54px;
+				display: block;
+				height: 100%;
+				background: linear-gradient(90deg, #ffffff 37.05%, rgba(246, 246, 246, 0) 100%);
+				position: absolute;
+				left: -20px;
+				top: 0;
+				z-index: 10;
+			}
+		
+			&::after {
+				content: '';
+				width: 54px;
+				display: block;
+				height: 100%;
+				background: linear-gradient(-90deg, #FFFFFF 37.05%, rgba(246, 246, 246, 0.00) 100%);
+				position: absolute;
+				right: -20px;
+				top: 0;
+				z-index: 10;
+			}
+		}
+
 		.types-swiper1 {
 			margin-bottom: 26px;
 		}

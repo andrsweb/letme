@@ -1,0 +1,69 @@
+<section class="feedbacks">
+	<div class="feedbacks__panel">
+		<h2 class="h2">
+			Комментарии <span>578</span>
+		</h2>
+		<div class="sort__button_wrapper">
+			<button class="sort__button">
+				<span class="sort__button_img">
+					@@include('../../svg/ui/arrow-sort.html')
+				</span>
+				<span class="sort__button_text">
+					Сортировать
+				</span>
+			</button>
+			<div class="sort__hidden_items">
+				<div class="sort__hidden_item active">
+					Популярные
+					@@include('../../svg/ui/sort-check.html')
+				</div>
+				<div class="sort__hidden_item">
+					Сначала новые
+					@@include('../../svg/ui/sort-check.html')
+				</div>
+				<div class="sort__hidden_item">
+					Сначала старые
+					@@include('../../svg/ui/sort-check.html')
+				</div>
+				<div class="sort__hidden_item">
+					Сначала положительные
+					@@include('../../svg/ui/sort-check.html')
+				</div>
+				<div class="sort__hidden_item">
+					Сначала отрицательные
+					@@include('../../svg/ui/sort-check.html')
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="feedbacks__items">
+		@@include('../../sections/about/user-feedback-empty.html')
+		@@include('../../sections/about/user-feedback-inner-no-photo.html')
+		@@include('../../sections/about/user-feedback-overflow.html')
+		@@include('../../sections/about/user-feedback-inner-big.html')
+		@@include('../../sections/about/user-feedback-inner.html')
+		@@include('../../sections/about/user-feedback-empty.html')
+		@@include('../../sections/about/user-feedback-empty.html')
+		@@include('../../sections/about/user-feedback-empty.html')
+		@@include('../../sections/about/user-feedback-empty.html')
+		@@include('../../sections/about/user-feedback-empty.html')
+		@@include('../../sections/about/user-feedback-empty.html')
+		<button class="button blue full">
+			Показать ещё
+		</button>
+	</div>
+	<form class="feedback__form">
+		<fieldset>
+			<input type="text" placeholder="Введите ваше имя">
+			<textarea name="feedback" placeholder="Напишите ваш комментарий"></textarea>
+		</fieldset>
+		<div class="feedback__form_buttons">
+			<button class="button blue" type="submit">
+				Ответить
+			</button>
+			<button class="cancel" type="button">
+				Отмена
+			</button>
+		</div>
+	</form>
+</section>

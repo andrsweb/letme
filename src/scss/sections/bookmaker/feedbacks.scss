@@ -1,0 +1,26 @@
+.feedbacks {
+	padding: 25px 0;
+
+	.h2 {
+		span {
+			color: $gray-middle;
+			font-family: $ff;
+			font-size: 32px;
+			font-style: normal;
+			font-weight: $fw-medium;
+			line-height: normal;
+			margin-left: 15px;
+		}
+	}
+
+	&__panel {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 35px;
+		
+		@media all and (min-width: $xl) {
+			padding: 0 50px;
+		}
+	}
+}
