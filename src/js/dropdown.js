@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	'use strict'
 
 	toogleDropdown('.dropdown', '.dropdown__open', '.dropdown__open', '.dropdown__inner')
+	toogleDropdownForSlide('.review__dropdown', '.dropdown__open', '.dropdown__open', '.dropdown__inner')
 })
 
 const toogleDropdown = (selector, open, innerOpen, inner) => {                                    //Function for smooth dropdown opening
@@ -34,6 +35,36 @@ const toogleDropdown = (selector, open, innerOpen, inner) => {                  
 	})
 }
 
+const toogleDropdownForSlide = (selector, open, innerOpen, inner) => {                                    //Function for smooth dropdown opening
+	const dropdowns = document.querySelectorAll(selector)
+
+	if (!dropdowns.length) return
+
+	dropdowns.forEach(dropdown => {
+		if (dropdown.classList.contains('opened'))
+			reCalculateDropdownHeight(dropdown, innerOpen, inner)
+	})
+
+	dropdowns.forEach(dropdown => {
+		const start = dropdown.querySelector('.dropdown__title svg')
+		start.addEventListener('click', () => {
+			const dropdownOpen = dropdown.querySelector(open)
+
+			if (!dropdownOpen) return
+
+			if (!dropdown.classList.contains('opened')) {
+				dropdown.classList.add('opened')
+				reCalculateDropdownHeight(dropdown, innerOpen, inner)
+			}
+			else {
+				dropdown.classList.remove('opened')
+				dropdownOpen.style.height = '0'
+			}
+		})
+	})
+}
+
+
 window.addEventListener('resize', () => {
 	const dropdowns = document.querySelectorAll('.dropdown.opened')
 
@@ -41,3 +72,4 @@ window.addEventListener('resize', () => {
 
 	dropdowns.forEach(dropdown => reCalculateDropdownHeight(dropdown))
 })
+

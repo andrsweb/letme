@@ -10,7 +10,31 @@ document.addEventListener('DOMContentLoaded', () => {
 	fixedWidthSwiper('.bookmaker-feedback-swiper')
 	simpleSwiper('.types-swiper1')
 	simpleSwiperWithReverse('.types-swiper2')
+	swiperWithNavAndPag('.dropdown-swiper1', '.dropdown__next', '.dropdown__prev')
+	swiperWithNavAndPag('.dropdown-swiper2', '.dropdown__next', '.dropdown__prev')
 })
+
+const swiperWithNavAndPag = (selector, next, prev) => {
+
+	if (!selector) return
+
+	const swiper = new Swiper(selector, {
+		spaceBetween: 20,
+		slidesPerView: 1,
+		modules: [Navigation, Pagination],
+
+		navigation: {
+			nextEl: next,
+			prevEl: prev,
+		},
+
+		pagination: {
+			el: '.swiper-pagination'
+		},
+
+		speed: 2000
+	})
+}
 
 const simpleSwiper = (selector) => {
 	if (!selector) return
