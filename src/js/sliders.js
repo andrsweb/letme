@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	'use strict'
 
 	swiperWithNav('.testimonials-swiper', '.testimonials__next', '.testimonials__prev')
+	swiperWithNav('.other-swiper', '.other__next', '.other__prev')
 	swiperCarousel()
 	swiperScrollbar()
 	fixedWidthSwiper('.bookmaker-feedback-swiper')

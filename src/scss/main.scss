@@ -32,6 +32,7 @@
 @import 'components/user-feedback/feedback';
 @import 'components/asides/bookmaker-aside';
 @import 'components/payment-card/payment-cards';
+@import 'components/other-card/card';
 
 // Home page sections styles.
 @import 'sections/home/hero';
@@ -68,3 +69,4 @@
 @import 'sections/bookmaker/types';
 @import 'sections/bookmaker/sales';
 @import 'sections/bookmaker/review';
+@import 'sections/bookmaker/other';

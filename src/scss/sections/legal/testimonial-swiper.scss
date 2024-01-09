@@ -154,37 +154,37 @@
 			}
 		}
 	}
-	
-	.testimonials__prev, .testimonials__next {
-		position: absolute;
-		z-index: 11;
-		cursor: pointer;
-		transition: opacity ease $tr;
+}
+
+.testimonials__prev, .testimonials__next {
+	position: absolute;
+	z-index: 11;
+	cursor: pointer;
+	transition: opacity ease $tr;
+}
+
+.testimonials__prev {
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+
+	@media all and (min-width: $xl) {
+		left: -30px;
 	}
-	
-	.testimonials__prev {
-		left: 0;
-		top: 50%;
-		transform: translateY(-50%);
+}
 
-		@media all and (min-width: $xl) {
-			left: -30px;
-		}
+.testimonials__next {
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+
+	@media all and (min-width: $xl) {
+		right: -30px;
 	}
+}
 
-	.testimonials__next {
-		right: 0;
-		top: 50%;
-		transform: translateY(-50%);
-
-		@media all and (min-width: $xl) {
-			right: -30px;
-		}
-	}
-
-	.swiper-button {
-		&-disabled {
-			opacity: 0.5;
-		}
+.swiper-button {
+	&-disabled {
+		opacity: 0.5;
 	}
 }

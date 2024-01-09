@@ -1,0 +1,63 @@
+.other {
+	padding: 35px 0;
+
+	.h2__wrapper {
+		margin-bottom: 40px;
+
+		.h2 {
+			margin-bottom: 0;
+		}
+
+		@media all and (min-width: $xl) {
+			padding: 0 50px;
+		}
+	}
+
+	&__wrapper {
+		position: relative;
+		padding: 0 25px;
+
+		&::before {
+			content: '';
+			width: 54px;
+			display: block;
+			height: 100%;
+			background: linear-gradient(90deg, #FFFFFF 27.05%, rgba(246, 246, 246, 0.00) 100%);
+			position: absolute;
+			left: 0;
+			top: 0;
+			z-index: 10;
+	
+			@media all and (min-width: $md) {
+				width: 104px;
+			}
+		}
+	
+		&::after {
+			content: '';
+			width: 54px;
+			display: block;
+			height: 100%;
+			background: linear-gradient(-90deg, #FFFFFF 27.05%, rgba(246, 246, 246, 0.00) 100%);
+			position: absolute;
+			right: 0;
+			top: 0;
+			z-index: 10;
+	
+			@media all and (min-width: $md) {
+				width: 104px;
+			}
+		}
+	}
+
+	.other__prev {
+		left: 0;
+		position: absolute;
+		z-index: 20;
+	}
+
+	.other__next {
+		right: 0;
+		z-index: 20;
+	}
+}
