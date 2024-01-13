@@ -4,33 +4,35 @@
 
 	&::before {
 		content: '';
-		width: 54px;
+		width: 24px;
 		display: block;
 		height: 100%;
 		background: linear-gradient(90deg, #F6F6F6 27.05%, rgba(246, 246, 246, 0.00) 100%);
 		position: absolute;
-		left: -20px;
+		left: 0;
 		top: 0;
 		z-index: 10;
 
 		@media all and (min-width: $md) {
 			width: 104px;
+			left: -15px;
 		}
 	}
 
 	&::after {
 		content: '';
-		width: 54px;
+		width: 24px;
 		display: block;
 		height: 100%;
 		background: linear-gradient(-90deg, #F6F6F6 27.05%, rgba(246, 246, 246, 0.00) 100%);
 		position: absolute;
-		right: -20px;
+		right: 0;
 		top: 0;
 		z-index: 10;
 
 		@media all and (min-width: $md) {
 			width: 104px;
+			right: -15px;
 		}
 	}
 
