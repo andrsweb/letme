@@ -5,22 +5,20 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 const fillStars = () => {
-	const starsContainer = document.querySelector('.main__stars')
+	const stars = document.querySelectorAll('.main__stars svg')
 
-	if(!starsContainer) return
-
-	const stars = starsContainer.querySelectorAll('svg')
-
-	starsContainer.addEventListener('click', e => {
-		const clickedStar = e.target
-		const clickedIndex = Array.from(stars).indexOf(clickedStar)
-
-		stars.forEach((star, index) => {
-			if (index > clickedIndex) {
-				star.classList.remove('active')
-			} else {
+	const handleStarClick = (index) => {
+		for (let i = stars.length - 1; i >= 0; i--) {
+			const star = stars[i]
+			if (i >= index) {
 				star.classList.add('active')
+			} else {
+				star.classList.remove('active')
 			}
-		})
+		}
+	}
+
+	stars.forEach((star, index) => {
+		star.addEventListener('click', () => handleStarClick(index))
 	})
 }

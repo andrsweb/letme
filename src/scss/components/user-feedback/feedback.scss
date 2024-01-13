@@ -558,7 +558,7 @@
 		opacity: 0;
 		visibility: hidden;
 		transition: opacity ease $tr,
-				visibility ease $tr;
+			visibility ease $tr;
 
 		&_circle {
 			height: 30px;
@@ -591,7 +591,7 @@
 			stroke-dasharray: 0 999;
 			stroke-dashoffset: 0px;
 			transition: stroke-dasharray ease 1s,
-					stroke ease 1s;
+				stroke ease 1s;
 		}
 
 		&.few {
@@ -745,26 +745,56 @@
 
 		.main__stars {
 			display: flex;
+			flex-direction: row-reverse;
 			justify-content: center;
-			gap: 12px;
 			cursor: pointer;
 
 			svg {
-				width: 30px;
-				height: 30px;
+				width: 36px;
+				height: 36px;
+				padding: 0 6px;
 
 				@media all and (min-width: $md) {
-					width: 40px;
-					height: 40px;
+					width: 46px;
+					height: 46px;
 				}
 
 				path {
-					transition: fill ease $tr;
+					transition: fill ease $tr,
+						stroke ease $tr;
+				}
+
+				&:hover path,
+				&:hover~svg path,
+				&:hover~[data-index]:hover path {
+					fill: #FFC62B;
 				}
 
 				&.active {
+					transition: opacity ease $tr;
+
 					path {
 						fill: #FFC62B;
+					}
+
+					animation: starscale forwards ease $tr;
+
+					@keyframes starscale {
+						0% {
+							scale: 1;
+						}
+
+						50% {
+							scale: 1.2;
+						}
+
+						100% {
+							scale: 1;
+						}
+					}
+
+					&:hover {
+						opacity: $op;
 					}
 				}
 			}
@@ -774,6 +804,7 @@
 	.blue {
 		&[disabled] {
 			opacity: 0.5;
+			cursor: not-allowed;
 		}
 	}
 }
