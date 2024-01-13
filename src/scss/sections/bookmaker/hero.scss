@@ -49,6 +49,10 @@
 		align-items: flex-start;
 
 		@media all and (min-width: $md) {
+			flex-direction: column-reverse;
+		}
+
+		@media all and (min-width: $xxl) {
 			flex-direction: row;
 			align-items: flex-end;
 		}
@@ -56,21 +60,83 @@
 
 	.item__left_row {
 		display: flex;
+
+		@media all and (min-width: $md) {
+			flex-direction: row-reverse;
+			justify-content: flex-end;
+		}
+
+		@media all and (min-width: $xxl) {
+			flex-direction: row;
+			align-items: center;
+			justify-content: flex-start;
+		}
 	}
 
 	.item__left_col {
 		display: flex;
 		flex-direction: column;
-		padding: 0 40px;
+		padding: 0 20px;
 		border-right: 2px solid $white;
+
+		@media all and (min-width: 1500px) {
+			padding: 0 40px;
+		}
 
 		&:first-child {
 			padding-left: 0;
+
+			@media all and (min-width: $md) {
+				padding-left: 20px;
+				border-right: 0;
+			}
+
+			@media all and (min-width: $xxl) {
+				padding-left: 0;
+				border-right: 2px solid $white;
+			}
+		}
+
+		&:last-child {
+			padding-left: 0;
+
+			@media all and (min-width: $xxl) {
+				padding-left: 20px;
+			}
+
+			@media all and (min-width: 1500px) {
+				padding-left: 40px;
+			}
 		}
 
 		&:nth-child(3) {
 			flex-direction: row;
 			align-items: center;
+		}
+
+		&.desktop {
+			display: none;
+
+			@media all and (min-width: $xxl) {
+				display: flex;
+			}
+		}
+
+		&.tab {
+			display: none;
+			padding: 0;
+			border: 0;
+
+			@media all and (min-width: $md) {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				margin-bottom: 26px;
+			}
+
+			@media all and (min-width: $xxl) {
+				display: none;
+			}
 		}
 	}
 
@@ -121,6 +187,15 @@
 		max-width: 100%;
 
 		@media all and (min-width: $md) {
+			flex-direction: row;
+
+			.white {
+				margin-right: 10px;
+			}
+		}
+
+		@media all and (min-width: $xxl) {
+			flex-direction: column;
 			margin-right: 42px;
 			max-width: 270px;
 		}
@@ -165,6 +240,11 @@
 
 		@media all and (min-width: $md) {
 			display: block;
+			max-width: 125px;
+		}
+
+		@media all and (min-width: $xxl) {
+			max-width: 220px;
 		}
 
 		&:hover {
@@ -224,12 +304,24 @@
 		margin-left: 13px;
 
 		.bookmaker__mobile_item{
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: column;
+
+			@media all and (min-width: $sm) {
+				flex-direction: row;
+			}
+
 			.grey__border_link {
 				background-color: $white;
 				display: flex;
 				justify-content: center;
 				max-width: 180px;
 				margin-bottom: 13px;
+
+				@media all and (min-width: $sm) {
+					margin-left: 10px;
+				}
 			}
 		}
 	}
@@ -246,6 +338,10 @@
 
 	.bookmaker__mobile_top {
 		display: flex;
+
+		@media all and (min-width: $sm) {
+			margin-bottom: 10px;
+		}
 	}
 
 	.mobile__item_wrapper {
@@ -266,6 +362,8 @@
 			font-weight: $fw-medium;
 			line-height: normal;
 			text-decoration: underline;
+			max-width: 200px;
+			word-wrap: break-word;
 		}
 	}
 }
