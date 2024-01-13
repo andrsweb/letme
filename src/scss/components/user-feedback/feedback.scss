@@ -274,7 +274,7 @@
 			svg {
 				transform: rotate(-90deg);
 			}
-		}	
+		}
 	}
 
 	&_bottom {
@@ -291,7 +291,8 @@
 				}
 			}
 
-			&__up, &__down {
+			&__up,
+			&__down {
 				display: flex;
 				align-items: center;
 				width: 56px;
@@ -355,7 +356,7 @@
 	&.cloned {
 		display: flex;
 	}
-	
+
 	fieldset {
 		display: flex;
 		flex-direction: column;
@@ -505,33 +506,11 @@
 		.textarea__wrapper {
 			width: 100%;
 			position: relative;
-
-			&::after {
-				content: 'мин. 60 — макс. 2000 символов';
-				display: block;
-				position: absolute;
-				left: 20px;
-				bottom: 30px;
-				font-family: $ff;
-				color: $gray-middle;
-				font-size: 16px;
-				font-style: normal;
-				font-weight: $fw-regular;
-				line-height: normal;
-
-				@media all and (min-width: 1500px) {
-					left: 50px;
-				}
-			}
-
-			&:focus-within::after {
-				display:  none;
-			}
 		}
 
 		textarea {
 			width: 100%;
-			padding: 20px;
+			padding: 20px 20px 50px 20px;
 			resize: none;
 			border-radius: $bord-20;
 			border: 1px solid #D1D1D6;
@@ -542,7 +521,9 @@
 			font-weight: $fw-medium;
 			line-height: normal;
 			min-height: 220px;
-			
+			height: auto;
+			overflow-y: hidden;
+
 
 			&::placeholder {
 				color: $gray-middle;
@@ -562,6 +543,96 @@
 
 			@media all and (min-width: 1500px) {
 				padding: 30px 50px;
+			}
+		}
+	}
+
+	.textarea__state {
+		border-radius: 10px;
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		position: absolute;
+		right: 20px;
+		bottom: 20px;
+		opacity: 0;
+		visibility: hidden;
+		transition: opacity ease $tr,
+				visibility ease $tr;
+
+		&_circle {
+			height: 30px;
+			width: 30px;
+		}
+
+		&_text {
+			font-family: $ff;
+			line-height: normal;
+			font-size: 15px;
+			margin-right: 10px;
+			transition: color ease $tr;
+		}
+
+		.progress-circle {
+			transform: rotate(-90deg);
+			border-radius: 50%;
+		}
+
+		.progress-circle-back {
+			fill: none;
+			stroke: #ece8e8;
+			stroke-width: 10px;
+		}
+
+		.progress-circle-prog {
+			fill: none;
+			stroke: #ece8e8;
+			stroke-width: 10px;
+			stroke-dasharray: 0 999;
+			stroke-dashoffset: 0px;
+			transition: stroke-dasharray ease 1s,
+					stroke ease 1s;
+		}
+
+		&.few {
+			opacity: 1;
+			visibility: visible;
+
+			.progress-circle-prog {
+				stroke: red;
+				stroke-dasharray: 33.333 999;
+			}
+
+			.textarea__state_text {
+				color: red;
+			}
+		}
+
+		&.normal {
+			opacity: 1;
+			visibility: visible;
+
+			.progress-circle-prog {
+				stroke: rgb(112, 209, 112);
+				stroke-dasharray: 66.66 999;
+			}
+
+			.textarea__state_text {
+				color: rgb(112, 209, 112);
+			}
+		}
+
+		&.good {
+			opacity: 1;
+			visibility: visible;
+
+			.progress-circle-prog {
+				stroke: rgb(12, 153, 12);
+				stroke-dasharray: 100 999;
+			}
+
+			.textarea__state_text {
+				color: rgb(12, 153, 12);
 			}
 		}
 	}
@@ -648,9 +719,9 @@
 
 			@media all and (min-width: 1500px) {
 				width: 35%;
-				
+
 			}
-			
+
 			.blue {
 				margin-top: 10px;
 				width: 100%;
