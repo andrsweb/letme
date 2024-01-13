@@ -78,7 +78,7 @@
 					margin-bottom: 10px;
 					max-width: 100%;
 
-					@media all and (min-width: $md) {
+					@media all and (min-width: $xl) {
 						max-width: 250px;
 					}
 
@@ -188,10 +188,22 @@
 		&_left {
 			border-radius: $bord-20;
 			background-color: $light-gray;
-			padding: 52px 70px;
+			padding: 52px 20px;
 			margin-right: 22px;
 			width: 100%;
-			max-width: 558px;
+
+			@media all and (min-width: $md) {
+				max-width: 558px;
+			}
+
+			@media all and (min-width: $xl) {
+				max-width: 300px;
+			}
+
+			@media all and (min-width: 1760px) {
+				padding: 52px 70px;
+				max-width: 558px;
+			}
 
 			.information__strong {
 				color: $dark-blue;
@@ -225,9 +237,13 @@
 		&_right {
 			border-radius: $bord-20;
 			background-color: $light-gray;
-			padding: 37px 75px;
+			padding: 37px 20px;
 			width: 100%;
-			max-width: 850px;
+
+			@media all and (min-width: 1760px) {
+				padding: 37px 75px;
+				max-width: 850px;
+			}
 		}
 	}
 
@@ -320,10 +336,14 @@
 		align-items: flex-start;
 		width: 100%;
 		max-width: 200px;
-		margin-right: 50px;
+		margin-right: 10px;
 
 		&:last-child {
 			margin-right: 0;
+		}
+
+		@media all and (min-width: 1760px) {
+			margin-right: 50px;
 		}
 
 		&_name {
@@ -356,16 +376,21 @@
 
 	&__bottom {
 		display: flex;
+		justify-content: center;
 
 		&_right {
 			border-radius: $bord-20;
 			background-color: $light-gray;
-			padding: 27px 75px;
+			padding: 27px 20px;
 			width: 100%;
-			max-width: 850px;
 
 			.information__title {
 				margin-bottom: 25px;
+			}
+
+			@media all and (min-width: 1760px) {
+				padding: 37px 75px;
+				max-width: 850px;
 			}
 		}
 	}
@@ -376,11 +401,20 @@
 		align-items: center;
 		border-radius: $bord-20;
 		background-color: $light-gray;
-		padding: 75px 70px;
+		padding: 75px 20px;
 		margin-right: 22px;
 		width: 100%;
 		max-width: 558px;
 		gap: 10px;
+
+		@media all and (min-width: $xl) {
+			max-width: 300px;
+		}
+
+		@media all and (min-width: 1760px) {
+			padding: 75px 70px;
+			max-width: 558px;
+		}
 	}
 
 	&__social {
