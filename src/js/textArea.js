@@ -6,8 +6,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 const updateTextarea = () => {
 	document.addEventListener('input', e => {
-		if (event.target.tagName.toLowerCase() === 'textarea') {
-			autoExpand(e.target)
+		const target = e.target
+		if (target.tagName.toLowerCase() === 'textarea') {
+			autoExpand(target)
 		}
 	})
 

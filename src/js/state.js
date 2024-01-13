@@ -7,19 +7,22 @@ document.addEventListener('DOMContentLoaded', () => {
 const setTextState = () => {
 	const textareaBlocks = document.querySelectorAll('.main__feedback')
 
-	if(!textareaBlocks.length) return
+	if (!textareaBlocks.length) return
 
 	textareaBlocks.forEach((textareaBlock) => {
 		const textarea = textareaBlock.querySelector('textarea[name="textarea"]')
 		const textareaState = textareaBlock.querySelector('.textarea__state')
 		const textareaStateText = textareaBlock.querySelector('.textarea__state_text')
+		const submitButton = textareaBlock.querySelector('.button')
 
-		if (textarea) {
+		if (textarea && submitButton) {
 			textarea.addEventListener('input', () => {
 				updateTextareaState(textarea, textareaState, textareaStateText)
+				toggleSubmitButton(textarea, submitButton)
 			})
 
 			updateTextareaState(textarea, textareaState, textareaStateText)
+			toggleSubmitButton(textarea, submitButton)
 		}
 	})
 }
@@ -45,4 +48,6 @@ const updateTextareaState = (textarea, textareaState, textareaStateText) => {
 	}
 }
 
-
+const toggleSubmitButton = (textarea, submitButton) => {
+	submitButton.disabled = textarea.value.length < 60
+}
