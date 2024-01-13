@@ -64,4 +64,117 @@
 			}
 		}
 	}
+
+	.breadcrumbs {
+		position: relative;
+	}
+
+	.bookmaker__menu {
+		margin: 20px 0;
+		display: flex;
+		flex-direction: column;
+
+		@media all and (min-width: $xl) {
+			display: none;
+		}
+
+		&.mobile {
+			@media all and (min-width: $md) {
+				display: none;
+			}
+		}
+
+		&.tabs {
+			display: none;
+			margin: 0;
+			width: 297px;
+
+			@media all and (min-width: $md) {
+				display: flex;
+				position: absolute;
+				right: 0;
+				top: 50%;
+				transform: translateY(-50%);
+				z-index: 90;
+			}
+
+			@media all and (min-width: $xl) {
+				display: none;
+			}
+
+			.bookmaker__menu_items {
+				padding: 20px;
+				border-radius: $bord-20;
+				position: absolute;
+				left: 0;
+				top: 20px;
+				background-color: $white;
+			}
+		}
+
+		&_items {
+			display: none;
+			flex-direction: column;
+		}
+
+		&_start {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: $light-blue;
+			font-family: $ff;
+			font-size: 14px;
+			font-style: normal;
+			font-weight: $fw-medium;
+			line-height: normal;
+			cursor: pointer;
+
+			svg {
+				transform: rotate(90deg);
+				transition: transform ease $tr;
+
+				path {
+					fill: $light-blue;
+				}
+			}
+		}
+
+		.bookmaker__aside_list {
+			display: flex;
+			flex-direction: column;
+			margin: 20px 0 50px;
+		}
+
+		.bookmaker__aside_items {
+			display: none;
+			margin-top: 0;
+
+			@media all and (min-width: $md) {
+				display: flex;
+			}
+		}
+
+		&.opened {
+			.bookmaker__menu_items {
+				display: flex;
+				animation: fademenu forwards 1s;
+
+				@keyframes fademenu {
+					0% {
+						opacity: 0;
+					}
+
+					100% {
+						opacity: 1;
+					}
+				}
+			}
+
+			.bookmaker__menu_start {
+				svg {
+					transform: rotate(-90deg);
+				}
+			}
+		}
+	}
 }
