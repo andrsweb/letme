@@ -1,8 +1,15 @@
 .bonuses__card {
-	width: 310px;
+	width: 100%;
+	max-width: 310px;
 	background-color: $white;
 	border-radius: $bord-20;
 	box-shadow: $gray-shadow;
+
+	&.big {
+		@media all and (min-width: $sm) {
+			max-width: 335px;
+		}
+	}
 
 	&_inner {
 		display: flex;

@@ -42,17 +42,36 @@ const simpleSwiper = (selector) => {
 
 	const swiper = new Swiper(selector, {
 		spaceBetween: 24,
-		slidesPerView: 5,
 		loop: true,
 
 		modules: [Autoplay],
 
 		breakpoints: {
+			320: {
+				slidesPerView: 1
+			},
+
+			480: {
+				slidesPerView: 2
+			},
+
 			768: {
 				slidesPerView: 3,
 			},
 
+			992: {
+				slidesPerView: 4,
+			},
+
 			1200: {
+				slidesPerView: 3
+			},
+
+			1366: {
+				slidesPerView: 4
+			},
+
+			1700: {
 				slidesPerView: 5
 			}
 		},
@@ -77,11 +96,31 @@ const simpleSwiperWithReverse = (selector) => {
 		modules: [Autoplay],
 
 		breakpoints: {
+			320: {
+				slidesPerView: 1
+			},
+
+			480: {
+				slidesPerView: 2
+			},
+
 			768: {
 				slidesPerView: 3,
 			},
 
+			992: {
+				slidesPerView: 4,
+			},
+
 			1200: {
+				slidesPerView: 3
+			},
+
+			1366: {
+				slidesPerView: 4
+			},
+
+			1700: {
 				slidesPerView: 5
 			}
 		},
@@ -126,13 +165,14 @@ const swiperWithNav = (selector, next, prev) => {
 				slidesPerView: 1,
 			},
 
-			576: {
+			480: {
 				slidesPerView: 2,
 			},
 
 
 			768: {
-				spaceBetween: 40,
+				slidesPerView: 3,
+				spaceBetween: 20,
 			},
 
 			992: {
@@ -140,7 +180,7 @@ const swiperWithNav = (selector, next, prev) => {
 				spaceBetween: 40,
 			},
 
-			1400: {
+			1600: {
 				slidesPerView: 4
 			}
 		},

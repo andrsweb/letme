@@ -454,34 +454,49 @@
 }
 
 .main__feedback {
-	margin-top: 40px;
-	display: none;
+	padding: 20px 0;
+	display: block;
+	margin-top: 0;
 
-	@media all and (min-width: $xl) {
-		display: block;
+	@media all and (min-width: $md) {
+		margin-top: 40px;
 	}
 
 	legend {
 		color: $dark-blue;
 		font-family: $ff;
-		font-size: 32px;
 		font-style: normal;
 		font-weight: $fw-medium;
 		line-height: normal;
-		padding-left: 50px;
 		margin-bottom: 20px;
+		padding-left: 0;
+		font-size: 20px;
+
+		@media all and (min-width: $md) {
+			padding-left: 50px;
+			font-size: 32px;
+		}
 	}
 
 	fieldset {
-		width: 100%;
 		display: flex;
+		width: 100%;
+		flex-direction: column;
+
+		@media all and (min-width: $md) {
+			flex-direction: row;
+		}
 	}
 
 	.main__left {
-		width: calc(50% - 10px);
 		display: flex;
 		flex-direction: column;
-		margin-right: 10px;
+		width: 100%;
+
+		@media all and (min-width: $md) {
+			width: calc(50% - 10px);
+			margin-right: 10px;
+		}
 
 		@media all and (min-width: 1500px) {
 			width: calc(65% - 10px);
@@ -600,7 +615,7 @@
 				width: 100%;
 
 				@media all and (min-width: 1500px) {
-					max-width: 512px;
+					max-width: 100%;
 				}
 			}
 		}
@@ -620,10 +635,16 @@
 		}
 
 		&_wrapper {
-			width: 50%;
 			display: flex;
 			flex-direction: column;
 			align-items: center;
+			width: 100%;
+			margin-top: 10px;
+
+			@media all and (min-width: $md) {
+				width: 50%;
+				margin-top: 0;
+			}
 
 			@media all and (min-width: 1500px) {
 				width: 35%;
@@ -631,7 +652,7 @@
 			}
 			
 			.blue {
-				margin-top: auto;
+				margin-top: 10px;
 				width: 100%;
 			}
 		}
@@ -639,12 +660,16 @@
 		.main__title {
 			color: $dark-blue;
 			font-family: $ff;
-			font-size: 24px;
 			font-style: normal;
 			font-weight: $fw-medium;
 			line-height: normal;
 			margin-bottom: 36px;
 			text-align: center;
+			font-size: 20px;
+
+			@media all and (min-width: $md) {
+				font-size: 24px;
+			}
 		}
 
 		.main__stars {
@@ -654,8 +679,13 @@
 			cursor: pointer;
 
 			svg {
-				width: 40px;
-				height: 40px;
+				width: 30px;
+				height: 30px;
+
+				@media all and (min-width: $md) {
+					width: 40px;
+					height: 40px;
+				}
 
 				path {
 					transition: fill ease $tr;

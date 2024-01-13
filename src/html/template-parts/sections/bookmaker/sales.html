@@ -8,13 +8,19 @@
 		</a>
 	</div>
 	<div class="sales__wrapper">
-		@@loop('../../components/bonus/bonus.html', [
-			{'src': 'img/components/bonus/bonus1.png', 'name': 'Фрибет 5 000 ₽', 'text': '5000 рублей за правильные прогнозы'},
-			{'src': 'img/components/bonus/bonus2.png', 'name': 'Промокод в ВИНлайн', 'text': 'Активируйте промокод и получайте фрибет 500 ₽'},
-			{'src': 'img/components/bonus/bonus3.png', 'name': 'Супер кэшбек', 'text': 'Кэшбек до 20% <br> для VIP-клиентов'},
-			{'src': 'img/components/bonus/bonus4.png', 'name': 'Розыгрыш 1,2 млн ₽', 'text': 'Совершите ставки и получайте призы'}
-		])
-		<a href="" class="button blue full">
+		<div class="sales__item">
+			@@include('../../components/bonus/bonus.html', {'class': 'big', 'src': 'img/components/bonus/bonus1.png', 'name': 'Фрибет 5 000 ₽', 'text': '5000 рублей за правильные прогнозы'}),
+		</div>
+		<div class="sales__item">
+			@@include('../../components/bonus/bonus.html', {'class': 'big','src': 'img/components/bonus/bonus2.png', 'name': 'Промокод в ВИНлайн', 'text': 'Активируйте промокод и получайте фрибет 500 ₽'}),
+		</div>
+		<div class="sales__item">
+			@@include('../../components/bonus/bonus.html', {'class': 'big','src': 'img/components/bonus/bonus3.png', 'name': 'Супер кэшбек', 'text': 'Кэшбек до 20% <br> для VIP-клиентов'}),
+		</div>
+		<div class="sales__item">
+			@@include('../../components/bonus/bonus.html', {'class': 'big','src': 'img/components/bonus/bonus4.png', 'name': 'Розыгрыш 1,2 млн ₽', 'text': 'Совершите ставки и получайте призы'})
+		</div>
+		<a href="#" class="button blue full">
 			Смотреть все
 		</a>
 	</div>

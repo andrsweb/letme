@@ -93,6 +93,7 @@
 		span {
 			font-size: 16px;
 			font-weight: $fw-medium;
+			
 
 			@media all and (min-width: $md) {
 				font-size: 24px;
@@ -215,9 +216,11 @@
 
 		span {
 			font-weight: $fw-medium;
+			margin-right: 5px;
 
 			@media all and (min-width: $md) {
 				font-size: 32px;
+				margin-right: 0;
 			}
 
 			@media all and (min-width: $xl) {

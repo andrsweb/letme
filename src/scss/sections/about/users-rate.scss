@@ -37,6 +37,11 @@
 			label:before {
 				margin-right: 10px;
 			}
+
+			.checkbox:checked + label {
+					color: $dark-blue;
+					font-weight: $fw-regular;
+			}
 		}
 
 		&:last-child {
