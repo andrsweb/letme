@@ -227,14 +227,6 @@
 				font-size: 36px;
 			}
 		}
-
-		br {
-			display: none;
-
-			@media all and (min-width: $md) {
-				display: block;
-			}
-		}
 	}
 
 	.h1 {

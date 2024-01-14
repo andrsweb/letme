@@ -3,6 +3,10 @@
 	height: 190px;
 	transition: opacity ease $tr;
 
+	@media all and (min-width: $md) {
+		width: 229px;
+	}
+
 	@media all and (min-width: 1920px) {
 		width: 267px;
 	}

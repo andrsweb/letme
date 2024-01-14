@@ -17,6 +17,14 @@
 	justify-content: space-between;
 	margin-bottom: 47px;
 
+	h2 {
+		width: 60%;
+
+		@media all and (min-width: $sm) {
+			width: auto;
+		}
+	}
+
 	.box__shadow_button {
 		min-width: 50px;
 		white-space: nowrap;
