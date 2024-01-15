@@ -1,0 +1,333 @@
+.bookmaker__bonuses {
+    padding: 50px 0;
+    width: 100%;
+
+    h2 {
+        margin-bottom: 40px;
+    }
+
+    &_links {
+        width: 100%;
+        display: flex;
+        gap: 10px;
+        white-space: nowrap;
+        overflow-x: auto;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        @media all and (min-width: $lg) {
+            flex-wrap: wrap;
+            white-space: normal;
+            overflow-x: hidden;
+        }
+    }
+
+    &_link {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        background-color: lightgray;
+        font-family: $ff;
+        font-size: 14px;
+        color: $dark-blue;
+        font-weight: $fw-medium;
+        line-height: normal;
+        border-radius: 10px;
+        transition: opacity ease $tr;
+
+        &:hover {
+            opacity: $op;
+        }
+
+        &.active {
+            background-color: $dark-blue;
+            color: $white;
+
+            .bonuses__link_img {
+                picture {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+
+    .bonuses__link_img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        margin-right: 5px;
+        border-radius: 10px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    &_info {
+        margin: 20px 0;
+        padding: 20px;
+		background-color: $light-gray;
+		color: $dark-blue;
+		font-family: $ff;
+		font-size: 14px;
+		font-style: normal;
+		font-weight: $fw-regular;
+		line-height: 130%;
+		border-radius: $bord-20;
+
+		@media all and (min-width: $md) {
+			font-size: 16px;
+		}
+
+		@media all and (min-width: $xl) {
+			font-size: 20px;
+		}
+    }
+
+    &_text {
+		color: $dark-blue;
+		font-family: $ff;
+		font-size: 12px;
+		font-style: normal;
+		font-weight: $fw-regular;
+		line-height: 130%;
+		border-radius: $bord-20;
+
+		@media all and (min-width: $md) {
+			font-size: 14px;
+		}
+
+		@media all and (min-width: $xl) {
+			font-size: 16px;
+		}
+    }
+
+    &_titles {
+        padding: 10px;
+        background-color: $dark-blue;
+        border-radius: $bord-20;
+        margin: 50px 0 20px;
+        display: none;
+
+        @media all and (min-width: $md) {
+            display: flex;
+        }
+    }
+
+    &_title {
+        width: 33.333%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $white;
+		font-family: $ff;
+		font-size: 12px;
+		font-style: normal;
+		font-weight: $fw-medium;
+		line-height: 130%;
+		border-radius: $bord-20;
+        text-align: center;
+
+        @media all and (min-width: $md) {
+            font-size: 16px;
+        }
+    }
+
+    &_table {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        border: 1px solid $dark-blue;
+        border-radius: $bord-20;
+        padding: 20px 0;
+        margin-top: 20px;
+
+        @media all and (min-width: $md) {
+            gap: 10px;
+            margin: 0;
+        }
+    }
+
+    &_row {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        padding: 5px;
+        background-color: #f5f4f4;
+
+        @media all and (min-width: $md) {
+            gap: 10px;
+            flex-direction: row;
+        }
+    }
+
+    &_item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+        width: 100%;
+
+        @media all and (min-width: $md) {
+            padding: 20px;
+            width: 33.333%;
+        }
+
+        a {
+            color: $dark-blue;
+            font-family: $ff;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: $fw-regular;
+            line-height: 130%;
+            text-decoration: underline;
+            text-align: center;
+
+            &:hover {
+                text-decoration: none;
+            }
+
+            @media all and (min-width: $md) {
+                font-size: 16px;
+            }
+        }
+
+        ol {
+            li {
+                font-size: 14px;
+
+                @media all and (min-width: $md) {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+
+.text__section {
+    padding: 25px 0;
+
+    h2 {
+        margin-bottom: 40px;
+    }
+
+    .dropdown {
+		position: relative;
+		padding-left: 40px;
+		margin-bottom: 30px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		&::before {
+			content: '';
+			display: block;
+			width: 10px;
+			height: 100%;
+			background-color: $light-blue;
+			position: absolute;
+			left: 0;
+			top: 0;
+			border-radius: $bord-20;
+		}
+
+		&.opened {
+			.dropdown__title {
+				svg {
+					transform: rotate(90deg);
+				}
+			}
+		}
+	}
+
+	.dropdown__open {
+		transition: padding ease $tr,
+				height ease $tr;
+	}
+
+	.dropdown__inner {
+		padding-top: 30px;
+	}
+
+	.dropdown__title {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		color: $dark-blue;
+		font-family: $ff;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: $fw-medium;
+		line-height: 130%;
+
+		@media all and (min-width: $md) {
+			font-size: 20px;
+		}
+		
+		svg {
+			margin-left: 30px;
+			width: 50px;
+			height: 50px;
+			transition: transform ease $tr;
+			cursor: pointer;
+			transform: rotate(-90deg);
+		}
+	}
+
+	.dropdown__start {
+		width: calc(100% - 80px);
+	}
+
+	.dropdown__text {
+		color: $dark-blue;
+		font-family: $ff;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: $fw-regular;
+		line-height: 130%;
+	}
+
+    .faq__items {
+        margin-top: 40px;
+    }
+
+    &_category {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    &_name {
+        font-family: $ff;
+        font-size: 16px;
+        font-weight: $fw-medium;
+    }
+
+    &_link {
+        color: $light-blue;
+        margin: 0 10px;
+        font-family: $ff;
+        font-size: 14px;
+        font-weight: $fw-medium;
+        transition: opacity ease $tr;
+
+        @media all and (min-width: $xl) {
+            font-size: 16px;
+        }       
+
+        &:hover {
+            opacity: $op;
+        }
+    }
+}
