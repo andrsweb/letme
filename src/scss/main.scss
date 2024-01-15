@@ -21,6 +21,7 @@
 @import 'components/asides/aside-left';
 @import 'components/asides/aside-right';
 @import 'components/asides/fixed-aside';
+@import 'components/asides/bonus-right';
 @import 'components/bookmaker/bookmaker';
 @import 'components/bonus/bonus';
 @import 'components/payment-tabs/payment-tabs';
@@ -71,3 +72,6 @@
 @import 'sections/bookmaker/review';
 @import 'sections/bookmaker/other';
 @import 'sections/bookmaker/feedbacks';
+
+// Bookmaker  sections styles.
+@import 'sections/bookmaker-bonus/hero';

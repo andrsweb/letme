@@ -66,6 +66,32 @@
 		}
 	}
 
+	&.black {
+		background-color: $light-gray;
+		padding: 10px;
+		font-size: 14px;
+		border-radius: 10px;
+		transition: opacity ease $tr;
+
+		span {
+			margin-left: 5px;
+		}
+
+		&:hover {
+			opacity: $op;
+		}
+
+		&.active {
+			background-color: $dark-blue;
+			color: $white;
+		}
+
+		@media all and (min-width: $md) {
+			padding: 20px;
+			font-size: 16px;
+		}
+	}
+
 	&.white {
 		background-color: $light-gray;
 		color: $dark-blue;

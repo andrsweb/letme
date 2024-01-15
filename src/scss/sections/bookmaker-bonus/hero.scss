@@ -1,0 +1,24 @@
+.bookmaker__bonus {
+    &_content {
+        
+        @media all and (min-width: $xl) {
+            width: calc(100% - 286px);
+            max-width: 100%;
+        }
+    }
+
+    &_filters {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        gap: 10px;
+        white-space: nowrap;
+        overflow-x: auto;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+}

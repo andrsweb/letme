@@ -1,0 +1,41 @@
+.toggle__checkbox:not(checked) {
+    position: absolute;
+    opacity: 0;
+  }
+  .toggle__checkbox:not(checked) + .toggle__label {
+    position: relative;
+    padding: 0 0 0 60px; 
+  }
+
+  /* Оформление первой части чекбокса в выключенном состоянии (фон). */
+ .toggle__checkbox:not(checked) + .toggle__label:before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: 0;
+    width: 50px;
+    height: 26px;
+    border-radius: 13px;
+    background-color: $gray-middle;
+  }
+
+  .toggle__checkbox:not(checked) + .toggle__label:after{
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: 2px;
+    width: 22px;
+    height: 22px;
+    border-radius: 10px;
+    background-color: $white;
+    box-shadow: 0 2px 5px rgba(0,0,0,.3);
+    transition: all .2s; 
+  }
+    
+ .toggle__checkbox:checked + .toggle__label:before {
+    background-color: $light-blue;
+  }
+
+  .toggle__checkbox:checked + label:after {
+    left: 26px;
+  }
