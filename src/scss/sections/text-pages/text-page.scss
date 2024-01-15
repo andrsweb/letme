@@ -20,10 +20,15 @@
     }
 
     &_contact {
-        padding: 20px;
-        width: 50%;
+        padding: 10px;
+        width: 100%;
         display: flex;
         flex-direction: column;
+
+        @media all and (min-width: $sm) {
+            width: 50%;
+            padding: 20px;
+        }
     }
 
     .contact__name {
