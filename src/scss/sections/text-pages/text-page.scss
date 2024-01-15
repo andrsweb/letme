@@ -1,0 +1,66 @@
+.text__page {
+    padding: 50px 0;
+
+    h2 {
+        margin: 20px 0;
+    }
+
+    p {
+        font-family: $ff;
+        font-style: normal;
+        font-size: 16px;
+        font-weight: $fw-regular;
+        padding-left: 20px;
+    }
+
+    &_contacts {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+    }
+
+    &_contact {
+        padding: 20px;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact__name {
+        font-family: $ff;
+        font-size: 18px;
+        font-weight: $fw-bold;
+        margin-bottom: 10px;
+    }
+
+    .contact__job {
+        font-family: $ff;
+        font-size: 16px;
+        font-weight: $fw-medium;
+        color: $gray-middle;
+        margin-bottom: 10px;
+    }
+
+    .contact__text {
+        font-family: $ff;
+        font-size: 16px;
+        font-weight: $fw-medium;
+        color: $dark-blue;
+        margin-bottom: 20px;       
+    }
+
+    .contact__email {
+        display: flex;
+        align-items: center;
+        font-family: $ff;
+        font-size: 16px;
+        color: $light-blue;
+        font-weight: $fw-medium;
+
+        svg {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+    }
+}
