@@ -12,6 +12,9 @@ const setTextState = () => {
 	textareaBlocks.forEach((textareaBlock) => {
 		const textarea = textareaBlock.querySelector('textarea[name="textarea"]')
 		const textareaState = textareaBlock.querySelector('.textarea__state')
+
+        if(!textareaState) return
+
 		const textareaStateText = textareaBlock.querySelector('.textarea__state_text')
 		const submitButton = textareaBlock.querySelector('.button')
 

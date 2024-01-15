@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Favcion -->
+	<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+	<link rel="manifest" href="favicon/site.webmanifest">
+	<link rel="shortcut icon" href="favicon/favicon.ico">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="msapplication-config" content="favicon/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
+	<!--  -->
+	<title>Letmebet.ru</title>
+	<link rel="stylesheet" href="css/main.min.css" />
+</head>
+<body>
+	<div class="wrapper for__sticky" id="wrapper-lock">
+		<header class="header">
+			<div class="container">
+				<div class="header__wrapper">
+					<a href="/" class="header__logo">
+						<img src="img/header/logo.svg" width="265" height="54" alt="">
+					</a>
+					<div class="header__inner" id="menu-lock">
+						@@include('template-parts/header/nav-menu/nav.html')
+					</div>
+					<button class="burger__button">
+						<span></span>
+					</button>
+				</div>
+			</div>
+		</header>
+
+<main>
+    <section class="about__box">
+        <div class="container">
+            <div class="breadcrumbs">
+                <ul class="breadcrumbs__list">
+                    @@loop('template-parts/components/breadcrumbs/breadcrumbs-item.html', [
+                        {'current': '', 'href': '/', 'text': 'Главная', 'arrow': ''},
+                        {'current': '', 'href': '/', 'text': 'Букмекеры', 'arrow': ''},
+                        {'current': '', 'href': '/', 'text': 'Фонбет', 'arrow': ''},
+                        {'current': 'current', 'href': '#', 'text': 'Отзывы', 'arrow': 'hidden'},
+                    ])
+                </ul>
+            </div>
+            <div class="about__box_items">
+                <div class="about__box_content">
+                    <div class="feedback">
+                        <h1 class="h1">
+                            Отзывы о букмекерской конторе Фонбет <span>48</span>
+                        </h1>
+                    </div>
+                    @@include('template-parts/sections/about/mobile-slide.html')
+                    @@include('template-parts/sections/about/user-rate.html')
+                    @@include('template-parts/sections/about/chatbar.html')
+                    @@include('template-parts/sections/about/user-feedback-empty.html')
+                    @@include('template-parts/sections/about/user-feedback-inner-no-photo.html')
+                    @@include('template-parts/sections/about/user-feedback-overflow.html')
+                    @@include('template-parts/sections/about/user-feedback-inner-big.html')
+                    @@include('template-parts/sections/about/user-feedback-inner.html')
+                    @@include('template-parts/sections/about/user-feedback-empty.html')
+                    @@include('template-parts/sections/about/user-feedback-empty.html')
+                    @@include('template-parts/sections/about/user-feedback-empty.html')
+                    @@include('template-parts/sections/about/user-feedback-empty.html')
+                    @@include('template-parts/sections/about/user-feedback-empty.html')
+                    @@include('template-parts/sections/about/user-feedback-empty.html')
+                    <button class="button blue full">
+                        Загрузить ещё
+                    </button>
+                    <form class="main__feedback" id="main-form-anchor">
+                        <div class="main__feedback_heading">Написать отзыв</div>
+                        <fieldset>
+                            <div class="main__left">
+                                <div class="main__inputs">
+                                    <input type="text" placeholder="Введите ваше имя">
+                                    <input type="text" placeholder="Введите ваш email">
+                                </div>
+                                <div class="textarea__wrapper">
+                                    <textarea name="textarea" placeholder="Пожалуйста, напишите, что вы думаете о букмекерской конторе"></textarea>
+                                </div>
+                            </div>
+                            <div class="main__right_wrapper">
+                                <div class="main__right">
+                                    <div class="main__rating">
+                                        <div class="main__title">
+                                            Оцените букмекера
+                                        </div>
+                                        <div class="main__stars">
+                                            @@include('template-parts/svg/ui/star-empty.html')
+                                            @@include('template-parts/svg/ui/star-empty.html')
+                                            @@include('template-parts/svg/ui/star-empty.html')
+                                            @@include('template-parts/svg/ui/star-empty.html')
+                                            @@include('template-parts/svg/ui/star-empty.html')
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="button blue">
+                                    Отправить отзыв
+                                </button>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="fixed__aside_wrapper">
+                    <aside class="fixed__aside testimonials__aside">
+                        <div class="aside__input_wrapper">
+                            <div class="aside__input_heading">
+                                <div class="aside__filter_name">
+                                    Фильтр
+                                </div>
+                                <button class="button black">
+                                    Сбросить
+                                </button>
+                            </div>
+                            <div class="aside__search">
+                                <input type="text" name="search" placeholder="Поиск">
+                                <div class="aside__search_img">
+                                    <img src="../img/ico/loupe.svg" width="20" height="20" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="aside__filter_wrapper">
+                            <div class="aside__filter">
+                                <h5 class="h5">
+                                   По букмекеру
+                                </h5>
+                                <div class="checkbox__wrapper">
+                                    <input class="checkbox" id="bo1" type="checkbox" name="aside-checkbox">
+                                    <label for="bo1" class="checkbox__label">
+                                        Pari
+                                    </label>
+                                </div>
+                                <div class="checkbox__wrapper">
+                                    <input class="checkbox" id="bo2" type="checkbox" name="aside-checkbox">
+                                    <label for="bo2" class="checkbox__label">
+                                        Betboom
+                                    </label>
+                                </div>
+                                <div class="checkbox__wrapper">
+                                    <input class="checkbox" id="bo3" type="checkbox" name="aside-checkbox">
+                                    <label for="bo3" class="checkbox__label">
+                                       Betcity
+                                    </label>
+                                </div>
+                                <div class="checkbox__wrapper">
+                                    <input class="checkbox" id="bo4" type="checkbox" name="aside-checkbox">
+                                    <label for="bo4" class="checkbox__label">
+                                        Мелбет
+                                    </label>
+                                </div>
+                                <div class="checkbox__wrapper">
+                                    <input class="checkbox" id="bo5" type="checkbox" name="aside-checkbox">
+                                    <label for="bo5" class="checkbox__label">
+                                        Фонбет
+                                    </label>
+                                </div>
+                                <div class="checkbox__wrapper">
+                                    <input class="checkbox" id="bo6" type="checkbox" name="aside-checkbox">
+                                    <label for="bo6" class="checkbox__label">
+                                        Винлайн
+                                    </label>
+                                </div>
+                                <div class="checkbox__wrapper">
+                                    <input class="checkbox" id="bo7" type="checkbox" name="aside-checkbox">
+                                    <label for="bo7" class="checkbox__label">
+                                        Леон
+                                    </label>
+                                </div>
+                                <div class="checkbox__wrapper">
+                                    <input class="checkbox" id="bo8" type="checkbox" name="aside-checkbox">
+                                    <label for="bo8" class="checkbox__label">
+                                        BETTERY
+                                    </label>
+                                </div>
+                                <div class="checkbox__wrapper">
+                                    <input class="checkbox" id="bo9" type="checkbox" name="aside-checkbox">
+                                    <label for="bo9" class="checkbox__label">
+                                        Марафон
+                                    </label>
+                                </div>
+                                <div class="checkbox__wrapper">
+                                    <input class="checkbox" id="bo10" type="checkbox" name="aside-checkbox">
+                                    <label for="bo10" class="checkbox__label">
+                                       Олимп
+                                    </label>
+                                </div>
+                                <div class="checkbox__wrapper">
+                                    <input class="checkbox" id="bo11" type="checkbox" name="aside-checkbox">
+                                    <label for="bo11" class="checkbox__label">
+                                        Тенниси
+                                    </label>
+                                </div>
+                                <div class="checkbox__wrapper">
+                                    <input class="checkbox" id="bo12" type="checkbox" name="aside-checkbox">
+                                    <label for="bo12" class="checkbox__label">
+                                        1хСтавка
+                                    </label>
+                                </div>
+                                <div class="checkbox__wrapper">
+                                    <input class="checkbox" id="bo13" type="checkbox" name="aside-checkbox">
+                                    <label for="bo13" class="checkbox__label">
+                                        Лига ставок
+                                    </label>
+                                </div>
+                                <div class="checkbox__wrapper">
+                                    <input class="checkbox" id="bo14" type="checkbox" name="aside-checkbox">
+                                    <label for="bo14" class="checkbox__label">
+                                        Спортбет
+                                    </label>
+                                </div>
+                                <div class="checkbox__wrapper">
+                                    <input class="checkbox" id="bo15" type="checkbox" name="aside-checkbox">
+                                    <label for="bo15" class="checkbox__label">
+                                        Балтбет
+                                    </label>
+                                </div>
+                                <div class="hidden__checkboxes">
+                                    <div class="hidden__checkboxes_inner">
+                                        <div class="checkbox__wrapper">
+                                            <input class="checkbox" id="bo11" type="checkbox" name="aside-checkbox">
+                                            <label for="bo11" class="checkbox__label">
+                                                Pari
+                                            </label>
+                                        </div>
+                                        <div class="checkbox__wrapper">
+                                            <input class="checkbox" id="bo21" type="checkbox" name="aside-checkbox">
+                                            <label for="bo21" class="checkbox__label">
+                                                Betboom
+                                            </label>
+                                        </div>
+                                        <div class="checkbox__wrapper">
+                                            <input class="checkbox" id="bo31" type="checkbox" name="aside-checkbox">
+                                            <label for="bo31" class="checkbox__label">
+                                               Betcity
+                                            </label>
+                                        </div>
+                                        <div class="checkbox__wrapper">
+                                            <input class="checkbox" id="bo41" type="checkbox" name="aside-checkbox">
+                                            <label for="bo41" class="checkbox__label">
+                                                Мелбет
+                                            </label>
+                                        </div>
+                                        <div class="checkbox__wrapper">
+                                            <input class="checkbox" id="bo51" type="checkbox" name="aside-checkbox">
+                                            <label for="bo51" class="checkbox__label">
+                                                Фонбет
+                                            </label>
+                                        </div>
+                                        <div class="checkbox__wrapper">
+                                            <input class="checkbox" id="bo61" type="checkbox" name="aside-checkbox">
+                                            <label for="bo61" class="checkbox__label">
+                                                Винлайн
+                                            </label>
+                                        </div>
+                                        <div class="checkbox__wrapper">
+                                            <input class="checkbox" id="bo71" type="checkbox" name="aside-checkbox">
+                                            <label for="bo71" class="checkbox__label">
+                                                Леон
+                                            </label>
+                                        </div>
+                                        <div class="checkbox__wrapper">
+                                            <input class="checkbox" id="bo81" type="checkbox" name="aside-checkbox">
+                                            <label for="bo81" class="checkbox__label">
+                                                BETTERY
+                                            </label>
+                                        </div>
+                                        <div class="checkbox__wrapper">
+                                            <input class="checkbox" id="bo91" type="checkbox" name="aside-checkbox">
+                                            <label for="bo91" class="checkbox__label">
+                                                Марафон
+                                            </label>
+                                        </div>
+                                        <div class="checkbox__wrapper">
+                                            <input class="checkbox" id="bo101" type="checkbox" name="aside-checkbox">
+                                            <label for="bo101" class="checkbox__label">
+                                               Олимп
+                                            </label>
+                                        </div>
+                                        <div class="checkbox__wrapper">
+                                            <input class="checkbox" id="bo111" type="checkbox" name="aside-checkbox">
+                                            <label for="bo111" class="checkbox__label">
+                                                Тенниси
+                                            </label>
+                                        </div>
+                                        <div class="checkbox__wrapper">
+                                            <input class="checkbox" id="bo121" type="checkbox" name="aside-checkbox">
+                                            <label for="bo121" class="checkbox__label">
+                                                1хСтавка
+                                            </label>
+                                        </div>                                   
+                                    </div>
+                                </div>
+                                <div class="show__more">
+                                    <span class="show__more_text">
+                                        Показать все
+                                    </span>
+                                    <div class="show__more_arrow">
+                                        @@include('template-parts/svg/ui/dropdown-arrow.html')
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="aside__filter_wrapper">
+                            <h5 class="h5">
+                                Период
+                            </h5>
+                            <div class="checkbox__wrapper">
+                                <input class="checkbox" id="web-check1fff12" type="checkbox" name="aside-checkbox">
+                                <label for="web-check1fff12" class="checkbox__label">
+                                    <span class="label__caption">
+                                        За 30 дней
+                                        <span class="label__value">0</span> 
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="checkbox__wrapper">
+                                <input class="checkbox" id="web-check1fff12" type="checkbox" name="aside-checkbox">
+                                <label for="web-check1fff12" class="checkbox__label">
+                                    <span class="label__caption">
+                                        За 60 дней
+                                        <span class="label__value">0</span> 
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="checkbox__wrapper">
+                                <input class="checkbox" id="web-check1fff133" type="checkbox" name="aside-checkbox">
+                                <label for="web-check1fff133" class="checkbox__label">
+                                    <span class="label__caption">
+                                        За 90 дней
+                                        <span class="label__value">0</span> 
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="checkbox__wrapper">
+                                <input class="checkbox" id="web-check1fff144" type="checkbox" name="aside-checkbox">
+                                <label for="web-check1fff144" class="checkbox__label">
+                                    <span class="label__caption">
+                                        Все
+                                        <span class="label__value">221</span> 
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+                <form class="feedback__form">
+                    <fieldset>
+                        <input type="text" placeholder="Введите ваше имя">
+                        <textarea name="feedback" placeholder="Напишите ваш комментарий"></textarea>
+                    </fieldset>
+                    <div class="feedback__form_buttons">
+                        <button class="button blue" type="submit">
+                            Ответить
+                        </button>
+                        <button class="cancel" type="button">
+                            Отмена
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</main>
+
+@@include( 'template-parts/footer/footer.html' )
+
