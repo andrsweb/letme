@@ -60,6 +60,10 @@
 	position: relative;
 	margin-bottom: 10px;
 
+    &.disabled {
+        opacity: 0.3;
+    }
+
 	.checkbox__label {
 		color: $dark-blue;
 		text-align: left;
