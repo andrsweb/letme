@@ -506,6 +506,29 @@
 		.textarea__wrapper {
 			width: 100%;
 			position: relative;
+
+			&_notify {
+				position: absolute;
+				bottom:	20px;
+				left: 20px;
+				color: $gray-middle;
+				text-align: left;
+				font-family: $ff;
+				font-size: 16px;
+				font-style: normal;
+				font-weight: $fw-regular;
+				line-height: normal;
+
+				@media all and (min-width: $md) {
+					left: 30px;
+				}
+			}
+
+			&:focus-within {
+				.textarea__wrapper_notify {
+					display: none;
+				}
+			}
 		}
 
 		textarea {
