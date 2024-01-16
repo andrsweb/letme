@@ -1,10 +1,16 @@
 .hidden__menu {
-	padding: 20px 34px;
+	padding: 10px;
 	border-radius: 8px;
 	background-color: $white;
-	box-shadow: $gray-shadow;
 	display: flex;
+    flex-direction: column;
 	justify-content: space-between;
+
+    @media all and (min-width: $xl) {
+        padding: 20px 34px;
+        flex-direction: row;
+        box-shadow: $gray-shadow;
+    }
 
 	&.single {
 		padding: 20px;
@@ -12,9 +18,7 @@
 
 	&_wrapper {
 		display: none;
-		position: absolute;
 		top: 100%;
-		left: 0;
 		z-index: 100;
 		padding-top: 6px;
 		animation: menuOn 0.5s forwards ease;
@@ -28,11 +32,21 @@
 				opacity: 1;
 			}
 		}
+
+        @media all and (min-width: $xl) {
+            position: absolute;
+            left: 0;
+        }
 	}
 
 	&_item {
-		padding: 16px 30px;
-		white-space: nowrap;
+		padding: 5px;
+        margin-bottom: 10px;
+
+         @media all and (min-width: $xl) {
+            padding: 16px 30px;
+		    white-space: nowrap;
+         }
 	}
 
 	&_link {
