@@ -11,6 +11,16 @@
 		}
 	}
 
+    &.short {
+        .bonuses__card_link {
+            display:  none;
+        }
+
+        .bonuses__card_text {
+            margin-bottom: 10px;
+        }
+    }
+
 	&_inner {
 		display: flex;
 		flex-direction: column;

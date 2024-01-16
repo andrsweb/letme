@@ -5,7 +5,9 @@ import { setTargetElement, getTargetElement } from './common/global'
 document.addEventListener( 'DOMContentLoaded', () => {
 	'use strict'
 
-	showPopup('.popup-wrapper.filter-modal', '.filter__button', '#wrapper-lock')
+	showPopup('.popup-wrapper.filter-modal', '.call-filter1', '#wrapper-lock')
+	showPopup('.popup-wrapper.filter-modal2', '.call-filter2', '#wrapper-lock')
+	showPopup('.popup-wrapper.filter-modal3', '.call-filter3', '#wrapper-lock')
 } )
 
 const showPopup = ( selector, btn, lock) => {

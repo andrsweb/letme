@@ -25,47 +25,56 @@
                                 <span>3</span>
                             </button>
                         </div>
-						<div class="hero__items_panel">
-							<div class="panel__item">
-								<div class="panel__item_text">
-									БУКМЕКЕР
-								</div>
-
-							</div>
-							<div class="panel__item">
-								<div class="panel__item_text">
-									РЕЙТИНГ
-								</div>
-
-							</div>
-							<div class="panel__item">
-								<div class="panel__item_text">
-									БОНУС
-								</div>
-							</div>
-							<div class="panel__item">
-								<div class="panel__item_text">
-									ПРИЛОЖЕНИЯ
-								</div>
-							</div>
-							<div class="panel__item"></div>
-						</div>
-						<div class="hero__bookmakers">
-							@@loop('../../components/bookmaker/bookmaker.html', [
-							{'src': 'img/bookmakers/betboom.svg', 'text': 'Betboom', 'value': '312', 'bonus': '10 000'},
-							{'src': 'img/bookmakers/winline.svg', 'text': 'Winline', 'value': '312', 'bonus': '8 000'},
-							{'src': 'img/bookmakers/fonbet.svg', 'text': 'Fonbet', 'value': '312', 'bonus': '6 000'},
-							{'src': 'img/bookmakers/leon.svg', 'text': 'Leon', 'value': '312', 'bonus': '4 000'},
-							{'src': 'img/bookmakers/pari.svg', 'text': 'Pari', 'value': '312', 'bonus': '6 000'},
-							{'src': 'img/bookmakers/betcity.svg', 'text': 'Betcity', 'value': '312', 'bonus': '10 000'},
-							{'src': 'img/bookmakers/league.svg', 'text': 'Лига ставок', 'value': '312', 'bonus': '10 000'},
-							{'src': 'img/bookmakers/olymp.svg', 'text': 'Olimpber', 'value': '312', 'bonus': '10 000'},
-							{'src': 'img/bookmakers/fonbet.svg', 'text': 'Fonbet', 'value': '312', 'bonus': '10 000'},
-							{'src': 'img/bookmakers/leon.svg', 'text': 'Leon', 'value': '312', 'bonus': '10 000'},
-							{'src': 'img/bookmakers/pari.svg', 'text': 'Pari', 'value': '312', 'bonus': '10 000'},
-							{'src': 'img/bookmakers/betcity.svg', 'text': 'Betcity', 'value': '312', 'bonus': '10 000'}
-							])
-						</div>
+                        <div class="filter__button_wrapper for-modal">
+                            <button class="filter__button call-filter2">
+                                <span class="filter__button_img">
+                                    @@include('../../svg/ui/arrow-sort.html')
+                                </span>
+                                Фильтры
+                            </button>
+                        </div>
+                        <section class="about__bonuses">
+                            <h2 class="h3">Бонусы и акции <a href="#">83</a></h2>
+                            <div class="bonuses__cards">
+                                @@loop('../../components/bonus/bonus.html', [
+                                    {'class': 'short','src': 'img/components/bonus/bonus1.png', 'name': 'Фрибет 5 000 ₽', 'text': '5000 рублей за правильные прогнозы'},
+                                    {'class': 'short','src': 'img/components/bonus/bonus2.png', 'name': 'Промокод в ВИНлайн', 'text': 'Активируйте промокод и получайте фрибет 500 ₽'},
+                                    {'class': 'short','src': 'img/components/bonus/bonus3.png', 'name': 'Супер кэшбек', 'text': 'Кэшбек до 20% <br> для VIP-клиентов'},
+                                    {'class': 'short','src': 'img/components/bonus/bonus4.png', 'name': 'Розыгрыш 1,2 млн ₽', 'text': 'Совершите ставки и получайте призы'},
+                                    {'class': 'short','src': 'img/components/bonus/bonus3.png', 'name': 'Супер кэшбек', 'text': 'Кэшбек до 20% <br> для VIP-клиентов'},
+                                    {'class': 'short','src': 'img/components/bonus/bonus4.png', 'name': 'Розыгрыш 1,2 млн ₽', 'text': 'Совершите ставки и получайте призы'},
+                                    {'class': 'short','src': 'img/components/bonus/bonus5.png', 'name': 'Фрибет 5 000 ₽', 'text': '5000 рублей за правильные прогнозы'},
+                                    {'class': 'short','src': 'img/components/bonus/bonus2.png', 'name': 'Промокод в ВИНлайн', 'text': 'Активируйте промокод и получайте фрибет 500 ₽'},
+                                    {'class': 'short','src': 'img/components/bonus/bonus1.png', 'name': 'Фрибет 5 000 ₽', 'text': '5000 рублей за правильные прогнозы'},
+                                    {'class': 'short','src': 'img/components/bonus/bonus2.png', 'name': 'Промокод в ВИНлайн', 'text': 'Активируйте промокод и получайте фрибет 500 ₽'},
+                                    {'class': 'short','src': 'img/components/bonus/bonus3.png', 'name': 'Супер кэшбек', 'text': 'Кэшбек до 20% <br> для VIP-клиентов'},
+                                    {'class': 'short','src': 'img/components/bonus/bonus4.png', 'name': 'Розыгрыш 1,2 млн ₽', 'text': 'Совершите ставки и получайте призы'},
+                                    {'class': 'short','src': 'img/components/bonus/bonus3.png', 'name': 'Супер кэшбек', 'text': 'Кэшбек до 20% <br> для VIP-клиентов'},
+                                    {'class': 'short','src': 'img/components/bonus/bonus4.png', 'name': 'Розыгрыш 1,2 млн ₽', 'text': 'Совершите ставки и получайте призы'},
+                                    {'class': 'short','src': 'img/components/bonus/bonus5.png', 'name': 'Фрибет 5 000 ₽', 'text': '5000 рублей за правильные прогнозы'},
+                                    {'class': 'short','src': 'img/components/bonus/bonus2.png', 'name': 'Промокод в ВИНлайн', 'text': 'Активируйте промокод и получайте фрибет 500 ₽'},
+                                    {'class': 'short','src': 'img/components/bonus/bonus1.png', 'name': 'Фрибет 5 000 ₽', 'text': '5000 рублей за правильные прогнозы'},
+                                    {'class': 'short','src': 'img/components/bonus/bonus2.png', 'name': 'Промокод в ВИНлайн', 'text': 'Активируйте промокод и получайте фрибет 500 ₽'},
+                                    {'class': 'short','src': 'img/components/bonus/bonus3.png', 'name': 'Супер кэшбек', 'text': 'Кэшбек до 20% <br> для VIP-клиентов'},
+                                    {'class': 'short','src': 'img/components/bonus/bonus4.png', 'name': 'Розыгрыш 1,2 млн ₽', 'text': 'Совершите ставки и получайте призы'},
+                                    {'class': 'short','src': 'img/components/bonus/bonus3.png', 'name': 'Супер кэшбек', 'text': 'Кэшбек до 20% <br> для VIP-клиентов'},
+                                    {'class': 'short','src': 'img/components/bonus/bonus4.png', 'name': 'Розыгрыш 1,2 млн ₽', 'text': 'Совершите ставки и получайте призы'},
+                                    {'class': 'short','src': 'img/components/bonus/bonus5.png', 'name': 'Фрибет 5 000 ₽', 'text': '5000 рублей за правильные прогнозы'},
+                                    {'class': 'short','src': 'img/components/bonus/bonus2.png', 'name': 'Промокод в ВИНлайн', 'text': 'Активируйте промокод и получайте фрибет 500 ₽'},
+                                    {'class': 'short','src': 'img/components/bonus/bonus1.png', 'name': 'Фрибет 5 000 ₽', 'text': '5000 рублей за правильные прогнозы'},
+                                    {'class': 'short','src': 'img/components/bonus/bonus2.png', 'name': 'Промокод в ВИНлайн', 'text': 'Активируйте промокод и получайте фрибет 500 ₽'},
+                                    {'class': 'short','src': 'img/components/bonus/bonus3.png', 'name': 'Супер кэшбек', 'text': 'Кэшбек до 20% <br> для VIP-клиентов'},
+                                    {'class': 'short','src': 'img/components/bonus/bonus4.png', 'name': 'Розыгрыш 1,2 млн ₽', 'text': 'Совершите ставки и получайте призы'},
+                                    {'class': 'short','src': 'img/components/bonus/bonus3.png', 'name': 'Супер кэшбек', 'text': 'Кэшбек до 20% <br> для VIP-клиентов'},
+                                    {'class': 'short','src': 'img/components/bonus/bonus4.png', 'name': 'Розыгрыш 1,2 млн ₽', 'text': 'Совершите ставки и получайте призы'},
+                                    {'class': 'short','src': 'img/components/bonus/bonus5.png', 'name': 'Фрибет 5 000 ₽', 'text': '5000 рублей за правильные прогнозы'},
+                                    {'class': 'short','src': 'img/components/bonus/bonus2.png', 'name': 'Промокод в ВИНлайн', 'text': 'Активируйте промокод и получайте фрибет 500 ₽'}
+                                ])
+                                <button class="button blue full">
+                                    Загрузить еще
+                                </button>
+                            </div>
+                        </section>						
                         @@include('./bonus.html')
                         @@include('./text-section.html')
                         @@include('./text-section1.html')

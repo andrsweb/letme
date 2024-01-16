@@ -22,3 +22,23 @@
         }
     }
 }
+
+.bookmaker__bonus_content {
+    .about__bonuses {
+        padding: 50px 0;
+
+        .h3 {
+            text-align: left;
+
+            a {
+                color: $light-blue;
+            }
+        }
+    }
+
+    .filter__button_wrapper {
+        margin: 20px 0;
+        width: 100%;
+        justify-content: center;
+    }
+}

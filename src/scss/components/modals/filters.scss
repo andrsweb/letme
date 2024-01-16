@@ -29,6 +29,21 @@
 					opacity: 1;
 				}
 			}
+
+            .bonus-right {
+                display: flex;
+                width: 100%;
+                justify-content: center;
+            }
+
+            .aside-right__wrapper {
+                width: 100%;
+                max-width: 300px;
+
+                .blue {
+                    white-space: nowrap;
+                }
+            }
 	}
 
 	&.closed {
@@ -174,6 +189,7 @@
 
 				@media all and (min-width: $sm) {
 					margin-right: 20px;
+                    margin-bottom: 0;
 				}
 			}
 

@@ -95,21 +95,12 @@
     }
 
     &_text {
-		color: $dark-blue;
+        color: $dark-blue;
 		font-family: $ff;
-		font-size: 12px;
+		font-size: 16px;
 		font-style: normal;
 		font-weight: $fw-regular;
 		line-height: 130%;
-		border-radius: $bord-20;
-
-		@media all and (min-width: $md) {
-			font-size: 14px;
-		}
-
-		@media all and (min-width: $xl) {
-			font-size: 16px;
-		}
     }
 
     &_titles {
@@ -204,6 +195,9 @@
 
         ol {
             li {
+                font-family: $ff;
+                font-weight: $fw-regular;
+                font-style: normal;
                 font-size: 14px;
 
                 @media all and (min-width: $md) {
@@ -250,6 +244,15 @@
 			}
 		}
 	}
+
+    li {
+        color: $dark-blue;
+		font-family: $ff;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: $fw-regular;
+		line-height: 130%;
+    }
 
 	.dropdown__open {
 		transition: padding ease $tr,
@@ -307,6 +310,11 @@
         display: flex;
         flex-wrap: wrap;
         align-items: center;
+        margin-bottom: 20px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
 
     &_name {
@@ -317,7 +325,7 @@
 
     &_link {
         color: $light-blue;
-        margin: 0 10px;
+        margin: 0 3px;
         font-family: $ff;
         font-size: 14px;
         font-weight: $fw-medium;
@@ -325,6 +333,7 @@
 
         @media all and (min-width: $xl) {
             font-size: 16px;
+            margin: 0 5px;
         }       
 
         &:hover {
@@ -332,3 +341,5 @@
         }
     }
 }
+
+
