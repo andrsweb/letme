@@ -92,7 +92,7 @@
 					margin-right: 0;
 
 					@media all and (min-width: $md) {
-						padding: 30px;
+						padding: 10px;
 					}
 				}
 
@@ -397,11 +397,12 @@
 
 	&__socials {
 		display: flex;
+        flex-wrap: wrap;
 		justify-content: center;
 		align-items: center;
 		border-radius: $bord-20;
 		background-color: $light-gray;
-		padding: 75px 20px;
+		padding: 75px 10px;
 		margin-right: 22px;
 		width: 100%;
 		max-width: 558px;
@@ -412,7 +413,7 @@
 		}
 
 		@media all and (min-width: 1760px) {
-			padding: 75px 70px;
+			padding: 75px 20px;
 			max-width: 558px;
 		}
 	}
@@ -424,7 +425,7 @@
 		justify-content: center;
 		align-items: center;
 		background-color: $white;
-		padding: 10px;
+		padding: 5px;
 		border-radius: $bord-20;
 		transition: opacity ease $tr;
 

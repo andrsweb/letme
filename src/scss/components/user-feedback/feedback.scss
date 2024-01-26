@@ -832,6 +832,31 @@
 			cursor: not-allowed;
 		}
 	}
+
+    .form-response {
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        padding: 20px;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        max-width: 300px;
+        background-color: $white;
+        border-radius: $bord-20;
+        text-align: center;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        font-family: $ff;
+        font-weight: $fw-medium;
+        color: $black;
+        z-index: 100;
+        box-shadow: 2px 2px 12px #1111118e ;
+
+        &.showed {
+            display: flex;
+        }
+    }
 }
 
 .for__sticky {

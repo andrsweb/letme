@@ -55,9 +55,8 @@
 			svg {
 				width: 30px;
 				height: 30px;
-				margin-left: 10px;
 				cursor: pointer;
-				margin-right: 10px;
+                transition: opacity ease $tr;
 	
 				path {
 					fill: $white;
@@ -66,7 +65,6 @@
 				@media all and (min-width: $md) {
 					width: 40px;
 					height: 40px;
-					margin-right: 0;
 				}
 			}
 		}
@@ -253,4 +251,87 @@
 			color: $white;
 		}
 	}
+}
+
+.hero-main_question {
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+
+    @media all and (min-width: $md) {
+        margin-right: 0;
+    }
+
+    &:hover {
+        svg {
+            opacity: $op;
+        }
+       
+    }
+}
+
+.hero-main_hidden {
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: $ff;
+    font-weight: $fw-medium;
+    font-style: normal;
+    padding: 10px;
+    border-radius: $bord-20;
+    font-size: $fs-xs;
+    background-color: $white;
+    box-shadow: $gray-shadow4;
+    position: absolute;
+    left: -200px;
+    top: -70px;
+    width: 250px;
+    transition: opacity ease $tr, visibility ease $tr;
+
+    @media all and (min-width: $md) {
+        font-size: $fs-sm;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    &::before {
+        content: '';
+        display: block;
+        width: 15px;
+        height: 15px;
+        background-color: $white;
+        position: absolute;
+        left: 83%;
+        bottom: 5px;
+        transform: rotate(45deg);
+        transition: bottom $tr linear, opacity ease $tr;
+        opacity: 0;
+        z-index: 1;
+
+        @media all and (min-width: $md) {
+            z-index: -1;
+            left: 50%;
+            transform: translateX(-50%) rotate(45deg);
+        }
+    }
+
+    &.showed {
+        opacity: 1;
+        visibility: visible;
+
+        &::before {
+            opacity: 1;
+            bottom: -5px;
+
+            @media all and (min-width: $md) {
+                bottom: -5px;
+            }
+        }
+    }
 }
