@@ -16,16 +16,20 @@ const clickedThumbs = () => {
 			? thumbsElem.nextElementSibling
 			: thumbsElem.previousElementSibling
 
-		if (siblingThumbs && siblingThumbs.classList.contains('clicked')) {
+		if (siblingThumbs?.classList.contains('clicked')) {
 			siblingThumbs.classList.remove('clicked')
 			const siblingValueElem = siblingThumbs.querySelector('.thumbs_value')
 			siblingValueElem.innerText = parseInt(siblingValueElem.innerText) - 1
 		}
 	}
 
-	const thumbsBtns = document.querySelectorAll('.thumbs__up, .thumbs__down')
+	document.body.addEventListener('click', e => {
+		const target = e.target
+		const thumbsUp = target.closest('.thumbs__up')
+		const thumbsDown = target.closest('.thumbs__down')
 
-	thumbsBtns.forEach((btn) => {
-		btn.addEventListener('click', () => toggleThumbs(btn))
+		if (thumbsUp || thumbsDown) {
+			toggleThumbs(thumbsUp || thumbsDown)
+		}
 	})
 }

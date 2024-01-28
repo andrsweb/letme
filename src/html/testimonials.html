@@ -233,6 +233,7 @@
                         <div class="main__feedback_heading">Написать отзыв</div>
                         <div class="main__feedback_select">
                             <select id="select" name="select">
+                                <option value="Выберите букмекера" disabled selected>Выберите букмекера</option>
                                 <option value="Pari">Pari</option>
                                 <option value="Betboom">Betboom</option>
                                 <option value="Betcity">Betcity</option>
@@ -257,6 +258,20 @@
                                 </div>
                                 <div class="textarea__wrapper">
                                     <textarea name="textarea" placeholder="Пожалуйста, напишите, что вы думаете о букмекерской конторе"></textarea>
+                                    <div class="textarea__state">
+                                        <div class="textarea__state_text">
+                                            Слишком мало
+                                        </div>
+                                        <div class="textarea__state_circle">
+                                            <svg class="progress-circle" width="30" height="30" xmlns="http://www.w3.org/2000/svg">
+                                                <circle class="progress-circle-back" cx="15" cy="15" r="15" fill="blue" />
+                                                <circle class="progress-circle-prog" cx="15" cy="15" r="15" fill="red" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="textarea__wrapper_notify">
+                                        мин. 60 — макс. 2000 символов
+                                    </div>
                                 </div>
                             </div>
                             <div class="main__right_wrapper">
