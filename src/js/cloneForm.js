@@ -5,25 +5,30 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 const cloneForm = () => {
-    const replyButtons = document.querySelectorAll('.reply')
+    document.body.addEventListener('click', e => {
+        const target = e.target
 
-    if (!replyButtons.length) return
+        if (target.classList.contains('reply')) {
+            const userFeedback = target.closest('.user__feedback')
 
-    replyButtons.forEach((button) => {
-        button.addEventListener('click', () => {
-            const userFeedback = button.closest('.user__feedback')
+            if (userFeedback) {
+                const clonedForm = userFeedback.querySelector('.cloned')
 
-            if (!userFeedback.querySelector('.cloned')) {
-                const feedbackForm = document.querySelector('.feedback__form')
-                const clonedForm = feedbackForm.cloneNode(true)
-                clonedForm.classList.add('cloned')
-                userFeedback.appendChild(clonedForm)
+                if (!clonedForm) {
+                    const feedbackForm = document.querySelector('.feedback__form')
 
-                const cancelButton = clonedForm.querySelector('.cancel')
-                cancelButton.addEventListener('click', () => {
-                    clonedForm.remove()
-                })
+                    if (feedbackForm) {
+                        const clonedForm = feedbackForm.cloneNode(true)
+                        clonedForm.classList.add('cloned')
+                        userFeedback.appendChild(clonedForm)
+
+                        const cancelButton = clonedForm.querySelector('.cancel')
+                        cancelButton.addEventListener('click', () => {
+                            clonedForm.remove()
+                        })
+                    }
+                }
             }
-        })
+        }
     })
 }
