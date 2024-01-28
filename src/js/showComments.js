@@ -1,19 +1,18 @@
 document.addEventListener('DOMContentLoaded', () => {
-	'use strict'  
+    'use strict'
 
-	showComments()
+    document.body.addEventListener('click', e => {
+        const target = e.target
+        const feedbackElement = target.closest('.user__feedback')
+
+        if (feedbackElement) {
+            const showCommentsBtn = feedbackElement.querySelector('.show__comments')
+            const innerFeedback = feedbackElement.querySelector('.inner__feedback')
+
+            if (showCommentsBtn && innerFeedback) {
+                showCommentsBtn.classList.toggle('clicked')
+                innerFeedback.classList.toggle('showed')
+            }
+        }
+    })
 })
-
-const showComments = () => {
-	const showCommentsBtns = document.querySelectorAll('.show__comments')
-
-	if(!showCommentsBtns.length) return
-
-	showCommentsBtns.forEach((btn) => {
-		btn.addEventListener('click', () => {
-			const innerFeedback = btn.closest('.user__feedback').querySelector('.inner__feedback')
-			btn.classList.toggle('clicked')
-			innerFeedback.classList.toggle('showed')
-		})
-	})
-}
