@@ -36,7 +36,194 @@
 		</header>
 
 <main>
-	@@include('template-parts/sections/bookmaker/box.html')
+	<div class="bookmaker__box">
+        <div class="container">
+            <div class="breadcrumbs">
+                <ul class="breadcrumbs__list">
+                    @@loop('./template-parts/components/breadcrumbs/breadcrumbs-item.html', [
+                        {'current': '', 'href': '/', 'text': 'Главная', 'arrow': ''},
+                        {'current': '', 'href': '/', 'text': 'Букмекеры', 'arrow': ''},
+                        {'current': 'current', 'href': '#', 'text': 'Фонбет', 'arrow': ''}
+                    ])
+                </ul>
+                <div class="bookmaker__menu tabs">
+                    <div class="bookmaker__menu_start">
+                        Содержание
+                        @@include('./template-parts/svg/ui/dropdown-arrow.html')
+                    </div>
+                    <div class="bookmaker__menu_items">
+                        <ul class="bookmaker__aside_list">
+                            <li class="bookmaker__aside_item">
+                                <a class="anchor" href="#book-item">Общая информация</a>
+                            </li>
+                            <li class="bookmaker__aside_item">
+                                <a class="anchor" href="#downloads">Скачать приложение</a>
+                            </li>
+                            <li class="bookmaker__aside_item">
+                                <a class="anchor" href="#testi">Отзывы</a>
+                            </li>
+                            <li class="bookmaker__aside_item">
+                                <a class="anchor" href="#info">Информация</a>
+                            </li>
+                            <li class="bookmaker__aside_item">
+                                <a class="anchor" href="#pay">Пополнение и вывод средств</a>
+                            </li>
+                            <li class="bookmaker__aside_item">
+                                <a class="anchor" href="#types">Виды спорта, доступные для ставок</a>
+                            </li>
+                            <li class="bookmaker__aside_item">
+                                <a class="anchor" href="#sales">Акции букмекера</a>
+                            </li>
+                            <li class="bookmaker__aside_item">
+                                <a class="anchor" href="#review">Обзор букмекера</a>
+                            </li>
+                            <li class="bookmaker__aside_item">
+                                <a class="anchor" href="#other">Другие БК</a>
+                            </li>
+                            <li class="bookmaker__aside_item">
+                                <a class="anchor" href="#feedbacks">Комментарии</a>
+                            </li>
+                        </ul>
+                        <div class="bookmaker__aside_items">
+                            <div class="aside__bookmaker">
+                                <div class="aside__bookmaker_image">
+                                    <img src="img/bookmakers/pari.svg" width="100" height="32" alt="">
+                                </div>
+                                <a class="button blue" href="#" target="_blank">
+                                    Открыть
+                                </a>
+                            </div>
+                            <div class="aside__bookmaker">
+                                <div class="aside__bookmaker_image">
+                                    <img src="img/bookmakers/leon.svg" width="100" height="32" alt="">
+                                </div>
+                                <a class="button blue" href="#" target="_blank">
+                                    Открыть
+                                </a>
+                            </div>
+                            <div class="aside__bookmaker">
+                                <div class="aside__bookmaker_image">
+                                    <img src="img/bookmakers/olymp.svg" width="100" height="32" alt="">
+                                </div>
+                                <a class="button blue" href="#" target="_blank">
+                                    Открыть
+                                </a>
+                            </div>
+                            <div class="aside__bookmaker">
+                                <div class="aside__bookmaker_image">
+                                    <img src="img/bookmakers/betcity.svg" width="100" height="32" alt="">
+                                </div>
+                                <a class="button blue" href="#" target="_blank">
+                                    Открыть
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bookmaker__menu mobile">
+                <div class="bookmaker__menu_start">
+                    Содержание
+                    @@include('./template-parts/svg/ui/dropdown-arrow.html')
+                </div>
+                <div class="bookmaker__menu_items">
+                    <ul class="bookmaker__aside_list">
+                        <li class="bookmaker__aside_item">
+                            <a class="anchor" href="#book-item">Общая информация</a>
+                        </li>
+                        <li class="bookmaker__aside_item">
+                            <a class="anchor" href="#downloads">Скачать приложение</a>
+                        </li>
+                        <li class="bookmaker__aside_item">
+                            <a class="anchor" href="#testi">Отзывы</a>
+                        </li>
+                        <li class="bookmaker__aside_item">
+                            <a class="anchor" href="#info">Информация</a>
+                        </li>
+                        <li class="bookmaker__aside_item">
+                            <a class="anchor" href="#pay">Пополнение и вывод средств</a>
+                        </li>
+                        <li class="bookmaker__aside_item">
+                            <a class="anchor" href="#types">Виды спорта, доступные для ставок</a>
+                        </li>
+                        <li class="bookmaker__aside_item">
+                            <a class="anchor" href="#sales">Акции букмекера</a>
+                        </li>
+                        <li class="bookmaker__aside_item">
+                            <a class="anchor" href="#review">Обзор букмекера</a>
+                        </li>
+                        <li class="bookmaker__aside_item">
+                            <a class="anchor" href="#other">Другие БК</a>
+                        </li>
+                        <li class="bookmaker__aside_item">
+                            <a class="anchor" href="#feedbacks">Комментарии</a>
+                        </li>
+                    </ul>
+                    <div class="bookmaker__aside_items">
+                        <div class="aside__bookmaker">
+                            <div class="aside__bookmaker_image">
+                                <img src="img/bookmakers/pari.svg" width="100" height="32" alt="">
+                            </div>
+                            <a class="button blue" href="#" target="_blank">
+                                Открыть
+                            </a>
+                        </div>
+                        <div class="aside__bookmaker">
+                            <div class="aside__bookmaker_image">
+                                <img src="img/bookmakers/leon.svg" width="100" height="32" alt="">
+                            </div>
+                            <a class="button blue" href="#" target="_blank">
+                                Открыть
+                            </a>
+                        </div>
+                        <div class="aside__bookmaker">
+                            <div class="aside__bookmaker_image">
+                                <img src="img/bookmakers/olymp.svg" width="100" height="32" alt="">
+                            </div>
+                            <a class="button blue" href="#" target="_blank">
+                                Открыть
+                            </a>
+                        </div>
+                        <div class="aside__bookmaker">
+                            <div class="aside__bookmaker_image">
+                                <img src="img/bookmakers/betcity.svg" width="100" height="32" alt="">
+                            </div>
+                            <a class="button blue" href="#" target="_blank">
+                                Открыть
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bookmaker__box_wrapper">
+            <div class="container">
+                <div class="bookmaker__box_items">
+                    <div class="bookmaker__box_content">
+                        <div class="bookmaker__box_title">
+                            <h1 class="h1">Букмекерская контора Фонбет</h1>
+                            <div class="grey__border_link feedback__top_notify">
+                                <img src="img/ico/check-green.svg" width="14" height="14" alt="">
+                                легальная БК
+                            </div>
+                        </div>
+                        @@include('./template-parts/sections/bookmaker/hero.html')
+                        @@include('./template-parts/sections/bookmaker/downloads.html')
+                        @@include('./template-parts/sections/legal/testimonials.html')
+                        @@include('./template-parts/sections/bookmaker/main-feedback.html')
+                        @@include('./template-parts/sections/bookmaker/information.html')
+                        @@include('./template-parts/sections/bookmaker/information-full.html')
+                        @@include('./template-parts/sections/bookmaker/options.html')
+                        @@include('./template-parts/sections/bookmaker/types.html')
+                        @@include('./template-parts/sections/bookmaker/sales.html')
+                        @@include('./template-parts/sections/bookmaker/review.html')
+                        @@include('./template-parts/sections/bookmaker/other.html')
+                    </div>
+                    @@include('./template-parts/components/asides/bookmaker-aside.html')
+                </div>
+            </div>
+        </div>
+    </div>
 </main>
 
 @@include( 'template-parts/footer/footer.html' )
