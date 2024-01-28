@@ -134,11 +134,16 @@
 		border-radius: 100px;
 		box-shadow: $gray-shadow3;
 		min-height: 40px;
-		margin-top: 10px;
 
-		@media all and (min-width: $md) {
-			margin-top: 0;
-		}
+        &_wrapper {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+
+            @media all and (min-width: $md) {
+                margin-top: 0;
+            }
+        }
 	}
 
 	.user__info_wrapper {
@@ -162,8 +167,8 @@
 	}
 
     .user__bookmaker_img {
-        width: 30px;
-        height: 30px;
+        width: 40px;
+        height: 40px;
         margin-left: 10px;
         display: none;
     }
