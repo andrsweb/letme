@@ -11,6 +11,23 @@
 		padding: 50px;
 	}
 
+    &.with-bookmaker {
+        .user__bookmaker_img {
+            display: block;
+        }
+    }
+
+    &.notified {
+		.user__notify {
+			display: flex;
+			margin-top: 10px;
+
+			@media all and (min-width: $md) {
+				margin-top: 0;
+			}
+		}
+	}
+
 	.user__feedback {
 		padding: 30px 20px 30px 20px;
 		position: relative;
@@ -47,17 +64,6 @@
 
 	&:last-child {
 		margin-bottom: 0;
-	}
-
-	&.notified {
-		.user__notify {
-			display: flex;
-			margin-top: 10px;
-
-			@media all and (min-width: $md) {
-				margin-top: 0;
-			}
-		}
 	}
 
 	.inner__feedback {
@@ -154,6 +160,13 @@
 			border-radius: 20px;
 		}
 	}
+
+    .user__bookmaker_img {
+        width: 30px;
+        height: 30px;
+        margin-left: 10px;
+        display: none;
+    }
 
 	.user__name {
 		color: $dark-blue;
@@ -489,6 +502,42 @@
 	padding: 20px 0;
 	display: block;
 	margin-top: 0;
+
+    &_select {
+        position: relative;
+        width: 100%;
+
+        @media all and (min-width: $md) {
+            max-width: 350px;
+        }
+
+        &::after {
+            content: '\25BC';
+            position: absolute;
+            right: 10px;
+            top: 25%;
+            pointer-events: none;
+        }
+    }
+
+    select {
+       width: 100%;
+        border: 1px solid $light-gray;
+        background-color: transparent;
+        border-radius: $bord-20;
+        border: 1px solid #D1D1D6;
+        color: $gray-middle;
+        font-family: $ff;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: $fw-medium;
+        line-height: normal;
+        padding: 20px;
+        margin-bottom: 20px;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+    }
 
 	@media all and (min-width: $md) {
 		margin-top: 40px;

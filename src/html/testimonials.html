@@ -58,22 +58,40 @@
                     @@include('template-parts/sections/about/mobile-slide.html')
                     @@include('template-parts/sections/about/user-rate.html')
                     @@include('template-parts/sections/about/chatbar.html')
-                    @@include('template-parts/sections/about/user-feedback-empty.html')
-                    @@include('template-parts/sections/about/user-feedback-inner-no-photo.html')
-                    @@include('template-parts/sections/about/user-feedback-overflow.html')
-                    @@include('template-parts/sections/about/user-feedback-inner-big.html')
-                    @@include('template-parts/sections/about/user-feedback-inner.html')
-                    @@include('template-parts/sections/about/user-feedback-empty.html')
-                    @@include('template-parts/sections/about/user-feedback-empty.html')
-                    @@include('template-parts/sections/about/user-feedback-empty.html')
-                    @@include('template-parts/sections/about/user-feedback-empty.html')
-                    @@include('template-parts/sections/about/user-feedback-empty.html')
-                    @@include('template-parts/sections/about/user-feedback-empty.html')
+                    @@include('template-parts/sections/about/user-feedback-empty.html', {'class': 'with-bookmaker'})
+                    @@include('template-parts/sections/about/user-feedback-inner-no-photo.html', {'class': 'with-bookmaker'})
+                    @@include('template-parts/sections/about/user-feedback-overflow.html', {'class': 'with-bookmaker'})
+                    @@include('template-parts/sections/about/user-feedback-inner-big.html', {'class': 'with-bookmaker'})
+                    @@include('template-parts/sections/about/user-feedback-inner.html', {'class': 'with-bookmaker'})
+                    @@include('template-parts/sections/about/user-feedback-empty.html', {'class': 'with-bookmaker'})
+                    @@include('template-parts/sections/about/user-feedback-empty.html', {'class': 'with-bookmaker'})
+                    @@include('template-parts/sections/about/user-feedback-empty.html', {'class': 'with-bookmaker'})
+                    @@include('template-parts/sections/about/user-feedback-empty.html', {'class': 'with-bookmaker'})
+                    @@include('template-parts/sections/about/user-feedback-empty.html', {'class': 'with-bookmaker'})
+                    @@include('template-parts/sections/about/user-feedback-empty.html', {'class': 'with-bookmaker'})
                     <button class="button blue full">
                         Загрузить ещё
                     </button>
                     <form class="main__feedback" id="main-form-anchor">
                         <div class="main__feedback_heading">Написать отзыв</div>
+                        <div class="main__feedback_select">
+                            <select id="select" name="select">
+                                <option value="Pari">Pari</option>
+                                <option value="Betboom">Betboom</option>
+                                <option value="Betcity">Betcity</option>
+                                <option value="Мелбет">Мелбет</option>
+                                <option value="Винлайн">Винлайн</option>
+                                <option value="Леон">Леон</option>
+                                <option value="BETTERY">BETTERY</option>
+                                <option value="Марафон">Марафон</option>
+                                <option value="Олимп">Олимп</option>
+                                <option value="Тенниси">Тенниси</option>
+                                <option value="1хСтавка">1хСтавка</option>
+                                <option value="Лига ставок">Лига ставок</option>
+                                <option value="Спортбет">Спортбет</option>
+                                <option value="Балтбет">Балтбет</option>
+                              </select>
+                        </div>
                         <fieldset>
                             <div class="main__left">
                                 <div class="main__inputs">
